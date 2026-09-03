@@ -1,0 +1,2082 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Velorix AI — Launch Your Coaching or Agency Business in 2 Hours</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --black: #000000;
+            --navy: #0052CC;
+            --navy-light: #0066FF;
+            --white: #ffffff;
+            --gray-light: #f5f5f5;
+            --gray: #e0e0e0;
+            --gray-dark: #8a8a8a;
+            --text-light: #ffffff;
+            --text-dark: #212529;
+            --accent: #FFD700;
+            --whatsapp: #25D366;
+        }
+        
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html { scroll-behavior: smooth; }
+        body { 
+            font-family: 'Inter', sans-serif; 
+            color: var(--text-light); 
+            line-height: 1.6; 
+            background-color: var(--black); 
+        }
+        
+        .container { width:100%; max-width:1200px; margin:0 auto; padding:0 20px; }
+        .navbar { display:flex; justify-content:space-between; align-items:center; gap:20px; }
+        .logo { display:flex; align-items:center; gap:10px; font-size:1.8rem; font-weight:800; color:var(--white); text-decoration:none; }
+        .logo-img { width:44px; height:44px; border-radius:8px; object-fit:contain; background:var(--black); display:block; }
+        .nav-links { display:flex; gap:30px; align-items:center; }
+        .nav-links a { color:var(--white); text-decoration:none; font-weight:500; transition:all .3s; }
+        .nav-links a:hover { color:var(--accent); }
+        
+        nav { 
+            background-color: var(--black); 
+            color: var(--white); 
+            padding: 18px 0; 
+            position: sticky; 
+            top: 0; 
+            z-index: 1000; 
+            box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
+            border-bottom: 1px solid rgba(0, 82, 204, 0.2);
+        }
+        
+        .hero { 
+            background: linear-gradient(135deg, var(--black) 0%, rgba(0, 0, 0, 0.95) 100%);
+            color: var(--text-light); 
+            padding: 120px 0 100px; 
+            text-align: center; 
+            position: relative; 
+            overflow: hidden; 
+            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+        }
+        
+        .hero::before { 
+            content: ''; 
+            position: absolute; 
+            top: -50%; 
+            right: -50%; 
+            width: 1000px; 
+            height: 1000px; 
+            background: radial-gradient(circle, rgba(0, 82, 204, 0.1) 0%, transparent 70%); 
+            animation: float 20s infinite ease-in-out; 
+        }
+        
+        @keyframes float { 
+            0%,100%{ transform:translate(0,0); } 
+            50%{ transform:translate(30px,-30px); } 
+        }
+        
+        .hero-content { position: relative; z-index: 1; }
+        
+        .hero h1 { 
+            font-size: 3.5rem; 
+            font-weight: 800; 
+            line-height: 1.2; 
+            margin-bottom: 20px; 
+            color: var(--navy-light);
+        }
+        
+        .highlight-yellow { 
+            color: var(--accent); 
+            font-weight: 900;
+        }
+        
+        .hero-subtitle { 
+            font-size: 1.3rem; 
+            max-width: 800px; 
+            margin: 0 auto 40px; 
+            color: var(--white);
+            opacity: 0.95;
+        }
+        
+        .cta-buttons { 
+            display: flex; 
+            justify-content: center; 
+            gap: 20px; 
+            margin-top: 40px; 
+            flex-wrap: wrap; 
+        }
+        
+        .btn { 
+            padding: 16px 36px; 
+            border-radius: 8px; 
+            font-size: 1.1rem; 
+            font-weight: 700; 
+            text-decoration: none; 
+            display: inline-flex; 
+            align-items: center; 
+            gap: 10px; 
+            transition: all .3s; 
+            border: none; 
+            cursor: pointer; 
+        }
+        
+        .btn-primary { 
+            background-color: var(--accent);
+            color: var(--black); 
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
+        }
+        
+        .btn-secondary { 
+            background: transparent; 
+            color: var(--white); 
+            border: 2px solid rgba(255, 215, 0, 0.4); 
+        }
+        
+        .btn-secondary:hover {
+            background: rgba(255, 215, 0, 0.1);
+            transform: translateY(-3px);
+        }
+        
+        .hero-features { 
+            display: flex; 
+            justify-content: center; 
+            gap: 30px; 
+            margin-top: 50px; 
+            flex-wrap: wrap; 
+        }
+        
+        .hero-feature { 
+            display: flex; 
+            align-items: center; 
+            gap: 10px; 
+            font-weight: 500; 
+        }
+        
+        .hero-feature i { 
+            color: var(--accent); 
+            font-size: 1.2rem; 
+        }
+        
+        .video-section { 
+            padding: 70px 0; 
+            text-align: center; 
+            background: rgba(0, 0, 0, 0.5);
+            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+        }
+        
+        .video-container { 
+            max-width: 900px; 
+            margin: 20px auto; 
+            border-radius: 12px; 
+            overflow: hidden; 
+            box-shadow: 0 15px 30px rgba(0, 82, 204, 0.2); 
+            background: #000; 
+            position: relative; 
+            aspect-ratio: 16/9; 
+            border: 1px solid rgba(0, 82, 204, 0.3);
+        }
+        
+        .video-placeholder { 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            flex-direction: column; 
+            color: #fff; 
+            height: 100%; 
+            padding: 20px; 
+        }
+        
+        .video-placeholder i { 
+            font-size: 4rem; 
+            color: var(--accent); 
+            margin-bottom: 15px; 
+        }
+        
+        .features { 
+            padding: 100px 0; 
+            background: var(--black);
+            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+        }
+        
+        .section-title { 
+            text-align: center; 
+            font-size: 2.5rem; 
+            font-weight: 800; 
+            margin-bottom: 60px; 
+            color: var(--navy-light); 
+        }
+        
+        .features-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
+            gap: 30px; 
+        }
+        
+        .feature-card { 
+            background: rgba(0, 82, 204, 0.08); 
+            padding: 40px 30px; 
+            border-radius: 12px; 
+            box-shadow: 0 5px 15px rgba(0, 82, 204, 0.1); 
+            border: 1px solid rgba(0, 82, 204, 0.15);
+            color: var(--white);
+        }
+        
+        .feature-card h3 { color: var(--navy-light); margin-bottom: 15px; }
+        .feature-card p { opacity: 0.9; }
+        
+        .feature-icon { 
+            width: 60px; 
+            height: 60px; 
+            border-radius: 12px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            margin-bottom: 20px; 
+            color: var(--accent); 
+            font-size: 1.8rem; 
+            background: rgba(255, 215, 0, 0.1);
+        }
+        
+        .benefits { 
+            padding: 100px 0; 
+            background: rgba(0, 0, 0, 0.7);
+            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+        }
+        
+        .benefits-text h2 { 
+            font-size: 2.2rem; 
+            color: var(--navy-light); 
+            margin-bottom: 20px; 
+        }
+        
+        .benefits-text p { 
+            color: var(--white); 
+            margin-bottom: 15px; 
+            opacity: 0.95;
+        }
+        
+        .benefits-list { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 25px; 
+            margin-top: 30px; 
+        }
+        
+        .benefit-item { 
+            display: flex; 
+            gap: 15px; 
+            align-items: flex-start; 
+            color: var(--white);
+        }
+        
+        .benefit-item i { 
+            color: var(--accent); 
+            font-size: 1.5rem; 
+            margin-top: 3px; 
+        }
+        
+        .services { 
+            padding: 100px 0; 
+            background: var(--black);
+            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+        }
+        
+        .services-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 25px; 
+        }
+        
+        .service-card { 
+            background: rgba(0, 82, 204, 0.08); 
+            padding: 35px; 
+            border-radius: 12px; 
+            box-shadow: 0 5px 15px rgba(0, 82, 204, 0.1); 
+            border-top: 4px solid var(--accent); 
+            border: 1px solid rgba(0, 82, 204, 0.15);
+            color: var(--white);
+        }
+        
+        .service-card h3 { color: var(--navy-light); margin-bottom: 15px; }
+        
+        .about-founder {
+            padding: 100px 0;
+            background: rgba(0, 0, 0, 0.7);
+            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+        }
+        
+        .founder-content {
+            display: grid;
+            grid-template-columns: 280px 1fr;
+            gap: 60px;
+            align-items: flex-start;
+        }
+        
+        .founder-photo {
+            background: linear-gradient(135deg, var(--navy-light) 0%, var(--accent) 100%);
+            border-radius: 16px;
+            padding: 30px;
+            text-align: center;
+            color: white;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(255, 215, 0, 0.2);
+            height: fit-content;
+        }
+        
+        .founder-photo img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 3px solid var(--accent);
+            margin-bottom: 15px;
+        }
+        
+        .founder-photo i {
+            font-size: 80px;
+            margin-bottom: 15px;
+            display: block;
+        }
+        
+        .founder-photo h3 {
+            font-size: 1.4rem;
+            margin-bottom: 5px;
+            font-weight: 800;
+        }
+        
+        .founder-photo p {
+            opacity: 0.9;
+            font-size: 0.9rem;
+            margin-bottom: 5px;
+        }
+        
+        .founder-story h3 {
+            color: var(--accent);
+            font-size: 1.6rem;
+            margin-bottom: 20px;
+        }
+        
+        .founder-story p {
+            color: var(--white);
+            margin-bottom: 15px;
+            opacity: 0.95;
+            line-height: 1.8;
+        }
+        
+        .how-it-works { 
+            padding: 100px 0; 
+            background: rgba(0, 0, 0, 0.7);
+            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+        }
+        
+        .steps-container { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 40px; 
+            max-width: 1000px; 
+            margin: 60px auto 0; 
+        }
+        
+        .step { display: flex; flex-direction: column; align-items: flex-start; }
+        
+        .step-number { 
+            width: 60px; 
+            height: 60px; 
+            background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%); 
+            border-radius: 50%; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            color: #fff; 
+            font-weight: 800; 
+            font-size: 1.6rem; 
+            margin-bottom: 20px;
+        }
+        
+        .step-content { 
+            background: rgba(0, 82, 204, 0.08); 
+            padding: 30px; 
+            border-radius: 12px; 
+            border-left: 4px solid var(--accent); 
+            border: 1px solid rgba(0, 82, 204, 0.15);
+            color: var(--white);
+        }
+        
+        .step-content h3 { color: var(--navy-light); margin-bottom: 10px; }
+        
+        .who-its-for { 
+            padding: 100px 0; 
+            background: linear-gradient(135deg, rgba(0, 82, 204, 0.15) 0%, rgba(0, 0, 0, 0.8) 100%);
+            color: white;
+            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+        }
+        
+        .who-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
+            gap: 30px; 
+        }
+        
+        .who-card { 
+            background: rgba(0, 82, 204, 0.1); 
+            padding: 30px; 
+            border-radius: 12px; 
+            border: 1px solid rgba(0, 82, 204, 0.25);
+            color: var(--white);
+        }
+        
+        .who-card h3 { color: var(--accent); margin-bottom: 15px; }
+        
+        .pricing { 
+            padding: 100px 0; 
+            background: rgba(0, 0, 0, 0.7);
+            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+        }
+        
+        .pricing-content { text-align: center; }
+        .pricing-content h2 { color: var(--navy-light); margin-bottom: 20px; }
+        .pricing-content p { color: var(--white); opacity: 0.95; margin-bottom: 15px; }
+        
+        .price-display { 
+            font-size: 3rem; 
+            font-weight: 800; 
+            color: var(--accent); 
+            margin: 30px 0; 
+        }
+        
+        .testimonials { 
+            padding: 100px 0; 
+            background: var(--black);
+            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+        }
+        
+        .testimonials-grid { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
+            gap: 30px; 
+        }
+        
+        .testimonial-card { 
+            background: rgba(0, 82, 204, 0.08); 
+            padding: 30px; 
+            border-radius: 12px; 
+            border-left: 5px solid var(--accent); 
+            border: 1px solid rgba(0, 82, 204, 0.15);
+            color: var(--white);
+        }
+        
+        .testimonial-rating { color: var(--accent); margin-bottom: 15px; }
+        .testimonial-text { opacity: 0.9; margin-bottom: 20px; }
+        .testimonial-author { display: flex; gap: 15px; align-items: center; }
+        .author-avatar { 
+            width: 50px; 
+            height: 50px; 
+            border-radius: 50%; 
+            background: linear-gradient(135deg, var(--navy-light) 0%, var(--accent) 100%); 
+            color: white; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-weight: 800; 
+        }
+        
+        .author-info h4 { color: var(--navy-light); }
+        .author-info p { opacity: 0.7; font-size: 0.9rem; }
+        
+        .faq { 
+            padding: 100px 0; 
+            background: rgba(0, 0, 0, 0.7);
+            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+        }
+        
+        .faq-container { 
+            max-width: 900px; 
+            margin: 0 auto; 
+        }
+        
+        .faq-item { 
+            margin-bottom: 15px; 
+            background: rgba(0, 82, 204, 0.08); 
+            border-radius: 10px; 
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); 
+            border: 1px solid rgba(0, 82, 204, 0.15);
+        }
+        
+        .faq-question { 
+            padding: 25px; 
+            font-weight: 600; 
+            cursor: pointer; 
+            display: flex; 
+            justify-content: space-between; 
+            align-items: center; 
+            color: var(--navy-light); 
+        }
+        
+        .faq-answer { 
+            padding: 0 25px 25px; 
+            color: var(--white); 
+            display: none; 
+            opacity: 0.9;
+        }
+        
+        .faq-item.active .faq-answer { 
+            display: block; 
+        }
+        
+        .final-cta { 
+            background: linear-gradient(135deg, rgba(0, 82, 204, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%);
+            color: white; 
+            padding: 80px 0; 
+            text-align: center; 
+            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+        }
+        
+        .final-cta h2 { 
+            color: var(--navy-light); 
+            font-size: 2.2rem; 
+            margin-bottom: 20px; 
+        }
+        
+        .final-cta p { 
+            opacity: 0.95; 
+            max-width: 700px; 
+            margin: 0 auto 30px; 
+        }
+        
+        footer { 
+            background: #0a0a0a; 
+            color: white; 
+            padding: 60px 0 30px; 
+            border-top: 1px solid rgba(0, 82, 204, 0.2);
+        }
+        
+        .footer-content { 
+            display: grid; 
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+            gap: 40px; 
+            margin-bottom: 40px;
+        }
+        
+        .footer-links a { 
+            color: var(--gray-dark); 
+            text-decoration: none; 
+            display: block; 
+            margin-bottom: 10px; 
+            cursor: pointer;
+        }
+        
+        .footer-links a:hover { color: var(--accent); }
+        
+        .copyright { 
+            text-align: center; 
+            padding-top: 30px; 
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: var(--gray-dark);
+            font-size: 0.85rem;
+        }
+        
+        .modal { 
+            display: none; 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            background: rgba(0, 0, 0, 0.9); 
+            z-index: 9999; 
+            justify-content: center; 
+            align-items: center; 
+            padding: 20px; 
+        }
+        
+        .modal.active { 
+            display: flex; 
+        }
+        
+        .modal-content { 
+            background: var(--black); 
+            border-radius: 16px; 
+            padding: 40px; 
+            max-width: 520px; 
+            width: 100%; 
+            position: relative; 
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8); 
+            border: 1px solid rgba(0, 82, 204, 0.3); 
+            animation: slideIn 0.3s ease; 
+            max-height: 90vh;
+            overflow-y: auto;
+        }
+        
+        @keyframes slideIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .close-btn { 
+            position: absolute; 
+            top: 15px; 
+            right: 20px; 
+            background: none; 
+            border: none; 
+            font-size: 1.5rem; 
+            cursor: pointer; 
+            color: var(--white); 
+        }
+        
+        .close-btn:hover { color: var(--accent); }
+        
+        .modal h2 { 
+            color: var(--accent); 
+            font-size: 1.5rem; 
+            font-weight: 800; 
+            margin-bottom: 8px; 
+            text-align: center; 
+        }
+        
+        .modal-subtitle { 
+            color: var(--gray-dark); 
+            font-size: 0.95rem; 
+            text-align: center; 
+            margin-bottom: 28px; 
+        }
+        
+        .form-group { 
+            margin-bottom: 18px; 
+        }
+        
+        .form-group label { 
+            display: block; 
+            color: var(--white); 
+            font-weight: 600; 
+            margin-bottom: 8px; 
+            font-size: 0.9rem; 
+        }
+        
+        .form-group input{
+            width: 100%; 
+            padding: 12px 16px; 
+            border: 2px solid rgba(0, 82, 204, 0.4); 
+            border-radius: 8px; 
+            font-size: 1rem; 
+            outline: none; 
+            transition: border 0.2s; 
+            background: rgba(255, 255, 255, 0.05); 
+            color: var(--white);
+        }
+        
+        .form-group input:focus {
+            border-color: var(--accent);
+            box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.2);
+        }
+        
+        .form-group input::placeholder { 
+            color: var(--gray-dark); 
+        }
+        
+        .submit-btn { 
+            width: 100%; 
+            background: var(--accent); 
+            color: var(--black); 
+            padding: 14px; 
+            border: none; 
+            border-radius: 8px; 
+            font-size: 1.05rem; 
+            font-weight: 700; 
+            cursor: pointer; 
+            letter-spacing: 1px; 
+            transition: all 0.3s; 
+            margin-top: 8px; 
+        }
+        
+        .submit-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+        }
+        
+        .thank-you-page { 
+            display: none; 
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--black); 
+            z-index: 10000;
+            overflow-y: auto;
+            padding: 40px 20px;
+        }
+        
+        .thank-you-page.active { 
+            display: flex;
+            align-items: flex-start;
+            justify-content: center;
+        }
+        
+        .thank-you-card { 
+            background: rgba(0, 82, 204, 0.1); 
+            border-radius: 20px; 
+            padding: 50px 40px; 
+            max-width: 560px; 
+            width: 100%; 
+            text-align: center; 
+            box-shadow: 0 20px 60px rgba(0, 82, 204, 0.3); 
+            border: 1px solid rgba(0, 82, 204, 0.3); 
+            color: var(--white);
+            margin: auto;
+        }
+        
+        .check-icon { 
+            font-size: 4rem; 
+            margin-bottom: 24px; 
+            color: var(--accent); 
+            animation: bounce 0.6s ease; 
+        }
+        
+        @keyframes bounce { 
+            0%, 100% { transform: scale(1); } 
+            50% { transform: scale(1.1); } 
+        }
+        
+        .thank-you-card h1 { 
+            color: var(--accent); 
+            font-size: 2rem; 
+            font-weight: 800; 
+            margin-bottom: 12px; 
+        }
+        
+        .thank-you-subtitle { 
+            color: var(--white); 
+            font-size: 1rem; 
+            line-height: 1.6; 
+            margin-bottom: 32px; 
+        }
+        
+        .name-highlight { 
+            color: var(--accent); 
+            font-weight: 700; 
+        }
+        
+        .divider { 
+            border: none; 
+            border-top: 2px solid rgba(0, 82, 204, 0.2); 
+            margin: 32px 0; 
+        }
+        
+        .what-next { 
+            background: rgba(0, 82, 204, 0.08); 
+            border-radius: 12px; 
+            padding: 24px; 
+            margin-bottom: 32px; 
+            text-align: left; 
+            border: 1px solid rgba(0, 82, 204, 0.2);
+        }
+        
+        .what-next h3 { 
+            color: var(--accent); 
+            font-size: 1rem; 
+            font-weight: 700; 
+            margin-bottom: 16px; 
+            text-align: center; 
+        }
+        
+        .step-ty { 
+            display: flex; 
+            align-items: flex-start; 
+            gap: 14px; 
+            margin-bottom: 14px; 
+        }
+        
+        .step-num-ty { 
+            background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%); 
+            color: #fff; 
+            border-radius: 50%; 
+            width: 32px; 
+            height: 32px; 
+            display: flex; 
+            align-items: center; 
+            justify-content: center; 
+            font-size: 0.8rem; 
+            font-weight: 700; 
+            flex-shrink: 0; 
+        }
+        
+        .step-text-ty { 
+            color: var(--white); 
+            font-size: 0.9rem; 
+            line-height: 1.5; 
+        }
+        
+        .step-text-ty strong { 
+            color: var(--accent); 
+        }
+        
+        .ty-buttons { 
+            display: flex; 
+            flex-direction: column; 
+            gap: 12px; 
+            margin-bottom: 24px; 
+        }
+        
+        .ty-btn { 
+            display: inline-flex; 
+            align-items: center; 
+            justify-content: center; 
+            gap: 10px; 
+            padding: 16px 24px; 
+            border-radius: 10px; 
+            text-decoration: none; 
+            font-size: 1rem; 
+            font-weight: 700; 
+            transition: all 0.3s; 
+            cursor: pointer; 
+            border: none; 
+        }
+        
+        .ty-btn-whatsapp { 
+            background: var(--whatsapp); 
+            color: #fff; 
+        }
+        
+        .ty-btn-whatsapp:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
+        }
+        
+        .ty-btn-cal { 
+            background: var(--accent); 
+            color: var(--black); 
+        }
+        
+        .ty-btn-cal:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
+        }
+        
+        .footer-note-ty { 
+            color: var(--gray-dark); 
+            font-size: 0.8rem; 
+            margin-top: 24px; 
+            line-height: 1.5; 
+        }
+        
+        .back-btn { 
+            background: rgba(0, 82, 204, 0.2); 
+            color: var(--accent); 
+            padding: 12px 24px; 
+            border-radius: 8px; 
+            border: 1px solid rgba(0, 82, 204, 0.3); 
+            cursor: pointer; 
+            font-weight: 600; 
+            margin-top: 20px; 
+        }
+        
+        .policy-page {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 10000;
+            overflow-y: auto;
+            padding: 40px 20px;
+        }
+        
+        .policy-page.active {
+            display: block;
+        }
+        
+        .policy-content {
+            background: var(--black);
+            border-radius: 20px;
+            padding: 60px 50px;
+            max-width: 900px;
+            margin: 0 auto;
+            box-shadow: 0 20px 60px rgba(0, 82, 204, 0.2);
+            border: 1px solid rgba(0, 82, 204, 0.3);
+            color: var(--white);
+        }
+        
+        .policy-header {
+            text-align: center;
+            margin-bottom: 40px;
+            padding-bottom: 20px;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
+        }
+        
+        .policy-title {
+            font-size: 2.5rem;
+            color: var(--accent);
+            margin-bottom: 10px;
+            font-weight: 800;
+        }
+        
+        .policy-date {
+            color: var(--gray-dark);
+            font-size: 0.9rem;
+        }
+        
+        .policy-body h2 {
+            color: var(--navy-light);
+            margin: 30px 0 15px;
+            padding-bottom: 8px;
+            border-bottom: 2px solid rgba(255, 215, 0, 0.2);
+        }
+        
+        .policy-body h3 {
+            color: var(--accent);
+            margin: 25px 0 10px;
+        }
+        
+        .policy-body p {
+            color: var(--white);
+            opacity: 0.95;
+            margin-bottom: 15px;
+            line-height: 1.7;
+        }
+        
+        .policy-body ul {
+            margin-left: 25px;
+            margin-bottom: 20px;
+        }
+        
+        .policy-body li {
+            color: var(--white);
+            opacity: 0.9;
+            margin-bottom: 8px;
+        }
+        
+        .back-policy {
+            display: inline-flex;
+            align-items: center;
+            gap: 10px;
+            background: var(--accent);
+            color: var(--black);
+            padding: 12px 25px;
+            border-radius: 8px;
+            text-decoration: none;
+            margin-top: 40px;
+            font-weight: 600;
+            border: none;
+            cursor: pointer;
+        }
+        
+        .mobile-cta { 
+            display: none; 
+            position: fixed; 
+            bottom: 0; 
+            left: 0; 
+            right: 0; 
+            background: var(--black); 
+            padding: 12px 15px; 
+            z-index: 999; 
+            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3); 
+            border-top: 1px solid rgba(0, 82, 204, 0.2);
+        }
+        
+        .mobile-cta .btn { 
+            width: 100%; 
+            justify-content: center; 
+            padding: 12px 20px; 
+        }
+        
+        @media (max-width: 992px) { 
+            .nav-links { display: none; } 
+            .mobile-menu-btn { display: block; background: none; border: none; color: var(--white); cursor: pointer; } 
+        } 
+        
+        @media (max-width: 768px) { 
+            .hero { padding: 80px 0 60px; } 
+            .hero h1 { font-size: 2rem; } 
+            .cta-buttons { flex-direction: column; } 
+            .btn { width: 100%; justify-content: center; } 
+            .mobile-cta { display: block; } 
+            body { padding-bottom: 70px; } 
+            .section-title { font-size: 1.8rem; } 
+            .founder-content { grid-template-columns: 1fr; gap: 30px; }
+            .modal-content { padding: 30px 24px; } 
+            .thank-you-card { padding: 30px 24px; }
+            .policy-content { padding: 30px 20px; }
+        }
+
+        /* PACKAGE TABS / APP ECOSYSTEM */
+        .pkg-tabs { display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin-bottom:40px; }
+        .pkg-tab { background:rgba(0,82,204,0.08); border:1px solid rgba(0,82,204,0.25); color:var(--white); padding:14px 28px; border-radius:10px; font-family:inherit; font-size:1.05rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:10px; transition:all .3s; }
+        .pkg-tab:hover { border-color:rgba(255,215,0,0.5); }
+        .pkg-tab.active { background:var(--accent); color:var(--black); border-color:var(--accent); }
+        .pkg-tab-count { font-size:0.85rem; font-weight:600; opacity:0.85; white-space:nowrap; }
+        .pkg-panel { display:none; }
+        .pkg-panel.active { display:block; }
+        .pkg-panel-head { display:flex; align-items:center; justify-content:space-between; gap:15px; flex-wrap:wrap; margin-bottom:25px; }
+        .pkg-panel-head h3 { color:var(--navy-light); font-size:1.5rem; }
+        .pkg-badge { background:rgba(255,215,0,0.12); border:1px solid rgba(255,215,0,0.35); color:var(--accent); padding:8px 16px; border-radius:999px; font-weight:700; font-size:0.9rem; white-space:nowrap; }
+        .app-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:15px; }
+        .app-item { background:rgba(0,82,204,0.08); border:1px solid rgba(0,82,204,0.15); border-radius:10px; padding:18px 20px; display:flex; align-items:center; gap:12px; color:var(--white); font-weight:600; line-height:1.4; }
+        .app-item i { color:var(--accent); flex-shrink:0; }
+        .upcoming-block { margin-top:45px; background:rgba(255,255,255,0.04); border:1px solid rgba(0,82,204,0.2); border-left:4px solid var(--navy-light); border-radius:10px; padding:25px 28px; }
+        .upcoming-block h4 { color:var(--navy-light); margin-bottom:10px; font-size:1.15rem; }
+        .upcoming-block p { color:var(--white); opacity:0.9; }
+        .nowrap { white-space:nowrap; }
+
+        /* VERTICAL (SHORTS) VIDEO */
+        .video-shorts { max-width:400px; aspect-ratio:9/16; margin:20px auto 0; border-radius:12px; overflow:hidden; background:#000; border:1px solid rgba(0,82,204,0.3); box-shadow:0 15px 30px rgba(0,82,204,0.2); }
+        .video-shorts iframe { width:100%; height:100%; display:block; border:0; }
+
+        /* CONTACT ROWS + THANK YOU EXTRAS */
+        .contact-rows a, .contact-rows p { display:flex; align-items:center; gap:10px; color:var(--gray-dark); text-decoration:none; margin-bottom:10px; word-break:break-word; }
+        .contact-rows a:hover { color:var(--accent); }
+        .contact-rows i { color:var(--accent); width:18px; text-align:center; flex-shrink:0; }
+        .ty-contact { display:flex; flex-direction:column; gap:8px; align-items:center; margin-bottom:20px; }
+        .ty-contact a { color:var(--white); text-decoration:none; font-size:0.9rem; display:inline-flex; align-items:center; gap:8px; word-break:break-word; }
+        .ty-contact a:hover { color:var(--accent); }
+        .ty-contact i { color:var(--accent); }
+        .ty-footer-links { display:flex; flex-wrap:wrap; gap:8px 18px; justify-content:center; padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); }
+        .ty-footer-links a { color:var(--gray-dark); font-size:0.85rem; text-decoration:none; cursor:pointer; }
+        .ty-footer-links a:hover { color:var(--accent); }
+        @media (max-width: 600px) {
+            .pkg-tab { width:100%; justify-content:center; }
+            .pkg-panel-head { flex-direction:column; align-items:flex-start; }
+            .upcoming-block { padding:20px; }
+        }
+    </style>
+
+<!-- ==========================================================================
+     SITE SETTINGS — EDIT EVERYTHING IN THIS ONE BLOCK
+     Change a value here and it updates everywhere on the site.
+     ========================================================================== -->
+<script>
+window.SITE = {
+
+    /* BRAND */
+    brandName:   "Velorix AI",
+    brandFirst:  "Velorix",      // shown in normal colour in the logo
+    brandSecond: "AI",           // shown in accent colour in the logo
+    logoUrl:     "assets/velorix-logo.png",   // swap in your own file to change the logo
+
+    /* CONTACT */
+    phone:           "+91 8218854770",
+    email:           "contact.velorixai@gmail.com",
+    whatsappNumber:  "918218854770",                              // digits only, with country code
+    whatsappMessage: "Hi! I'm interested in Velorix AI.",
+
+    /* BOOKING */
+    CAL_ID_BOOKING_URL: "https://cal.id/velorixai/demo-call?duration=30",
+    prefillCalId: true,          // pass the lead's name/email into Cal.id
+    openCalInNewTab: false,
+
+    /* MEDIA */
+    youtubeUrl:   "https://youtube.com/shorts/Ol6ReFCvqeQ?feature=share",
+    youtubeTitle: "Velorix AI Build Walkthrough",
+
+    /* POLICY PAGES
+       "#terms" / "#privacy" / "#refund" open the built-in pages below.
+       Replace with a full URL (e.g. "https://velorixai.com/terms") to link out instead. */
+    termsUrl:   "#terms",
+    privacyUrl: "#privacy",
+    refundUrl:  "#refund",
+
+    /* PRICING */
+    priceRange: "₹25,900 – ₹85,900"
+};
+</script>
+</head>
+<body>
+
+<!-- BOOKING FORM MODAL -->
+<div class="modal" id="demoModal">
+    <div class="modal-content">
+        <button class="close-btn" onclick="closeDemoForm()">✕</button>
+        <h2>📅 Book Your Free Demo Call</h2>
+        <p class="modal-subtitle">Enter your details and pick your demo date and time on the next step.</p>
+        
+        <form id="demoForm" onsubmit="submitDemoForm(event)">
+            <div class="form-group">
+                <label for="clientName">Full Name *</label>
+                <input type="text" id="clientName" required placeholder="Enter your full name"/>
+            </div>
+            <div class="form-group">
+                <label for="clientEmail">Email Address *</label>
+                <input type="email" id="clientEmail" required placeholder="you@example.com"/>
+            </div>
+            <div class="form-group">
+                <label for="clientPhone">Phone Number *</label>
+                <input type="tel" id="clientPhone" required placeholder="+91 98765 43210"/>
+            </div>
+            
+            <button type="submit" class="submit-btn">SEND &amp; CONTINUE TO BOOK DEMO</button>
+            
+            <p style="text-align:center; font-size:0.8rem; color:var(--gray-dark); margin-top:12px;">
+                🔒 No spam. Your info is 100% safe with us.
+            </p>
+        </form>
+    </div>
+</div>
+
+
+<!-- THANK YOU PAGE -->
+<div class="thank-you-page" id="thankYouPage">
+    <div class="thank-you-card">
+        <img data-site="logo" src="assets/velorix-logo.png" alt="Velorix AI logo" style="width:64px; height:64px; border-radius:10px; object-fit:contain; margin:0 auto 20px; display:block;">
+        <div class="check-icon"><i class="fas fa-circle-check"></i></div>
+        <h1>Thank You!</h1>
+        <p class="thank-you-subtitle">
+            Your request has been received<span id="tyName"></span>.<br>
+            To complete your demo booking, choose a convenient date and time below.
+        </p>
+
+        <div class="what-next">
+            <h3>What happens next</h3>
+            <div class="step-ty">
+                <div class="step-num-ty">1</div>
+                <div class="step-text-ty">Click <strong>Book Your Demo</strong> to open the live calendar.</div>
+            </div>
+            <div class="step-ty">
+                <div class="step-num-ty">2</div>
+                <div class="step-text-ty">Pick your <strong>date and time</strong> and confirm the 30-minute slot.</div>
+            </div>
+            <div class="step-ty">
+                <div class="step-num-ty">3</div>
+                <div class="step-text-ty">You get a <strong>confirmation</strong> with the call link. Message us on WhatsApp if you need to reschedule.</div>
+            </div>
+        </div>
+
+        <div class="ty-buttons">
+            <a href="#" class="ty-btn ty-btn-cal" data-site="calBooking"><i class="fas fa-calendar-alt"></i> Book Your Demo</a>
+            <a href="#" class="ty-btn ty-btn-whatsapp" data-site="whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Connect on WhatsApp</a>
+        </div>
+
+        <hr class="divider">
+
+        <div class="ty-contact">
+            <a href="#" data-site="phoneLink"><i class="fas fa-phone"></i><span data-site="phone">+91 8218854770</span></a>
+            <a href="#" data-site="emailLink"><i class="fas fa-envelope"></i><span data-site="email">contact.velorixai@gmail.com</span></a>
+        </div>
+
+        <div class="ty-footer-links">
+            <a href="#" data-policy="terms">Terms &amp; Conditions</a>
+            <a href="#" data-policy="refund">Refund Policy</a>
+            <a href="#" data-policy="privacy">Privacy Policy</a>
+            <a href="#" onclick="closeThankYou(); return false;">Back to Home</a>
+        </div>
+
+        <p class="footer-note-ty">Your details are safe with us and are used only to arrange your demo.</p>
+    </div>
+</div>
+
+<!-- POLICY PAGES -->
+<!-- PRIVACY POLICY -->
+<div class="policy-page" id="privacyPolicyPage">
+    <div class="policy-content">
+        <div class="policy-header">
+            <h1 class="policy-title">Privacy Policy</h1>
+            <p class="policy-date">Last Updated: August 30, 2026</p>
+        </div>
+        
+        <div class="policy-body">
+            <h2>1. Introduction</h2>
+            <p>At Velorix AI ("we," "us," or "our"), we respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.</p>
+            
+            <h2>2. Information We Collect</h2>
+            <h3>2.1 Personal Information</h3>
+            <p>We may collect personal information that you voluntarily provide to us when you:</p>
+            <ul>
+                <li>Book a demo call or contact us</li>
+                <li>Sign up for our services</li>
+                <li>Subscribe to our newsletter</li>
+                <li>Interact with our website or support team</li>
+            </ul>
+            
+            <h3>2.2 Automatically Collected Information</h3>
+            <p>When you visit our website, we automatically collect certain information, including:</p>
+            <ul>
+                <li>IP address</li>
+                <li>Browser type and version</li>
+                <li>Pages visited</li>
+                <li>Time and date of visit</li>
+                <li>Referring website</li>
+            </ul>
+            
+            <h2>3. How We Use Your Information</h2>
+            <p>We use the information we collect to:</p>
+            <ul>
+                <li>Provide and maintain our services</li>
+                <li>Schedule and conduct demo calls</li>
+                <li>Process payments and subscriptions</li>
+                <li>Send you updates and marketing communications</li>
+                <li>Improve our website and services</li>
+                <li>Respond to your inquiries and provide support</li>
+                <li>Comply with legal obligations</li>
+            </ul>
+            
+            <h2>4. Data Security</h2>
+            <p>We implement reasonable security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.</p>
+            
+            <h2>5. Contact Us</h2>
+            <p><strong>Email:</strong> privacy@velorixai.com<br><strong>Address:</strong> Velorix AI, Bandia, Uttarakhand, India</p>
+            
+            <button onclick="closePolicy('privacy')" class="back-policy">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- TERMS & CONDITIONS -->
+<div class="policy-page" id="termsPage">
+    <div class="policy-content">
+        <div class="policy-header">
+            <h1 class="policy-title">Terms & Conditions</h1>
+            <p class="policy-date">Last Updated: August 30, 2026</p>
+        </div>
+        
+        <div class="policy-body">
+            <h2>1. Agreement to Terms</h2>
+            <p>By accessing or using Velorix AI's services, website, or booking a demo call, you agree to be bound by these Terms & Conditions.</p>
+            
+            <h2>2. Services & Demo Calls</h2>
+            <p>Velorix AI provides all-in-one AI growth platforms for coaches, consultants, and agency owners. Our free 30-minute demo calls are for discovery and consultation purposes only.</p>
+            
+            <h2>3. Pricing & Payments</h2>
+            <p>Pricing is confirmed during your demo call based on your specific business needs. Payment plans are available quarterly and annually. Prices are in Indian Rupees (₹) unless otherwise specified.</p>
+            
+            <h2>4. Use of Service</h2>
+            <p>You agree to use our services only for lawful purposes and in accordance with these Terms.</p>
+            
+            <h2>5. Data & Privacy</h2>
+            <p>Your use of our services is subject to our Privacy Policy. You own your business data and we don't sell or share your data with third parties.</p>
+            
+            <h2>6. Contact Information</h2>
+            <p><strong>Email:</strong> legal@velorixai.com<br><strong>Address:</strong> Velorix AI, Bandia, Uttarakhand, India</p>
+            
+            <button onclick="closePolicy('terms')" class="back-policy">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- REFUND POLICY -->
+<div class="policy-page" id="refundPage">
+    <div class="policy-content">
+        <div class="policy-header">
+            <h1 class="policy-title">Refund Policy</h1>
+            <p class="policy-date">Last Updated: August 30, 2026</p>
+        </div>
+        
+        <div class="policy-body">
+            <h2>1. Refund Eligibility</h2>
+            <p><strong>✅ You ARE eligible for a refund if:</strong></p>
+            <ul>
+                <li>Technical issues on our end prevent you from accessing the platform for over 7 consecutive days.</li>
+                <li>You purchased the wrong plan and notify us within <strong>3 days (72 hours)</strong> of payment.</li>
+                <li>The agreed-upon initial onboarding support was not provided within the promised timeframe.</li>
+            </ul>
+            
+            <p><strong>❌ You ARE NOT eligible for a refund if:</strong></p>
+            <ul>
+                <li>You change your mind after the <strong>3-day window</strong> has passed.</li>
+                <li>You have already accessed premium training materials or AI specialized tools.</li>
+                <li>Your business model changes or you decide to stop your operations.</li>
+            </ul>
+            
+            <h2>2. Refund Process & Timeline</h2>
+            <p>Email refunds@velorixai.com within 72 hours of your transaction with your Name, Registered Email, and Transaction ID. We review all requests within 3 business days. If approved, the amount will be credited to your original payment method within 7-10 business days.</p>
+            
+            <h2>3. Subscription Cancellations</h2>
+            <p>You can cancel your subscription at any time through your dashboard. Your access will continue until the end of your current billing period.</p>
+            
+            <button onclick="closePolicy('refund')" class="back-policy">
+                <i class="fas fa-arrow-left"></i> Back to Home
+            </button>
+        </div>
+    </div>
+</div>
+
+<!-- NAVIGATION -->
+<nav>
+    <div class="container navbar">
+        <a href="/" class="logo">
+            <img class="logo-img" data-site="logo" src="assets/velorix-logo.png" alt="Velorix AI logo">
+            <span data-site="brandLockup">Velorix <span style="color:var(--accent);">AI</span></span>
+        </a>
+        <div class="nav-links">
+            <a href="#services">Platform</a>
+            <a href="#how-it-works">How It Works</a>
+            <a href="#founder">About Founder</a>
+            <a href="#testimonials">Testimonials</a>
+            <a href="#faq">FAQ</a>
+            <a href="#pricing">Pricing</a>
+            <button onclick="openDemoForm()" class="btn btn-primary" style="padding:10px 24px;">Book Free Demo</button>
+        </div>
+        <button class="mobile-menu-btn" onclick="openDemoForm()">
+            <i class="fas fa-calendar-check"></i>
+        </button>
+    </div>
+</nav>
+
+<!-- HERO SECTION -->
+<section class="hero">
+    <div class="container hero-content">
+        <h1>Launch Your Coaching or Agency Business in <span class="highlight-yellow">2 Hours</span>, Not 2 Months</h1>
+        <p class="hero-subtitle">Velorix AI puts <span class="highlight-yellow nowrap">16 AI-powered apps</span> in one dashboard, so you can launch and run your coaching or agency business without hiring a tech team or juggling a dozen tools.</p>
+        
+        <div class="cta-buttons">
+            <button onclick="openDemoForm()" class="btn btn-primary">
+                <i class="fas fa-calendar-check"></i> Book My Free Demo
+            </button>
+            <a href="#" data-site="whatsapp" target="_blank" class="btn btn-secondary">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+        
+        <div class="hero-features">
+            <div class="hero-feature"><i class="fas fa-check-circle"></i><span><span class="highlight-yellow nowrap">16 apps</span> in one dashboard</span></div>
+            <div class="hero-feature"><i class="fas fa-check-circle"></i><span>Go live in about <span class="highlight-yellow">2 hours</span></span></div>
+            <div class="hero-feature"><i class="fas fa-check-circle"></i><span>No tech team needed</span></div>
+        </div>
+    </div>
+</section>
+
+<!-- VIDEO SECTION -->
+<section class="video-section" id="watch-demo">
+    <div class="container">
+        <h2 class="section-title">Watch a Real 2-Hour Build</h2>
+        <p style="text-align:center; color:var(--gray-dark); max-width:800px; margin:0 auto 20px;">This is the actual walkthrough of a guided build session — from kickoff to going live.</p>
+        <div class="video-shorts" role="region" aria-label="Demo video">
+            <iframe id="siteVideo" src="" title="Velorix AI Build Walkthrough" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        </div>
+    </div>
+</section>
+
+<!-- FEATURES SECTION -->
+<section class="features">
+    <div class="container">
+        <h2 class="section-title">Everything You Need to Grow</h2>
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-rocket"></i></div>
+                <h3>Launch your business in just 2 hours with AI</h3>
+                <p>From idea to live business in a single guided session — no tech skills required.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-th-large"></i></div>
+                <h3>16 powerful apps in one platform</h3>
+                <p>Website builder, CRM, WhatsApp automation, scheduling, payments, and more — all connected.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
+                <h3>Generate leads automatically</h3>
+                <p>Smart AI tools find and qualify your ideal clients 24/7 while you focus on delivering results.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-robot"></i></div>
+                <h3>Automate your marketing</h3>
+                <p>Email sequences, WhatsApp follow-ups, and lead nurturing run on complete autopilot.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
+                <h3>Manage clients from one dashboard</h3>
+                <p>Track every lead, client, and payment without switching between 10 different tools.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fas fa-code"></i></div>
+                <h3>No coding required</h3>
+                <p>Drag-and-drop interface makes everything simple. Save time and grow fast.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- BENEFITS SECTION -->
+<section class="benefits">
+    <div class="container benefits-content">
+        <div class="benefits-text">
+            <h2>Built for Coaches, Agency Owners & Solopreneurs Who Want to Move Fast</h2>
+            <p>Most coaches and agency owners lose weeks stitching together a website builder, a CRM, an email tool, a course platform and a scheduling app that refuse to talk to each other. Velorix AI replaces that entire stack with one connected system.</p>
+            <p><strong>Everything you need to sell, deliver and support your clients — live in a single login.</strong></p>
+        </div>
+        <div class="benefits-list">
+            <div class="benefit-item">
+                <i class="fas fa-check-circle"></i>
+                <p>Stop paying for <span class="highlight-yellow">6–10 separate tools</span> that don't sync with each other</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-check-circle"></i>
+                <p>Skip the learning curve of hiring or managing a developer</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-check-circle"></i>
+                <p>Launch offers, funnels and client portals the <span class="highlight-yellow">same day you sign up</span></p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-check-circle"></i>
+                <p>Manage your whole business — leads, clients and payments — from one dashboard</p>
+            </div>
+            <div class="benefit-item">
+                <i class="fas fa-check-circle"></i>
+                <p>Scale to a full agency setup without rebuilding your tech from scratch</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- PACKAGES & APP ECOSYSTEM -->
+<section class="services" id="services">
+    <div class="container">
+        <h2 class="section-title">One Dashboard. Zero Tool Chaos.</h2>
+        <p style="text-align:center; color:var(--gray-dark); max-width:780px; margin:0 auto 40px;">Pick a package to see exactly which apps are included. Prestige includes <strong class="nowrap">8 apps</strong>. Signature includes <strong class="nowrap">16 apps</strong>.</p>
+
+        <div class="pkg-tabs" role="tablist" aria-label="Packages">
+            <button type="button" class="pkg-tab active" id="tab-prestige" role="tab" aria-selected="true" aria-controls="panel-prestige" onclick="showPackage('prestige')">Prestige <span class="pkg-tab-count">8 apps</span></button>
+            <button type="button" class="pkg-tab" id="tab-signature" role="tab" aria-selected="false" aria-controls="panel-signature" onclick="showPackage('signature')">Signature <span class="pkg-tab-count">16 apps</span></button>
+        </div>
+
+        <div class="pkg-panel active" id="panel-prestige" role="tabpanel" aria-labelledby="tab-prestige">
+            <div class="pkg-panel-head">
+                <h3>Prestige</h3>
+                <span class="pkg-badge"><span class="nowrap">8 apps</span> included</span>
+            </div>
+            <div class="app-grid">
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Opportunity Finder Pro</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Funnel & Website Builder</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Omni Chat</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>AI Chatbot Engine</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Contacts</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>AEO Launch Pad</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Image Editor</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Video Craft AI</span></div>
+            </div>
+        </div>
+
+        <div class="pkg-panel" id="panel-signature" role="tabpanel" aria-labelledby="tab-signature">
+            <div class="pkg-panel-head">
+                <h3>Signature</h3>
+                <span class="pkg-badge"><span class="nowrap">16 apps</span> included</span>
+            </div>
+            <div class="app-grid">
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Opportunity Finder Pro</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Funnel & Website Builder</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Craft Book AI</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Audio Studio</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Presentation AI</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>AEO Blogs Engine</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Motion Canvas AI</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Omni Chat</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Image Editor</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Studio Canvas</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Video Craft AI</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>AEO Launch Pad</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Humanizer</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Knowledge Base</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>AI Chatbot Engine</span></div>
+                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Contacts</span></div>
+            </div>
+        </div>
+
+        <div class="upcoming-block">
+            <h4><i class="fas fa-clock" style="margin-right:8px;"></i>Upcoming Apps</h4>
+            <p>New apps are released to the platform over time and added to your package as they launch. Upcoming apps are not counted in the <span class="nowrap">8 apps</span> in Prestige or the <span class="nowrap">16 apps</span> in Signature — the lists above are what is included today.</p>
+        </div>
+
+        <div style="text-align:center; margin-top:40px;">
+            <button onclick="openDemoForm()" class="btn btn-primary">
+                <i class="fas fa-calendar-check"></i> See the Apps on a Free Demo
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- ABOUT FOUNDER -->
+<section class="about-founder" id="founder">
+    <div class="container">
+        <h2 class="section-title">Meet Anis Ahmad — The Founder Behind Velorix AI</h2>
+        
+        <div class="founder-content">
+            <div class="founder-photo">
+                <img src="https://i.ibb.co/mrhgQGy3/photo-16.jpg" alt="Anis Ahmad - Founder of Velorix AI">
+                <h3>Anis Ahmad</h3>
+                <p>Founder & CEO</p>
+                <p>Velorix AI</p>
+            </div>
+            
+            <div class="founder-story">
+                <h3>Why We Built Velorix AI</h3>
+                <p>I spent years watching coaches and agency owners waste time and money. They'd juggle 5-6 tools, pay ₹20K+ monthly, and still lose leads because nothing talked to each other.</p>
+
+                <p>One founder told me: "I spend more time managing software than growing my business." That line changed everything.</p>
+
+                <p>The problem wasn't the tools — they just weren't built for people who move fast. So I built Velorix AI. One dashboard. Website + CRM + WhatsApp + Booking + Payments. All connected. Live in 2 hours.</p>
+
+                <p>On your free demo, I'll show you exactly how it works for your business. No BS. Just results.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how-it-works" id="how-it-works">
+    <div class="container">
+        <h2 class="section-title">From Idea to Live in 3 Steps</h2>
+        <p style="text-align:center; color:var(--gray-dark); max-width:700px; margin:0 auto 40px;">Velorix AI is designed so any coach or solopreneur — with zero technical background — can go fully operational in a single session.</p>
+        <div class="steps-container">
+            <div class="step">
+                <div class="step-number">1</div>
+                <div class="step-content">
+                    <h3>Book your free 30-minute demo</h3>
+                    <p>A Velorix AI specialist walks you through the platform and builds a plan around your business — coaching, consulting, or agency.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">2</div>
+                <div class="step-content">
+                    <h3>Set up in 2 hours</h3>
+                    <p>Your website, funnel, CRM, WhatsApp automation, calendar, and payments go live in one guided build session. No tech skills required.</p>
+                </div>
+            </div>
+            <div class="step">
+                <div class="step-number">3</div>
+                <div class="step-content">
+                    <h3>Grow on autopilot</h3>
+                    <p>Your marketing runs 24/7. Leads come in, get nurtured, and book calls while you focus on delivering results for your clients.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- WHO IS THIS FOR / NOT FOR -->
+<section class="who-its-for" style="background: rgba(0, 0, 0, 0.7); padding: 100px 0; border-bottom: 1px solid rgba(0, 82, 204, 0.1);">
+    <div class="container">
+        <h2 class="section-title">Is Velorix AI Right for You?</h2>
+        
+        <!-- WHO IT'S FOR -->
+        <div style="margin-bottom: 60px;">
+            <h3 style="text-align: center; color: var(--accent); font-size: 1.8rem; margin-bottom: 40px;">
+                <i class="fas fa-check-circle"></i> Velorix AI is Built For:
+            </h3>
+            
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
+                <div style="background: rgba(0, 82, 204, 0.08); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(0, 82, 204, 0.15);">
+                    <h4 style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
+                        <i class="fas fa-check"></i> Coaches Ready to Go Live
+                    </h4>
+                    <p style="color: var(--white); opacity: 0.9; line-height: 1.6;">
+                        You've got the expertise. You just need the tech to stop holding you back. Launch your first funnel, sell your first offer, and start making money — all in 2 hours.
+                    </p>
+                </div>
+                
+                <div style="background: rgba(0, 82, 204, 0.08); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(0, 82, 204, 0.15);">
+                    <h4 style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
+                        <i class="fas fa-check"></i> Agency Owners Tired of Tool Chaos
+                    </h4>
+                    <p style="color: var(--white); opacity: 0.9; line-height: 1.6;">
+                        You're managing 5-6 tools, losing leads between systems, and spending ₹20K+ monthly. One dashboard. Everything connected. Your leads never fall through cracks again.
+                    </p>
+                </div>
+                
+                <div style="background: rgba(0, 82, 204, 0.08); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(0, 82, 204, 0.15);">
+                    <h4 style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
+                        <i class="fas fa-check"></i> Solopreneurs Who Want Freedom
+                    </h4>
+                    <p style="color: var(--white); opacity: 0.9; line-height: 1.6;">
+                        You don't want to hire a tech team or waste 6 months building a website. You want to sell, deliver, and scale — without the headache.
+                    </p>
+                </div>
+                
+                <div style="background: rgba(0, 82, 204, 0.08); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(0, 82, 204, 0.15);">
+                    <h4 style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
+                        <i class="fas fa-check"></i> Consultants Who Value Their Time
+                    </h4>
+                    <p style="color: var(--white); opacity: 0.9; line-height: 1.6;">
+                        Every hour you spend on admin tasks is an hour you're not earning. Automate everything. Focus on what you do best — delivering results for clients.
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <!-- WHO IT'S NOT FOR -->
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF7D7D; margin-bottom: 10px;">
+            <h4 style="color: #FF7D7D; margin-bottom: 10px; font-size: 1.1rem;">
+                <i class="fas fa-times"></i> People Looking for Free Tools or Shortcuts
+            </h4>
+            <p style="color: var(--white); opacity: 0.9;">
+                This is about building real, profitable businesses — not finding free workarounds. If you want cheap hacks instead of actual systems, this isn't for you.
+            </p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF7D7D; margin-bottom: 10px;">
+            <h4 style="color: #FF7D7D; margin-bottom: 10px; font-size: 1.1rem;">
+                <i class="fas fa-times"></i> Those Who Just Want to "Learn AI"
+            </h4>
+            <p style="color: var(--white); opacity: 0.9;">
+                We focus on EARNING from AI, not endless tutorials and certifications. If you're collecting courses instead of building revenue, this won't help.
+            </p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF7D7D; margin-bottom: 10px;">
+            <h4 style="color: #FF7D7D; margin-bottom: 10px; font-size: 1.1rem;">
+                <i class="fas fa-times"></i> Anyone Not Ready to Take Action
+            </h4>
+            <p style="color: var(--white); opacity: 0.9;">
+                Clarity without commitment is pointless. If you're not ready to actually launch or scale your business, booking a demo is just wasting time.
+            </p>
+        </div>
+
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF7D7D; margin-bottom: 10px;">
+            <h4 style="color: #FF7D7D; margin-bottom: 10px; font-size: 1.1rem;">
+                <i class="fas fa-times"></i> Job Seekers or Hobbyists
+            </h4>
+            <p style="color: var(--white); opacity: 0.9;">
+                This is for entrepreneurs who want to BUILD and SCALE their own business — not for people looking for employment or side projects.
+            </p>
+        </div>
+        
+        <!-- BOTTOM CTA -->
+        <div style="text-align: center; margin-top: 60px; padding: 40px; background: rgba(0, 82, 204, 0.1); border-radius: 16px; border: 1px solid rgba(0, 82, 204, 0.3);">
+            <h3 style="color: var(--accent); margin-bottom: 20px; font-size: 1.5rem;">
+                <i class="fas fa-arrow-right"></i> Sounds Like You?
+            </h3>
+            <p style="color: var(--white); opacity: 0.95; margin-bottom: 25px; font-size: 1.05rem;">
+                Book your free 30-minute demo and let's see if Velorix AI is the right fit for your business.
+            </p>
+            <button onclick="openDemoForm()" class="btn btn-primary" style="font-size: 1.1rem;">
+                <i class="fas fa-calendar-check"></i> Book My Free Demo Now
+            </button>
+        </div>
+    </div>
+</section>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+    <div class="container pricing-content">
+        <h2 class="section-title">Pricing Tailored to You — Confirmed on Your Free Demo</h2>
+        <p>Because every coaching or agency business is unique, we use your free demo to tailor a plan that matches your actual business size and app usage — no generic pricing.</p>
+        <div class="price-display" data-site="priceRange">₹25,900 – ₹85,900</div>
+        <div class="pricing-description">
+            <p><strong>Quarterly and annual plans available</strong> • Includes all apps • No hidden fees</p>
+            <p style="font-size:0.95rem; margin-top:15px;">Plans scale with your business — from solo coach to full agency<br>Cancel or change your plan anytime after sign-up<br>No cost, no obligation — just your time for 30 minutes.</p>
+        </div>
+        <button onclick="openDemoForm()" class="btn btn-primary" style="margin-top:20px;">
+            <i class="fas fa-calendar-alt"></i> Get Your Custom Pricing
+        </button>
+    </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="testimonials" id="testimonials">
+    <div class="container">
+        <h2 class="section-title">Loved by Coaches & Agencies</h2>
+        <div class="testimonials-grid">
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"I was managing my coaching business across 7 different tools — Kajabi for courses, a separate booking app, a separate CRM, WhatsApp manually, Stripe for payments. I was losing leads because nothing talked to each other. After my Velorix AI demo, everything was live in 2 hours. My first automated WhatsApp sequence brought in 3 leads the next day. By week 2, I had my first paying client. This single platform has literally tripled my efficiency and cut my monthly subscriptions from ₹15,000 to ₹5,000."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">R</div>
+                    <div class="author-info">
+                        <h4>Riya Malhotra</h4>
+                        <p>Fitness Coach, Pune | 8-12 clients/month</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"As an agency owner, I was drowning in tool management. My team was jumping between Pipedrive, email, scheduling apps, and invoicing software. It was chaos. Anis showed us how Velorix AI consolidates everything — our entire client pipeline, automated follow-ups, booking management, and billing — all in one place. We've cut our operational overhead by 40% and onboarded 5 new clients in the first month because we're actually responsive now. Best business decision we made this year."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">A</div>
+                    <div class="author-info">
+                        <h4>Aman Singh</h4>
+                        <p>Agency Owner, Jaipur | 15+ active clients</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="testimonial-card">
+                <div class="testimonial-rating">
+                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
+                </div>
+                <p class="testimonial-text">"I was a freelancer consultant with zero interest in tech. I thought I'd need to hire someone to build my funnel and CRM. The 2-hour setup call with Velorix AI was eye-opening — within hours, I had a professional website, a lead capture funnel, and WhatsApp automation running. No coding, no confusion. In 30 days, I went from ₹0 to ₹2.5L in revenue because my leads weren't falling through the cracks anymore. The system does what used to require a VA and three different software licenses."</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">P</div>
+                    <div class="author-info">
+                        <h4>Priya Kapoor</h4>
+                        <p>Business Consultant, Indore | ₹2.5L+ monthly</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq" id="faq">
+    <div class="container">
+        <h2 class="section-title">Frequently Asked Questions</h2>
+        <div class="faq-container">
+            <div class="faq-item active">
+                <div class="faq-question">
+                    <span>💰 How much does Velorix AI cost?</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Pricing depends on your plan — Prestige (8 apps) or Signature (16 apps). <strong>Our investment range is ₹25,900 to ₹85,900</strong>. We confirm exact pricing on your free demo call based on your niche, business size and the specific apps you need.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>🛠️ Do I need any technical skills to use Velorix AI?</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Not at all. The dashboard is built for coaches and agency owners with no coding or design background. Everything is drag-and-drop, and we guide you through the entire setup.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>⏱️ How long is the demo?</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>The free demo session takes about 30 minutes. In that time, we'll walk you through exactly how Velorix AI replaces your entire tool stack and helps you launch faster.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>🔄 Can I move my existing tools over?</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Yes. Our team helps you migrate your contacts, content and offers during onboarding. We make sure nothing gets lost in the transition.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>🚀 How fast can I actually launch?</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Most clients go from idea to a live business in just 2 hours during our guided build session. Your website, funnel, CRM, WhatsApp automation, calendar, and payments can all go live in that single session.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>💳 What if I'm not ready to commit?</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>The demo is completely free and no-obligation. You'll only be charged if you decide to move forward after seeing exactly how Velorix AI works for your business.</p>
+                </div>
+            </div>
+            
+            <div class="faq-item">
+                <div class="faq-question">
+                    <span>🛡️ What about my data and privacy?</span>
+                    <i class="fas fa-chevron-down faq-icon"></i>
+                </div>
+                <div class="faq-answer">
+                    <p>Your data is 100% yours and secure with us. We follow strict privacy and security protocols. You can review our full Privacy Policy and Terms & Conditions before booking your demo.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="final-cta" id="demo">
+    <div class="container">
+        <h2>See Your Business Running on Velorix AI</h2>
+        <p>Book a free 30-minute demo and we'll walk you through the exact apps and workflows for your coaching or agency business. Prefer to chat first? Message us directly on WhatsApp for instant answers.</p>
+        <div class="cta-buttons">
+            <button onclick="openDemoForm()" class="btn btn-primary">
+                <i class="fas fa-calendar-check"></i> Book My Free Demo
+            </button>
+            <a href="#" data-site="whatsapp" target="_blank" class="btn btn-secondary">
+                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
+            </a>
+        </div>
+        <p style="margin-top:30px; font-size:0.9rem; opacity:0.8;">Limited build slots open this week</p>
+    </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+    <div class="container">
+        <div class="footer-content">
+            <div>
+                <h4 style="display:flex; align-items:center; gap:10px; color:var(--accent); margin-bottom:15px;">
+                    <img data-site="logo" src="assets/velorix-logo.png" alt="Velorix AI logo" style="width:32px; height:32px; border-radius:6px; object-fit:contain; background:var(--black);">
+                    <span data-site="brandLockup">Velorix <span style="color:var(--accent);">AI</span></span>
+                </h4>
+                <p style="color:var(--gray-dark); margin-bottom:10px;">All-in-one AI growth platform for coaches, consultants, and agencies.</p>
+                <p style="color:var(--gray-dark); font-size:0.9rem;">Based in Bandia, Uttarakhand, India — trusted by coaches and agencies worldwide.</p>
+            </div>
+            
+            <div>
+                <h4 style="color:var(--accent); margin-bottom:15px;">Platform</h4>
+                <div class="footer-links">
+                    <a href="#services">Platform</a>
+                    <a href="#how-it-works">How It Works</a>
+                    <a href="#founder">About Founder</a>
+                    <a href="#testimonials">Testimonials</a>
+                    <a href="#pricing">Pricing</a>
+                    <a href="#faq">FAQ</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 style="color:var(--accent); margin-bottom:15px;">Legal</h4>
+                <div class="footer-links">
+                    <a href="#" data-policy="terms">Terms &amp; Conditions</a>
+                    <a href="#" data-policy="refund">Refund Policy</a>
+                    <a href="#" data-policy="privacy">Privacy Policy</a>
+                </div>
+            </div>
+            
+            <div>
+                <h4 style="color:var(--accent); margin-bottom:15px;">Connect</h4>
+                <div class="contact-rows">
+                    <a href="#" data-site="phoneLink"><i class="fas fa-phone"></i><span data-site="phone">+91 8218854770</span></a>
+                    <a href="#" data-site="emailLink"><i class="fas fa-envelope"></i><span data-site="email">contact.velorixai@gmail.com</span></a>
+                    <a href="#" data-site="whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
+                </div>
+                <p style="margin-top:20px; font-size:0.9rem; color:var(--gray-dark);"><strong>No cost, no obligation</strong><br>Just your time for 30 minutes.</p>
+            </div>
+        </div>
+        
+        <div class="copyright">
+            <p>© 2026 Velorix AI. All rights reserved.</p>
+            <p style="margin-top:10px; font-size:0.85rem;">
+                <a href="#" data-policy="terms" style="color:var(--gray-dark); text-decoration:none;">Terms &amp; Conditions</a> | 
+                <a href="#" data-policy="refund" style="color:var(--gray-dark); text-decoration:none;">Refund Policy</a> | 
+                <a href="#" data-policy="privacy" style="color:var(--gray-dark); text-decoration:none;">Privacy Policy</a>
+            </p>
+        </div>
+    </div>
+</footer>
+
+<!-- MOBILE STICKY CTA -->
+<div class="mobile-cta">
+    <button onclick="openDemoForm()" class="btn btn-primary">
+        <i class="fas fa-calendar-check"></i> Book Free Demo
+    </button>
+</div>
+
+<!-- COMPLETE WORKFLOW JAVASCRIPT -->
+<script>
+    // Initialize page state
+    let currentPage = 'home';
+    
+    // Open Demo Form
+    function openDemoForm() {
+        document.getElementById('demoModal').classList.add('active');
+    }
+    
+    // Close Demo Form
+    function closeDemoForm() {
+        document.getElementById('demoModal').classList.remove('active');
+    }
+    
+    // Open Policy Pages
+    function openPolicy(type) {
+        if (type === 'privacy') {
+            document.getElementById('privacyPolicyPage').classList.add('active');
+        } else if (type === 'terms') {
+            document.getElementById('termsPage').classList.add('active');
+        } else if (type === 'refund') {
+            document.getElementById('refundPage').classList.add('active');
+        }
+        document.body.style.overflow = 'hidden';
+    }
+    
+    // Close Policy Pages
+    function closePolicy(type) {
+        if (type === 'privacy') {
+            document.getElementById('privacyPolicyPage').classList.remove('active');
+        } else if (type === 'terms') {
+            document.getElementById('termsPage').classList.remove('active');
+        } else if (type === 'refund') {
+            document.getElementById('refundPage').classList.remove('active');
+        }
+        document.body.style.overflow = 'auto';
+    }
+    
+    // ---------------------------------------------------------------
+    // CONFIG WIRING — reads window.SITE (see the SITE SETTINGS block in <head>)
+    // ---------------------------------------------------------------
+    var S = window.SITE || {};
+
+    function waLink() {
+        return 'https://wa.me/' + (S.whatsappNumber || '') +
+               (S.whatsappMessage ? '?text=' + encodeURIComponent(S.whatsappMessage) : '');
+    }
+
+    function youtubeEmbed(url) {
+        if (!url) return '';
+        var m = url.match(/(?:shorts\/|embed\/|v=|youtu\.be\/)([A-Za-z0-9_-]{6,})/);
+        return m ? 'https://www.youtube.com/embed/' + m[1] + '?rel=0' : url;
+    }
+
+    function calUrl() {
+        var base = S.CAL_ID_BOOKING_URL || '';
+        if (!S.prefillCalId) return base;
+        var name = localStorage.getItem('clientName') || '';
+        var email = localStorage.getItem('clientEmail') || '';
+        var phone = localStorage.getItem('clientPhone') || '';
+        if (!name && !email) return base;
+        var q = [];
+        if (name) q.push('name=' + encodeURIComponent(name));
+        if (email) q.push('email=' + encodeURIComponent(email));
+        if (phone) q.push('smsReminderNumber=' + encodeURIComponent(phone));
+        return base + (base.indexOf('?') > -1 ? '&' : '?') + q.join('&');
+    }
+
+    function setAll(key, fn) {
+        document.querySelectorAll('[data-site="' + key + '"]').forEach(fn);
+    }
+
+    function applySiteSettings() {
+        if (S.phone) setAll('phone', function (el) { el.textContent = S.phone; });
+        if (S.phone) setAll('phoneLink', function (el) { el.href = 'tel:' + S.phone.replace(/[^+0-9]/g, ''); });
+        if (S.email) setAll('email', function (el) { el.textContent = S.email; });
+        if (S.email) setAll('emailLink', function (el) { el.href = 'mailto:' + S.email; });
+        setAll('whatsapp', function (el) { el.href = waLink(); el.target = '_blank'; el.rel = 'noopener'; });
+        setAll('calBooking', function (el) { el.href = calUrl(); });
+        if (S.priceRange) setAll('priceRange', function (el) { el.textContent = S.priceRange; });
+        if (S.brandFirst) setAll('brandLockup', function (el) {
+            el.innerHTML = S.brandFirst + ' <span style="color:var(--accent);">' + (S.brandSecond || '') + '</span>';
+        });
+        if (S.logoUrl) setAll('logo', function (el) { el.src = S.logoUrl; el.alt = (S.brandName || '') + ' logo'; });
+        var vid = document.getElementById('siteVideo');
+        if (vid) {
+            vid.src = youtubeEmbed(S.youtubeUrl);
+            if (S.youtubeTitle) vid.title = S.youtubeTitle;
+        }
+        document.querySelectorAll('[data-policy]').forEach(function (el) {
+            var key = el.getAttribute('data-policy');
+            var url = S[key + 'Url'] || '#' + key;
+            if (url.charAt(0) === '#') {
+                el.href = url;
+                el.addEventListener('click', function (e) { e.preventDefault(); openPolicy(key); });
+            } else {
+                el.href = url;
+                el.target = '_blank';
+                el.rel = 'noopener';
+            }
+        });
+    }
+
+    // ---------------------------------------------------------------
+    // FUNNEL: Book Demo -> Lead Form -> Send -> Thank You -> Cal.id
+    // ---------------------------------------------------------------
+    function submitDemoForm(event) {
+        if (event) event.preventDefault();
+
+        var name = document.getElementById('clientName').value.trim();
+        var email = document.getElementById('clientEmail').value.trim();
+        var phone = document.getElementById('clientPhone').value.trim();
+
+        if (!name || !email || !phone) {
+            alert('Please fill all fields.');
+            return;
+        }
+
+        localStorage.setItem('clientName', name);
+        localStorage.setItem('clientEmail', email);
+        localStorage.setItem('clientPhone', phone);
+
+        closeDemoForm();
+        openThankYou(name);
+    }
+
+    function openThankYou(name) {
+        var tyName = document.getElementById('tyName');
+        if (tyName) tyName.innerHTML = name ? ', <span class="name-highlight">' + name + '</span>' : '';
+        setAll('calBooking', function (el) {
+            el.href = calUrl();
+            if (S.openCalInNewTab) { el.target = '_blank'; el.rel = 'noopener'; }
+        });
+        document.getElementById('thankYouPage').classList.add('active');
+        document.body.style.overflow = 'hidden';
+    }
+
+    function closeThankYou() {
+        document.getElementById('thankYouPage').classList.remove('active');
+        document.body.style.overflow = 'auto';
+    }
+
+    // Package tabs
+    function showPackage(pkg) {
+        ['prestige', 'signature'].forEach(function (key) {
+            var tab = document.getElementById('tab-' + key);
+            var panel = document.getElementById('panel-' + key);
+            var on = key === pkg;
+            tab.classList.toggle('active', on);
+            tab.setAttribute('aria-selected', on ? 'true' : 'false');
+            panel.classList.toggle('active', on);
+        });
+    }
+
+    applySiteSettings();
+
+    // FAQ Toggle
+    document.querySelectorAll('.faq-question').forEach(item => {
+        item.addEventListener('click', function() {
+            const parent = this.parentElement;
+            document.querySelectorAll('.faq-item').forEach(f => { 
+                if(f !== parent) f.classList.remove('active'); 
+            });
+            parent.classList.toggle('active');
+        });
+    });
+    
+    // Allow Enter key to submit form
+    document.addEventListener('keypress', function(event) {
+        if (event.key === 'Enter' && document.getElementById('demoModal').classList.contains('active')) {
+            document.getElementById('demoForm').dispatchEvent(new Event('submit'));
+        }
+    });
+    
+    // Close policy pages with Escape key
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape') {
+            document.getElementById('privacyPolicyPage').classList.remove('active');
+            document.getElementById('termsPage').classList.remove('active');
+            document.getElementById('refundPage').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    // Close modals when clicking outside
+    window.addEventListener('click', function(event) {
+        // Demo modal
+        var modal = document.getElementById('demoModal');
+        if (event.target === modal) {
+            modal.classList.remove('active');
+        }
+        
+        // Policy pages
+        if (event.target.classList.contains('policy-page')) {
+            event.target.classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+    });
+    
+    console.log('Velorix AI page loaded.');
+</script>
+
+</body>
+</html>
