@@ -3,19 +3,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Velorix AI — Launch Your Coaching or Agency Business in 2 Hours</title>
+    <title>VelorixAI, Launch Your Coaching or Agency Business in 2 Hours</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
     <style>
         :root {
             --black: #000000;
-            --navy: #0052CC;
-            --navy-light: #0066FF;
-            --white: #ffffff;
+            --navy: #0B1630;          /* deep navy: cards, supporting surfaces */
+            --navy-light: #1B2B52;    /* navy step up: borders, depth */
+            --white: #F5F5F5;
             --gray-light: #f5f5f5;
             --gray: #e0e0e0;
-            --gray-dark: #8a8a8a;
-            --text-light: #ffffff;
+            --gray-dark: #A7A7A7;
+            --text-light: #F5F5F5;
             --text-dark: #212529;
             --accent: #FFD700;
             --whatsapp: #25D366;
@@ -46,7 +46,7 @@
             top: 0; 
             z-index: 1000; 
             box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
-            border-bottom: 1px solid rgba(0, 82, 204, 0.2);
+            border-bottom: 1px solid rgba(27, 43, 82, 0.85);
         }
         
         .hero { 
@@ -56,7 +56,7 @@
             text-align: center; 
             position: relative; 
             overflow: hidden; 
-            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+            border-bottom: 1px solid rgba(11, 22, 48, 0.7);
         }
         
         .hero::before { 
@@ -66,7 +66,7 @@
             right: -50%; 
             width: 1000px; 
             height: 1000px; 
-            background: radial-gradient(circle, rgba(0, 82, 204, 0.1) 0%, transparent 70%); 
+            background: radial-gradient(circle, rgba(11, 22, 48, 0.7) 0%, transparent 70%); 
             animation: float 20s infinite ease-in-out; 
         }
         
@@ -82,7 +82,7 @@
             font-weight: 800; 
             line-height: 1.2; 
             margin-bottom: 20px; 
-            color: var(--navy-light);
+            color: var(--white);
         }
         
         .highlight-yellow { 
@@ -165,7 +165,7 @@
             padding: 70px 0; 
             text-align: center; 
             background: rgba(0, 0, 0, 0.5);
-            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+            border-bottom: 1px solid rgba(11, 22, 48, 0.7);
         }
         
         .video-container { 
@@ -173,11 +173,11 @@
             margin: 20px auto; 
             border-radius: 12px; 
             overflow: hidden; 
-            box-shadow: 0 15px 30px rgba(0, 82, 204, 0.2); 
+            box-shadow: 0 15px 30px rgba(27, 43, 82, 0.85); 
             background: #000; 
             position: relative; 
             aspect-ratio: 16/9; 
-            border: 1px solid rgba(0, 82, 204, 0.3);
+            border: 1px solid rgba(27, 43, 82, 0.85);
         }
         
         .video-placeholder { 
@@ -199,7 +199,7 @@
         .features { 
             padding: 100px 0; 
             background: var(--black);
-            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+            border-bottom: 1px solid rgba(11, 22, 48, 0.7);
         }
         
         .section-title { 
@@ -207,7 +207,7 @@
             font-size: 2.5rem; 
             font-weight: 800; 
             margin-bottom: 60px; 
-            color: var(--navy-light); 
+            color: var(--white); 
         }
         
         .features-grid { 
@@ -217,15 +217,15 @@
         }
         
         .feature-card { 
-            background: rgba(0, 82, 204, 0.08); 
+            background: rgba(11, 22, 48, 0.7); 
             padding: 40px 30px; 
             border-radius: 12px; 
-            box-shadow: 0 5px 15px rgba(0, 82, 204, 0.1); 
-            border: 1px solid rgba(0, 82, 204, 0.15);
+            box-shadow: 0 5px 15px rgba(11, 22, 48, 0.7); 
+            border: 1px solid rgba(27, 43, 82, 0.85);
             color: var(--white);
         }
         
-        .feature-card h3 { color: var(--navy-light); margin-bottom: 15px; }
+        .feature-card h3 { color: var(--white); margin-bottom: 15px; }
         .feature-card p { opacity: 0.9; }
         
         .feature-icon { 
@@ -244,12 +244,12 @@
         .benefits { 
             padding: 100px 0; 
             background: rgba(0, 0, 0, 0.7);
-            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+            border-bottom: 1px solid rgba(11, 22, 48, 0.7);
         }
         
         .benefits-text h2 { 
             font-size: 2.2rem; 
-            color: var(--navy-light); 
+            color: var(--white); 
             margin-bottom: 20px; 
         }
         
@@ -282,7 +282,7 @@
         .services { 
             padding: 100px 0; 
             background: var(--black);
-            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+            border-bottom: 1px solid rgba(11, 22, 48, 0.7);
         }
         
         .services-grid { 
@@ -292,21 +292,21 @@
         }
         
         .service-card { 
-            background: rgba(0, 82, 204, 0.08); 
+            background: rgba(11, 22, 48, 0.7); 
             padding: 35px; 
             border-radius: 12px; 
-            box-shadow: 0 5px 15px rgba(0, 82, 204, 0.1); 
+            box-shadow: 0 5px 15px rgba(11, 22, 48, 0.7); 
             border-top: 4px solid var(--accent); 
-            border: 1px solid rgba(0, 82, 204, 0.15);
+            border: 1px solid rgba(27, 43, 82, 0.85);
             color: var(--white);
         }
         
-        .service-card h3 { color: var(--navy-light); margin-bottom: 15px; }
+        .service-card h3 { color: var(--white); margin-bottom: 15px; }
         
         .about-founder {
             padding: 100px 0;
             background: rgba(0, 0, 0, 0.7);
-            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+            border-bottom: 1px solid rgba(11, 22, 48, 0.7);
         }
         
         .founder-content {
@@ -317,7 +317,7 @@
         }
         
         .founder-photo {
-            background: linear-gradient(135deg, var(--navy-light) 0%, var(--accent) 100%);
+            background: linear-gradient(135deg, #1B2B52 0%, var(--accent) 100%);
             border-radius: 16px;
             padding: 30px;
             text-align: center;
@@ -370,7 +370,7 @@
         .how-it-works { 
             padding: 100px 0; 
             background: rgba(0, 0, 0, 0.7);
-            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+            border-bottom: 1px solid rgba(11, 22, 48, 0.7);
         }
         
         .steps-container { 
@@ -386,7 +386,7 @@
         .step-number { 
             width: 60px; 
             height: 60px; 
-            background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%); 
+            background: linear-gradient(135deg, #1B2B52 0%, #0B1630 100%); 
             border-radius: 50%; 
             display: flex; 
             align-items: center; 
@@ -398,21 +398,21 @@
         }
         
         .step-content { 
-            background: rgba(0, 82, 204, 0.08); 
+            background: rgba(11, 22, 48, 0.7); 
             padding: 30px; 
             border-radius: 12px; 
             border-left: 4px solid var(--accent); 
-            border: 1px solid rgba(0, 82, 204, 0.15);
+            border: 1px solid rgba(27, 43, 82, 0.85);
             color: var(--white);
         }
         
-        .step-content h3 { color: var(--navy-light); margin-bottom: 10px; }
+        .step-content h3 { color: var(--white); margin-bottom: 10px; }
         
         .who-its-for { 
             padding: 100px 0; 
-            background: linear-gradient(135deg, rgba(0, 82, 204, 0.15) 0%, rgba(0, 0, 0, 0.8) 100%);
+            background: linear-gradient(135deg, rgba(27, 43, 82, 0.85) 0%, rgba(0, 0, 0, 0.8) 100%);
             color: white;
-            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+            border-bottom: 1px solid rgba(11, 22, 48, 0.7);
         }
         
         .who-grid { 
@@ -422,10 +422,10 @@
         }
         
         .who-card { 
-            background: rgba(0, 82, 204, 0.1); 
+            background: rgba(11, 22, 48, 0.7); 
             padding: 30px; 
             border-radius: 12px; 
-            border: 1px solid rgba(0, 82, 204, 0.25);
+            border: 1px solid rgba(27, 43, 82, 0.85);
             color: var(--white);
         }
         
@@ -434,11 +434,11 @@
         .pricing { 
             padding: 100px 0; 
             background: rgba(0, 0, 0, 0.7);
-            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+            border-bottom: 1px solid rgba(11, 22, 48, 0.7);
         }
         
         .pricing-content { text-align: center; }
-        .pricing-content h2 { color: var(--navy-light); margin-bottom: 20px; }
+        .pricing-content h2 { color: var(--white); margin-bottom: 20px; }
         .pricing-content p { color: var(--white); opacity: 0.95; margin-bottom: 15px; }
         
         .plan-note {
@@ -456,7 +456,7 @@
         .plan-card ul { list-style:none; }
         .plan-card ul li { display:flex; align-items:flex-start; gap:11px; color:var(--white); font-size:0.98rem; line-height:1.5; margin-bottom:13px; }
         .plan-card ul li i { color:var(--accent); margin-top:4px; flex-shrink:0; }
-        .plan-card ul li .fa-gift { color:#FF7D7D; }
+        .plan-card ul li .fa-gift { color:var(--accent); }
         @media (max-width: 600px) {
             .plan-note { font-size:1.3rem; }
             .plan-card { padding:25px 22px; }
@@ -472,7 +472,7 @@
         .testimonials { 
             padding: 100px 0; 
             background: var(--black);
-            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+            border-bottom: 1px solid rgba(11, 22, 48, 0.7);
         }
         
         .testimonials-grid { 
@@ -482,11 +482,11 @@
         }
         
         .testimonial-card { 
-            background: rgba(0, 82, 204, 0.08); 
+            background: rgba(11, 22, 48, 0.7); 
             padding: 30px; 
             border-radius: 12px; 
             border-left: 5px solid var(--accent); 
-            border: 1px solid rgba(0, 82, 204, 0.15);
+            border: 1px solid rgba(27, 43, 82, 0.85);
             color: var(--white);
         }
         
@@ -497,7 +497,7 @@
             width: 50px; 
             height: 50px; 
             border-radius: 50%; 
-            background: linear-gradient(135deg, var(--navy-light) 0%, var(--accent) 100%); 
+            background: linear-gradient(135deg, #1B2B52 0%, var(--accent) 100%); 
             color: white; 
             display: flex; 
             align-items: center; 
@@ -505,13 +505,13 @@
             font-weight: 800; 
         }
         
-        .author-info h4 { color: var(--navy-light); }
+        .author-info h4 { color: var(--white); }
         .author-info p { opacity: 0.7; font-size: 0.9rem; }
         
         .faq { 
             padding: 100px 0; 
             background: rgba(0, 0, 0, 0.7);
-            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+            border-bottom: 1px solid rgba(11, 22, 48, 0.7);
         }
         
         .faq-container { 
@@ -521,10 +521,10 @@
         
         .faq-item { 
             margin-bottom: 15px; 
-            background: rgba(0, 82, 204, 0.08); 
+            background: rgba(11, 22, 48, 0.7); 
             border-radius: 10px; 
             box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); 
-            border: 1px solid rgba(0, 82, 204, 0.15);
+            border: 1px solid rgba(27, 43, 82, 0.85);
         }
         
         .faq-question { 
@@ -534,7 +534,7 @@
             display: flex; 
             justify-content: space-between; 
             align-items: center; 
-            color: var(--navy-light); 
+            color: var(--white); 
         }
         
         .faq-answer { 
@@ -549,15 +549,15 @@
         }
         
         .final-cta { 
-            background: linear-gradient(135deg, rgba(0, 82, 204, 0.2) 0%, rgba(0, 0, 0, 0.9) 100%);
+            background: linear-gradient(135deg, rgba(27, 43, 82, 0.85) 0%, rgba(0, 0, 0, 0.9) 100%);
             color: white; 
             padding: 80px 0; 
             text-align: center; 
-            border-bottom: 1px solid rgba(0, 82, 204, 0.1);
+            border-bottom: 1px solid rgba(11, 22, 48, 0.7);
         }
         
         .final-cta h2 { 
-            color: var(--navy-light); 
+            color: var(--white); 
             font-size: 2.2rem; 
             margin-bottom: 20px; 
         }
@@ -572,7 +572,7 @@
             background: #0a0a0a; 
             color: white; 
             padding: 60px 0 30px; 
-            border-top: 1px solid rgba(0, 82, 204, 0.2);
+            border-top: 1px solid rgba(27, 43, 82, 0.85);
         }
         
         .footer-content { 
@@ -626,7 +626,7 @@
             width: 100%; 
             position: relative; 
             box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8); 
-            border: 1px solid rgba(0, 82, 204, 0.3); 
+            border: 1px solid rgba(27, 43, 82, 0.85); 
             animation: slideIn 0.3s ease; 
             max-height: 90vh;
             overflow-y: auto;
@@ -680,7 +680,7 @@
         .form-group input{
             width: 100%; 
             padding: 12px 16px; 
-            border: 2px solid rgba(0, 82, 204, 0.4); 
+            border: 2px solid rgba(27, 43, 82, 0.85); 
             border-radius: 8px; 
             font-size: 1rem; 
             outline: none; 
@@ -691,7 +691,7 @@
         
         .form-group input:focus {
             border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(0, 82, 204, 0.2);
+            box-shadow: 0 0 0 3px rgba(27, 43, 82, 0.85);
         }
         
         .form-group input::placeholder { 
@@ -738,14 +738,14 @@
         }
         
         .thank-you-card { 
-            background: rgba(0, 82, 204, 0.1); 
+            background: rgba(11, 22, 48, 0.7); 
             border-radius: 20px; 
             padding: 50px 40px; 
             max-width: 560px; 
             width: 100%; 
             text-align: center; 
-            box-shadow: 0 20px 60px rgba(0, 82, 204, 0.3); 
-            border: 1px solid rgba(0, 82, 204, 0.3); 
+            box-shadow: 0 20px 60px rgba(27, 43, 82, 0.85); 
+            border: 1px solid rgba(27, 43, 82, 0.85); 
             color: var(--white);
             margin: auto;
         }
@@ -783,17 +783,17 @@
         
         .divider { 
             border: none; 
-            border-top: 2px solid rgba(0, 82, 204, 0.2); 
+            border-top: 2px solid rgba(27, 43, 82, 0.85); 
             margin: 32px 0; 
         }
         
         .what-next { 
-            background: rgba(0, 82, 204, 0.08); 
+            background: rgba(11, 22, 48, 0.7); 
             border-radius: 12px; 
             padding: 24px; 
             margin-bottom: 32px; 
             text-align: left; 
-            border: 1px solid rgba(0, 82, 204, 0.2);
+            border: 1px solid rgba(27, 43, 82, 0.85);
         }
         
         .what-next h3 { 
@@ -812,7 +812,7 @@
         }
         
         .step-num-ty { 
-            background: linear-gradient(135deg, var(--navy-light) 0%, var(--navy) 100%); 
+            background: linear-gradient(135deg, #1B2B52 0%, #0B1630 100%); 
             color: #fff; 
             border-radius: 50%; 
             width: 32px; 
@@ -885,11 +885,11 @@
         }
         
         .back-btn { 
-            background: rgba(0, 82, 204, 0.2); 
+            background: rgba(27, 43, 82, 0.85); 
             color: var(--accent); 
             padding: 12px 24px; 
             border-radius: 8px; 
-            border: 1px solid rgba(0, 82, 204, 0.3); 
+            border: 1px solid rgba(27, 43, 82, 0.85); 
             cursor: pointer; 
             font-weight: 600; 
             margin-top: 20px; 
@@ -918,8 +918,8 @@
             padding: 60px 50px;
             max-width: 900px;
             margin: 0 auto;
-            box-shadow: 0 20px 60px rgba(0, 82, 204, 0.2);
-            border: 1px solid rgba(0, 82, 204, 0.3);
+            box-shadow: 0 20px 60px rgba(27, 43, 82, 0.85);
+            border: 1px solid rgba(27, 43, 82, 0.85);
             color: var(--white);
         }
         
@@ -943,7 +943,7 @@
         }
         
         .policy-body h2 {
-            color: var(--navy-light);
+            color: var(--white);
             margin: 30px 0 15px;
             padding-bottom: 8px;
             border-bottom: 2px solid rgba(255, 215, 0, 0.2);
@@ -997,7 +997,7 @@
             padding: 12px 15px; 
             z-index: 999; 
             box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3); 
-            border-top: 1px solid rgba(0, 82, 204, 0.2);
+            border-top: 1px solid rgba(27, 43, 82, 0.85);
         }
         
         .mobile-cta .btn { 
@@ -1027,25 +1027,25 @@
 
         /* PACKAGE TABS / APP ECOSYSTEM */
         .pkg-tabs { display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin-bottom:40px; }
-        .pkg-tab { background:rgba(0,82,204,0.08); border:1px solid rgba(0,82,204,0.25); color:var(--white); padding:14px 28px; border-radius:10px; font-family:inherit; font-size:1.05rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:10px; transition:all .3s; }
+        .pkg-tab { background:rgba(11, 22, 48, 0.7); border:1px solid rgba(27, 43, 82, 0.85); color:var(--white); padding:14px 28px; border-radius:10px; font-family:inherit; font-size:1.05rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:10px; transition:all .3s; }
         .pkg-tab:hover { border-color:rgba(255,215,0,0.5); }
         .pkg-tab.active { background:var(--accent); color:var(--black); border-color:var(--accent); }
         .pkg-tab-count { font-size:0.85rem; font-weight:600; opacity:0.85; white-space:nowrap; }
         .pkg-panel { display:none; }
         .pkg-panel.active { display:block; }
         .pkg-panel-head { display:flex; align-items:center; justify-content:space-between; gap:15px; flex-wrap:wrap; margin-bottom:25px; }
-        .pkg-panel-head h3 { color:var(--navy-light); font-size:1.5rem; }
+        .pkg-panel-head h3 { color: var(--white); font-size:1.5rem; }
         .pkg-badge { background:rgba(255,215,0,0.12); border:1px solid rgba(255,215,0,0.35); color:var(--accent); padding:8px 16px; border-radius:999px; font-weight:700; font-size:0.9rem; white-space:nowrap; }
         .app-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:15px; }
-        .app-item { background:rgba(0,82,204,0.08); border:1px solid rgba(0,82,204,0.15); border-radius:10px; padding:18px 20px; display:flex; align-items:center; gap:12px; color:var(--white); font-weight:600; line-height:1.4; }
+        .app-item { background:rgba(11, 22, 48, 0.7); border:1px solid rgba(27, 43, 82, 0.85); border-radius:10px; padding:18px 20px; display:flex; align-items:center; gap:12px; color:var(--white); font-weight:600; line-height:1.4; }
         .app-item i { color:var(--accent); flex-shrink:0; }
-        .upcoming-block { margin-top:45px; background:rgba(255,255,255,0.04); border:1px solid rgba(0,82,204,0.2); border-left:4px solid var(--navy-light); border-radius:10px; padding:25px 28px; }
-        .upcoming-block h4 { color:var(--navy-light); margin-bottom:10px; font-size:1.15rem; }
+        .upcoming-block { margin-top:45px; background:rgba(255,255,255,0.04); border:1px solid rgba(27, 43, 82, 0.85); border-left:4px solid var(--navy-light); border-radius:10px; padding:25px 28px; }
+        .upcoming-block h4 { color: var(--white); margin-bottom:10px; font-size:1.15rem; }
         .upcoming-block p { color:var(--white); opacity:0.9; }
         .nowrap { white-space:nowrap; }
 
         /* VERTICAL (SHORTS) VIDEO */
-        .video-shorts { max-width:400px; aspect-ratio:9/16; margin:20px auto 0; border-radius:12px; overflow:hidden; background:#000; border:1px solid rgba(0,82,204,0.3); box-shadow:0 15px 30px rgba(0,82,204,0.2); }
+        .video-shorts { max-width:400px; aspect-ratio:9/16; margin:20px auto 0; border-radius:12px; overflow:hidden; background:#000; border:1px solid rgba(27, 43, 82, 0.85); box-shadow:0 15px 30px rgba(27, 43, 82, 0.85); }
         .video-shorts iframe { width:100%; height:100%; display:block; border:0; }
 
         /* CONTACT ROWS + THANK YOU EXTRAS */
@@ -1067,14 +1067,14 @@
     </style>
 
 <!-- ==========================================================================
-     SITE SETTINGS — EDIT EVERYTHING IN THIS ONE BLOCK
+     SITE SETTINGS, EDIT EVERYTHING IN THIS ONE BLOCK
      Change a value here and it updates everywhere on the site.
      ========================================================================== -->
 <script>
 window.SITE = {
 
     /* BRAND */
-    brandName:   "Velorix AI",
+    brandName:   "VelorixAI",
     brandFirst:  "Velorix",      // shown in normal colour in the logo
     brandSecond: "AI",           // shown in accent colour in the logo
     logoUrl:     "assets/velorix-logo.png",   // swap in your own file to change the logo
@@ -1083,7 +1083,7 @@ window.SITE = {
     phone:           "+91 8218854770",
     email:           "contact.velorixai@gmail.com",
     whatsappNumber:  "918218854770",                              // digits only, with country code
-    whatsappMessage: "Hi! I'm interested in Velorix AI.",
+    whatsappMessage: "Hi! I'm interested in VelorixAI.",
 
     /* BOOKING */
     CAL_ID_BOOKING_URL: "https://cal.id/velorixai/demo-call?duration=30",
@@ -1092,7 +1092,7 @@ window.SITE = {
 
     /* MEDIA */
     youtubeUrl:   "https://youtube.com/shorts/Ol6ReFCvqeQ?feature=share",
-    youtubeTitle: "Velorix AI Build Walkthrough",
+    youtubeTitle: "VelorixAI Build Walkthrough",
 
     /* POLICY PAGES
        "#terms" / "#privacy" / "#refund" open the built-in pages below.
@@ -1101,7 +1101,7 @@ window.SITE = {
     privacyUrl: "#privacy",
     refundUrl:  "#refund",
 
-    /* PLANS (no public pricing — confirmed on the free demo) */
+    /* PLANS (no public pricing, confirmed on the free demo) */
     planNote: "Quarterly & Annual plans available"
 };
 </script>
@@ -1142,7 +1142,7 @@ window.SITE = {
 <!-- THANK YOU PAGE -->
 <div class="thank-you-page" id="thankYouPage">
     <div class="thank-you-card">
-        <img data-site="logo" src="assets/velorix-logo.png" alt="Velorix AI logo" style="width:64px; height:64px; border-radius:10px; object-fit:contain; margin:0 auto 20px; display:block;">
+        <img data-site="logo" src="assets/velorix-logo.png" alt="VelorixAI logo" style="width:64px; height:64px; border-radius:10px; object-fit:contain; margin:0 auto 20px; display:block;">
         <div class="check-icon"><i class="fas fa-circle-check"></i></div>
         <h1>Thank You!</h1>
         <p class="thank-you-subtitle">
@@ -1200,7 +1200,7 @@ window.SITE = {
         
         <div class="policy-body">
             <h2>1. Introduction</h2>
-            <p>At Velorix AI ("we," "us," or "our"), we respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.</p>
+            <p>At VelorixAI ("we," "us," or "our"), we respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.</p>
             
             <h2>2. Information We Collect</h2>
             <h3>2.1 Personal Information</h3>
@@ -1238,7 +1238,7 @@ window.SITE = {
             <p>We implement reasonable security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.</p>
             
             <h2>5. Contact Us</h2>
-            <p><strong>Email:</strong> privacy@velorixai.com<br><strong>Address:</strong> Velorix AI, Bandia, Uttarakhand, India</p>
+            <p><strong>Email:</strong> privacy@velorixai.com<br><strong>Address:</strong> VelorixAI, Bandia, Uttarakhand, India</p>
             
             <button onclick="closePolicy('privacy')" class="back-policy">
                 <i class="fas fa-arrow-left"></i> Back to Home
@@ -1257,10 +1257,10 @@ window.SITE = {
         
         <div class="policy-body">
             <h2>1. Agreement to Terms</h2>
-            <p>By accessing or using Velorix AI's services, website, or booking a demo call, you agree to be bound by these Terms & Conditions.</p>
+            <p>By accessing or using VelorixAI's services, website, or booking a demo call, you agree to be bound by these Terms & Conditions.</p>
             
             <h2>2. Services & Demo Calls</h2>
-            <p>Velorix AI provides all-in-one AI growth platforms for coaches, consultants, and agency owners. Our free 30-minute demo calls are for discovery and consultation purposes only.</p>
+            <p>VelorixAI provides all-in-one AI growth platforms for coaches, consultants, and agency owners. Our free 30-minute demo calls are for discovery and consultation purposes only.</p>
             
             <h2>3. Pricing & Payments</h2>
             <p>Pricing is confirmed during your demo call based on your specific business needs. Payment plans are available quarterly and annually. All amounts are quoted and payable in Indian Rupees.</p>
@@ -1272,7 +1272,7 @@ window.SITE = {
             <p>Your use of our services is subject to our Privacy Policy. You own your business data and we don't sell or share your data with third parties.</p>
             
             <h2>6. Contact Information</h2>
-            <p><strong>Email:</strong> legal@velorixai.com<br><strong>Address:</strong> Velorix AI, Bandia, Uttarakhand, India</p>
+            <p><strong>Email:</strong> legal@velorixai.com<br><strong>Address:</strong> VelorixAI, Bandia, Uttarakhand, India</p>
             
             <button onclick="closePolicy('terms')" class="back-policy">
                 <i class="fas fa-arrow-left"></i> Back to Home
@@ -1322,8 +1322,8 @@ window.SITE = {
 <nav>
     <div class="container navbar">
         <a href="/" class="logo">
-            <img class="logo-img" data-site="logo" src="assets/velorix-logo.png" alt="Velorix AI logo">
-            <span data-site="brandLockup">Velorix <span style="color:var(--accent);">AI</span></span>
+            <img class="logo-img" data-site="logo" src="assets/velorix-logo.png" alt="VelorixAI logo">
+            <span data-site="brandLockup">Velorix<span style="color:var(--accent);">AI</span></span>
         </a>
         <div class="nav-links">
             <a href="#services">Platform</a>
@@ -1344,7 +1344,7 @@ window.SITE = {
 <section class="hero">
     <div class="container hero-content">
         <h1>Launch Your Coaching or Agency Business in <span class="highlight-yellow">2 Hours</span>, Not 2 Months</h1>
-        <p class="hero-subtitle">Velorix AI puts <span class="highlight-yellow nowrap">16 AI-powered apps</span> in one dashboard, so you can launch and run your coaching or agency business without hiring a tech team or juggling a dozen tools.</p>
+        <p class="hero-subtitle">VelorixAI puts <span class="highlight-yellow nowrap">16 AI-powered apps</span> in one dashboard, so you can launch and run your coaching or agency business without hiring a tech team or juggling a dozen tools.</p>
         
         <div class="cta-buttons">
             <button onclick="openDemoForm()" class="btn btn-primary">
@@ -1367,9 +1367,9 @@ window.SITE = {
 <section class="video-section" id="watch-demo">
     <div class="container">
         <h2 class="section-title">Watch a Real 2-Hour Build</h2>
-        <p style="text-align:center; color:var(--gray-dark); max-width:800px; margin:0 auto 20px;">This is the actual walkthrough of a guided build session — from kickoff to going live.</p>
+        <p style="text-align:center; color:var(--gray-dark); max-width:800px; margin:0 auto 20px;">This is the actual walkthrough of a guided build session, from kickoff to going live.</p>
         <div class="video-shorts" role="region" aria-label="Demo video">
-            <iframe id="siteVideo" src="" title="Velorix AI Build Walkthrough" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            <iframe id="siteVideo" src="" title="VelorixAI Build Walkthrough" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         </div>
     </div>
 </section>
@@ -1382,12 +1382,12 @@ window.SITE = {
             <div class="feature-card">
                 <div class="feature-icon"><i class="fas fa-rocket"></i></div>
                 <h3>Launch your business in just 2 hours with AI</h3>
-                <p>From idea to live business in a single guided session — no tech skills required.</p>
+                <p>From idea to live business in a single guided session, no tech skills required.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon"><i class="fas fa-th-large"></i></div>
                 <h3>16 powerful apps in one platform</h3>
-                <p>Website builder, CRM, WhatsApp automation, scheduling, payments, and more — all connected.</p>
+                <p>Website builder, CRM, WhatsApp automation, scheduling, payments, and more, all connected.</p>
             </div>
             <div class="feature-card">
                 <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
@@ -1418,8 +1418,8 @@ window.SITE = {
     <div class="container benefits-content">
         <div class="benefits-text">
             <h2>Built for Coaches, Agency Owners & Solopreneurs Who Want to Move Fast</h2>
-            <p>Most coaches and agency owners lose weeks stitching together a website builder, a CRM, an email tool, a course platform and a scheduling app that refuse to talk to each other. Velorix AI replaces that entire stack with one connected system.</p>
-            <p><strong>Everything you need to sell, deliver and support your clients — live in a single login.</strong></p>
+            <p>Most coaches and agency owners lose weeks stitching together a website builder, a CRM, an email tool, a course platform and a scheduling app that refuse to talk to each other. VelorixAI replaces that entire stack with one connected system.</p>
+            <p><strong>Everything you need to sell, deliver and support your clients, live in a single login.</strong></p>
         </div>
         <div class="benefits-list">
             <div class="benefit-item">
@@ -1436,7 +1436,7 @@ window.SITE = {
             </div>
             <div class="benefit-item">
                 <i class="fas fa-check-circle"></i>
-                <p>Manage your whole business — leads, clients and payments — from one dashboard</p>
+                <p>Manage your whole business, leads, clients and payments, from one dashboard</p>
             </div>
             <div class="benefit-item">
                 <i class="fas fa-check-circle"></i>
@@ -1501,7 +1501,7 @@ window.SITE = {
 
         <div class="upcoming-block">
             <h4><i class="fas fa-clock" style="margin-right:8px;"></i>Upcoming Apps</h4>
-            <p>New apps are released to the platform over time and added to your package as they launch. Upcoming apps are not counted in the <span class="nowrap">8 apps</span> in Prestige or the <span class="nowrap">16 apps</span> in Signature — the lists above are what is included today.</p>
+            <p>New apps are released to the platform over time and added to your package as they launch. Upcoming apps are not counted in the <span class="nowrap">8 apps</span> in Prestige or the <span class="nowrap">16 apps</span> in Signature. The lists above are what is included today.</p>
         </div>
 
         <div style="text-align:center; margin-top:40px;">
@@ -1515,23 +1515,23 @@ window.SITE = {
 <!-- ABOUT FOUNDER -->
 <section class="about-founder" id="founder">
     <div class="container">
-        <h2 class="section-title">Meet Anis Ahmad — The Founder Behind Velorix AI</h2>
+        <h2 class="section-title">Meet Anis Ahmad, The Founder Behind VelorixAI</h2>
         
         <div class="founder-content">
             <div class="founder-photo">
-                <img src="https://i.ibb.co/mrhgQGy3/photo-16.jpg" alt="Anis Ahmad - Founder of Velorix AI">
+                <img src="https://i.ibb.co/mrhgQGy3/photo-16.jpg" alt="Anis Ahmad - Founder of VelorixAI">
                 <h3>Anis Ahmad</h3>
                 <p>Founder & CEO</p>
-                <p>Velorix AI</p>
+                <p>VelorixAI</p>
             </div>
             
             <div class="founder-story">
-                <h3>Why We Built Velorix AI</h3>
+                <h3>Why We Built VelorixAI</h3>
                 <p>I spent years watching coaches and agency owners waste time and money. They'd juggle 5-6 tools, pay for every one of them monthly, and still lose leads because nothing talked to each other.</p>
 
                 <p>One founder told me: "I spend more time managing software than growing my business." That line changed everything.</p>
 
-                <p>The problem wasn't the tools — they just weren't built for people who move fast. So I built Velorix AI. One dashboard. Website + CRM + WhatsApp + Booking + Payments. All connected. Live in 2 hours.</p>
+                <p>The problem wasn't the tools, they just weren't built for people who move fast. So I built VelorixAI. One dashboard. Website + CRM + WhatsApp + Booking + Payments. All connected. Live in 2 hours.</p>
 
                 <p>On your free demo, I'll show you exactly how it works for your business. No BS. Just results.</p>
             </div>
@@ -1543,13 +1543,13 @@ window.SITE = {
 <section class="how-it-works" id="how-it-works">
     <div class="container">
         <h2 class="section-title">From Idea to Live in 3 Steps</h2>
-        <p style="text-align:center; color:var(--gray-dark); max-width:700px; margin:0 auto 40px;">Velorix AI is designed so any coach or solopreneur — with zero technical background — can go fully operational in a single session.</p>
+        <p style="text-align:center; color:var(--gray-dark); max-width:700px; margin:0 auto 40px;">VelorixAI is designed so any coach or solopreneur, with zero technical background, can go fully operational in a single session.</p>
         <div class="steps-container">
             <div class="step">
                 <div class="step-number">1</div>
                 <div class="step-content">
                     <h3>Book your free 30-minute demo</h3>
-                    <p>A Velorix AI specialist walks you through the platform and builds a plan around your business — coaching, consulting, or agency.</p>
+                    <p>A VelorixAI specialist walks you through the platform and builds a plan around your business, coaching, consulting, or agency.</p>
                 </div>
             </div>
             <div class="step">
@@ -1571,27 +1571,27 @@ window.SITE = {
 </section>
 
 <!-- WHO IS THIS FOR / NOT FOR -->
-<section class="who-its-for" style="background: rgba(0, 0, 0, 0.7); padding: 100px 0; border-bottom: 1px solid rgba(0, 82, 204, 0.1);">
+<section class="who-its-for" style="background: rgba(0, 0, 0, 0.7); padding: 100px 0; border-bottom: 1px solid rgba(11, 22, 48, 0.7);">
     <div class="container">
-        <h2 class="section-title">Is Velorix AI Right for You?</h2>
+        <h2 class="section-title">Is VelorixAI Right for You?</h2>
         
         <!-- WHO IT'S FOR -->
         <div style="margin-bottom: 60px;">
             <h3 style="text-align: center; color: var(--accent); font-size: 1.8rem; margin-bottom: 40px;">
-                <i class="fas fa-check-circle"></i> Velorix AI is Built For:
+                <i class="fas fa-check-circle"></i> VelorixAI is Built For:
             </h3>
             
             <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-                <div style="background: rgba(0, 82, 204, 0.08); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(0, 82, 204, 0.15);">
+                <div style="background: rgba(11, 22, 48, 0.7); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(27, 43, 82, 0.85);">
                     <h4 style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
                         <i class="fas fa-check"></i> Coaches Ready to Go Live
                     </h4>
                     <p style="color: var(--white); opacity: 0.9; line-height: 1.6;">
-                        You've got the expertise. You just need the tech to stop holding you back. Launch your first funnel, sell your first offer, and start making money — all in 2 hours.
+                        You've got the expertise. You just need the tech to stop holding you back. Launch your first funnel, sell your first offer, and start making money, all in 2 hours.
                     </p>
                 </div>
                 
-                <div style="background: rgba(0, 82, 204, 0.08); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(0, 82, 204, 0.15);">
+                <div style="background: rgba(11, 22, 48, 0.7); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(27, 43, 82, 0.85);">
                     <h4 style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
                         <i class="fas fa-check"></i> Agency Owners Tired of Tool Chaos
                     </h4>
@@ -1600,21 +1600,21 @@ window.SITE = {
                     </p>
                 </div>
                 
-                <div style="background: rgba(0, 82, 204, 0.08); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(0, 82, 204, 0.15);">
+                <div style="background: rgba(11, 22, 48, 0.7); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(27, 43, 82, 0.85);">
                     <h4 style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
                         <i class="fas fa-check"></i> Solopreneurs Who Want Freedom
                     </h4>
                     <p style="color: var(--white); opacity: 0.9; line-height: 1.6;">
-                        You don't want to hire a tech team or waste 6 months building a website. You want to sell, deliver, and scale — without the headache.
+                        You don't want to hire a tech team or waste 6 months building a website. You want to sell, deliver, and scale, without the headache.
                     </p>
                 </div>
                 
-                <div style="background: rgba(0, 82, 204, 0.08); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(0, 82, 204, 0.15);">
+                <div style="background: rgba(11, 22, 48, 0.7); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(27, 43, 82, 0.85);">
                     <h4 style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
                         <i class="fas fa-check"></i> Consultants Who Value Their Time
                     </h4>
                     <p style="color: var(--white); opacity: 0.9; line-height: 1.6;">
-                        Every hour you spend on admin tasks is an hour you're not earning. Automate everything. Focus on what you do best — delivering results for clients.
+                        Every hour you spend on admin tasks is an hour you're not earning. Automate everything. Focus on what you do best, delivering results for clients.
                     </p>
                 </div>
             </div>
@@ -1622,20 +1622,20 @@ window.SITE = {
         
         <!-- WHO IT'S NOT FOR -->
         <h3 style="text-align: center; color: #FF3B30; font-size: 1.8rem; margin-bottom: 40px;">
-            <i class="fas fa-times-circle"></i> Velorix AI is Not Built For:
+            <i class="fas fa-times-circle"></i> VelorixAI is Not Built For:
         </h3>
 
-        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF7D7D; margin-bottom: 10px;">
-            <h4 style="color: #FF7D7D; margin-bottom: 10px; font-size: 1.1rem;">
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF3B30; margin-bottom: 10px;">
+            <h4 style="color: #FF3B30; margin-bottom: 10px; font-size: 1.1rem;">
                 <i class="fas fa-times"></i> People Looking for Free Tools or Shortcuts
             </h4>
             <p style="color: var(--white); opacity: 0.9;">
-                This is about building real, profitable businesses — not finding free workarounds. If you want cheap hacks instead of actual systems, this isn't for you.
+                This is about building real, profitable businesses, not finding free workarounds. If you want cheap hacks instead of actual systems, this isn't for you.
             </p>
         </div>
 
-        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF7D7D; margin-bottom: 10px;">
-            <h4 style="color: #FF7D7D; margin-bottom: 10px; font-size: 1.1rem;">
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF3B30; margin-bottom: 10px;">
+            <h4 style="color: #FF3B30; margin-bottom: 10px; font-size: 1.1rem;">
                 <i class="fas fa-times"></i> Those Who Just Want to "Learn AI"
             </h4>
             <p style="color: var(--white); opacity: 0.9;">
@@ -1643,8 +1643,8 @@ window.SITE = {
             </p>
         </div>
 
-        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF7D7D; margin-bottom: 10px;">
-            <h4 style="color: #FF7D7D; margin-bottom: 10px; font-size: 1.1rem;">
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF3B30; margin-bottom: 10px;">
+            <h4 style="color: #FF3B30; margin-bottom: 10px; font-size: 1.1rem;">
                 <i class="fas fa-times"></i> Anyone Not Ready to Take Action
             </h4>
             <p style="color: var(--white); opacity: 0.9;">
@@ -1652,22 +1652,22 @@ window.SITE = {
             </p>
         </div>
 
-        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF7D7D; margin-bottom: 10px;">
-            <h4 style="color: #FF7D7D; margin-bottom: 10px; font-size: 1.1rem;">
+        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF3B30; margin-bottom: 10px;">
+            <h4 style="color: #FF3B30; margin-bottom: 10px; font-size: 1.1rem;">
                 <i class="fas fa-times"></i> Job Seekers or Hobbyists
             </h4>
             <p style="color: var(--white); opacity: 0.9;">
-                This is for entrepreneurs who want to BUILD and SCALE their own business — not for people looking for employment or side projects.
+                This is for entrepreneurs who want to BUILD and SCALE their own business, not for people looking for employment or side projects.
             </p>
         </div>
         
         <!-- BOTTOM CTA -->
-        <div style="text-align: center; margin-top: 60px; padding: 40px; background: rgba(0, 82, 204, 0.1); border-radius: 16px; border: 1px solid rgba(0, 82, 204, 0.3);">
+        <div style="text-align: center; margin-top: 60px; padding: 40px; background: rgba(11, 22, 48, 0.7); border-radius: 16px; border: 1px solid rgba(27, 43, 82, 0.85);">
             <h3 style="color: var(--accent); margin-bottom: 20px; font-size: 1.5rem;">
                 <i class="fas fa-arrow-right"></i> Sounds Like You?
             </h3>
             <p style="color: var(--white); opacity: 0.95; margin-bottom: 25px; font-size: 1.05rem;">
-                Book your free 30-minute demo and let's see if Velorix AI is the right fit for your business.
+                Book your free 30-minute demo and let's see if VelorixAI is the right fit for your business.
             </p>
             <button onclick="openDemoForm()" class="btn btn-primary" style="font-size: 1.1rem;">
                 <i class="fas fa-calendar-check"></i> Book My Free Demo Now
@@ -1680,7 +1680,7 @@ window.SITE = {
 <section class="pricing" id="pricing">
     <div class="container pricing-content">
         <h2 class="section-title">Plans Tailored to Your Business</h2>
-        <p>Because every coaching or agency business is unique, we use your free demo to recommend the plan that matches your actual business size and app usage.</p>
+        <p>Every coaching and agency business is different, so we use your free demo to recommend the plan that fits your business size and how you will actually use the apps.</p>
         <div class="plan-note" data-site="planNote">Quarterly &amp; Annual plans available</div>
 
         <div class="plan-grid">
@@ -1697,7 +1697,7 @@ window.SITE = {
                 <h3>Signature</h3>
                 <div class="plan-term">Annual · 12 Months</div>
                 <ul>
-                    <li><i class="fas fa-check-circle"></i><span><strong>16+ powerful apps</strong> — the full current ecosystem</span></li>
+                    <li><i class="fas fa-check-circle"></i><span><strong>16+ powerful apps</strong>, the full current ecosystem</span></li>
                     <li><i class="fas fa-check-circle"></i><span><strong>9,000 AI tokens</strong></span></li>
                     <li><i class="fas fa-check-circle"></i><span>New apps added over time</span></li>
                     <li><i class="fas fa-check-circle"></i><span>Technical support and assistance</span></li>
@@ -1707,7 +1707,7 @@ window.SITE = {
         </div>
 
         <div class="pricing-description">
-            <p>Plans scale with your business — from solo coach to full agency<br>Get a personalized recommendation during your free demo<br>No cost, no obligation — just your time for 30 minutes.</p>
+            <p>Plans scale with your business, from solo coach to full agency<br>Get a personalized recommendation during your free demo<br>No cost and no obligation. All it takes is 30 minutes of your time.</p>
         </div>
         <button onclick="openDemoForm()" class="btn btn-primary" style="margin-top:20px;">
             <i class="fas fa-calendar-alt"></i> Get Your Custom Plan
@@ -1724,7 +1724,7 @@ window.SITE = {
                 <div class="testimonial-rating">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <p class="testimonial-text">"I was managing my coaching business across 7 different tools — Kajabi for courses, a separate booking app, a separate CRM, WhatsApp manually, Stripe for payments. I was losing leads because nothing talked to each other. After my Velorix AI demo, everything was live in 2 hours. My first automated WhatsApp sequence brought in 3 leads the next day. By week 2, I had my first paying client. This single platform has literally tripled my efficiency and cut my monthly subscriptions from ₹15,000 to ₹5,000."</p>
+                <p class="testimonial-text">"I was managing my coaching business across 7 different tools, Kajabi for courses, a separate booking app, a separate CRM, WhatsApp manually, Stripe for payments. I was losing leads because nothing talked to each other. After my VelorixAI demo, everything was live in 2 hours. My first automated WhatsApp sequence brought in 3 leads the next day. By week 2, I had my first paying client. This single platform has literally tripled my efficiency and cut my monthly subscriptions from ₹15,000 to ₹5,000."</p>
                 <div class="testimonial-author">
                     <div class="author-avatar">R</div>
                     <div class="author-info">
@@ -1738,7 +1738,7 @@ window.SITE = {
                 <div class="testimonial-rating">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <p class="testimonial-text">"As an agency owner, I was drowning in tool management. My team was jumping between Pipedrive, email, scheduling apps, and invoicing software. It was chaos. Anis showed us how Velorix AI consolidates everything — our entire client pipeline, automated follow-ups, booking management, and billing — all in one place. We've cut our operational overhead by 40% and onboarded 5 new clients in the first month because we're actually responsive now. Best business decision we made this year."</p>
+                <p class="testimonial-text">"As an agency owner, I was drowning in tool management. My team was jumping between Pipedrive, email, scheduling apps, and invoicing software. It was chaos. Anis showed us how VelorixAI consolidates everything, our entire client pipeline, automated follow-ups, booking management, and billing, all in one place. We've cut our operational overhead by 40% and onboarded 5 new clients in the first month because we're actually responsive now. Best business decision we made this year."</p>
                 <div class="testimonial-author">
                     <div class="author-avatar">A</div>
                     <div class="author-info">
@@ -1752,7 +1752,7 @@ window.SITE = {
                 <div class="testimonial-rating">
                     <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
                 </div>
-                <p class="testimonial-text">"I was a freelancer consultant with zero interest in tech. I thought I'd need to hire someone to build my funnel and CRM. The 2-hour setup call with Velorix AI was eye-opening — within hours, I had a professional website, a lead capture funnel, and WhatsApp automation running. No coding, no confusion. In 30 days, I went from ₹0 to ₹2.5L in revenue because my leads weren't falling through the cracks anymore. The system does what used to require a VA and three different software licenses."</p>
+                <p class="testimonial-text">"I was a freelancer consultant with zero interest in tech. I thought I'd need to hire someone to build my funnel and CRM. The 2-hour setup call with VelorixAI was eye-opening, within hours, I had a professional website, a lead capture funnel, and WhatsApp automation running. No coding, no confusion. In 30 days, I went from ₹0 to ₹2.5L in revenue because my leads weren't falling through the cracks anymore. The system does what used to require a VA and three different software licenses."</p>
                 <div class="testimonial-author">
                     <div class="author-avatar">P</div>
                     <div class="author-info">
@@ -1772,7 +1772,7 @@ window.SITE = {
         <div class="faq-container">
             <div class="faq-item active">
                 <div class="faq-question">
-                    <span>💰 How much does Velorix AI cost?</span>
+                    <span>💰 How much does VelorixAI cost?</span>
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer">
@@ -1782,7 +1782,7 @@ window.SITE = {
             
             <div class="faq-item">
                 <div class="faq-question">
-                    <span>🛠️ Do I need any technical skills to use Velorix AI?</span>
+                    <span>🛠️ Do I need any technical skills to use VelorixAI?</span>
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer">
@@ -1796,7 +1796,7 @@ window.SITE = {
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>The free demo session takes about 30 minutes. In that time, we'll walk you through exactly how Velorix AI replaces your entire tool stack and helps you launch faster.</p>
+                    <p>The free demo session takes about 30 minutes. In that time, we'll walk you through exactly how VelorixAI replaces your entire tool stack and helps you launch faster.</p>
                 </div>
             </div>
             
@@ -1826,7 +1826,7 @@ window.SITE = {
                     <i class="fas fa-chevron-down faq-icon"></i>
                 </div>
                 <div class="faq-answer">
-                    <p>The demo is completely free and no-obligation. You'll only be charged if you decide to move forward after seeing exactly how Velorix AI works for your business.</p>
+                    <p>The demo is completely free and no-obligation. You'll only be charged if you decide to move forward after seeing exactly how VelorixAI works for your business.</p>
                 </div>
             </div>
             
@@ -1846,7 +1846,7 @@ window.SITE = {
 <!-- FINAL CTA -->
 <section class="final-cta" id="demo">
     <div class="container">
-        <h2>See Your Business Running on Velorix AI</h2>
+        <h2>See Your Business Running on VelorixAI</h2>
         <p>Book a free 30-minute demo and we'll walk you through the exact apps and workflows for your coaching or agency business. Prefer to chat first? Message us directly on WhatsApp for instant answers.</p>
         <div class="cta-buttons">
             <button onclick="openDemoForm()" class="btn btn-primary">
@@ -1866,11 +1866,11 @@ window.SITE = {
         <div class="footer-content">
             <div>
                 <h4 style="display:flex; align-items:center; gap:10px; color:var(--accent); margin-bottom:15px;">
-                    <img data-site="logo" src="assets/velorix-logo.png" alt="Velorix AI logo" style="width:32px; height:32px; border-radius:6px; object-fit:contain; background:var(--black);">
-                    <span data-site="brandLockup">Velorix <span style="color:var(--accent);">AI</span></span>
+                    <img data-site="logo" src="assets/velorix-logo.png" alt="VelorixAI logo" style="width:32px; height:32px; border-radius:6px; object-fit:contain; background:var(--black);">
+                    <span data-site="brandLockup">Velorix<span style="color:var(--accent);">AI</span></span>
                 </h4>
                 <p style="color:var(--gray-dark); margin-bottom:10px;">All-in-one AI growth platform for coaches, consultants, and agencies.</p>
-                <p style="color:var(--gray-dark); font-size:0.9rem;">Based in Bandia, Uttarakhand, India — trusted by coaches and agencies worldwide.</p>
+                <p style="color:var(--gray-dark); font-size:0.9rem;">Based in Bandia, Uttarakhand, India, trusted by coaches and agencies worldwide.</p>
             </div>
             
             <div>
@@ -1906,7 +1906,7 @@ window.SITE = {
         </div>
         
         <div class="copyright">
-            <p>© 2026 Velorix AI. All rights reserved.</p>
+            <p>© 2026 VelorixAI. All rights reserved.</p>
             <p style="margin-top:10px; font-size:0.85rem;">
                 <a href="#" data-policy="terms" style="color:var(--gray-dark); text-decoration:none;">Terms &amp; Conditions</a> | 
                 <a href="#" data-policy="refund" style="color:var(--gray-dark); text-decoration:none;">Refund Policy</a> | 
@@ -1963,7 +1963,7 @@ window.SITE = {
     }
     
     // ---------------------------------------------------------------
-    // CONFIG WIRING — reads window.SITE (see the SITE SETTINGS block in <head>)
+    // CONFIG WIRING, reads window.SITE (see the SITE SETTINGS block in <head>)
     // ---------------------------------------------------------------
     var S = window.SITE || {};
 
@@ -2005,7 +2005,7 @@ window.SITE = {
         setAll('calBooking', function (el) { el.href = calUrl(); });
         if (S.planNote) setAll('planNote', function (el) { el.textContent = S.planNote; });
         if (S.brandFirst) setAll('brandLockup', function (el) {
-            el.innerHTML = S.brandFirst + ' <span style="color:var(--accent);">' + (S.brandSecond || '') + '</span>';
+            el.innerHTML = S.brandFirst + '<span style="color:var(--accent);">' + (S.brandSecond || '') + '</span>';
         });
         if (S.logoUrl) setAll('logo', function (el) { el.src = S.logoUrl; el.alt = (S.brandName || '') + ' logo'; });
         var vid = document.getElementById('siteVideo');
@@ -2123,7 +2123,7 @@ window.SITE = {
         }
     });
     
-    console.log('Velorix AI page loaded.');
+    console.log('VelorixAI page loaded.');
 </script>
 
 </body>
