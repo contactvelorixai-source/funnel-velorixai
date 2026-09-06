@@ -1,2130 +1,857 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>VelorixAI, Launch Your Coaching or Agency Business in 2 Hours</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <style>
-        :root {
-            --black: #000000;
-            --navy: #17113D;          /* deep indigo: cards, supporting surfaces */
-            --navy-light: #2A1F5C;    /* indigo step up: borders, depth */
-            --white: #F5F5F5;
-            --gray-light: #f5f5f5;
-            --gray: #e0e0e0;
-            --gray-dark: #A7A7A7;
-            --text-light: #F5F5F5;
-            --text-dark: #212529;
-            --accent: #FFD700;
-            --whatsapp: #25D366;
-        }
-        
-        * { margin: 0; padding: 0; box-sizing: border-box; }
-        html { scroll-behavior: smooth; }
-        body { 
-            font-family: 'Inter', sans-serif; 
-            color: var(--text-light); 
-            line-height: 1.6; 
-            background-color: var(--black); 
-        }
-        
-        .container { width:100%; max-width:1200px; margin:0 auto; padding:0 20px; }
-        .navbar { display:flex; justify-content:space-between; align-items:center; gap:20px; }
-        .logo { display:flex; align-items:center; gap:10px; font-size:1.8rem; font-weight:800; color:var(--white); text-decoration:none; }
-        .logo-img { width:44px; height:44px; border-radius:8px; object-fit:contain; background:var(--black); display:block; }
-        .nav-links { display:flex; gap:30px; align-items:center; }
-        .nav-links a { color:var(--white); text-decoration:none; font-weight:500; transition:all .3s; }
-        .nav-links a:hover { color:var(--accent); }
-        
-        nav { 
-            background-color: var(--black); 
-            color: var(--white); 
-            padding: 18px 0; 
-            position: sticky; 
-            top: 0; 
-            z-index: 1000; 
-            box-shadow: 0 4px 12px rgba(0,0,0,0.3); 
-            border-bottom: 1px solid rgba(42, 31, 92, 0.85);
-        }
-        
-        .hero { 
-            background: linear-gradient(135deg, var(--black) 0%, rgba(0, 0, 0, 0.95) 100%);
-            color: var(--text-light); 
-            padding: 120px 0 100px; 
-            text-align: center; 
-            position: relative; 
-            overflow: hidden; 
-            border-bottom: 1px solid rgba(23, 17, 61, 0.7);
-        }
-        
-        .hero::before { 
-            content: ''; 
-            position: absolute; 
-            top: -50%; 
-            right: -50%; 
-            width: 1000px; 
-            height: 1000px; 
-            background: radial-gradient(circle, rgba(23, 17, 61, 0.7) 0%, transparent 70%); 
-            animation: float 20s infinite ease-in-out; 
-        }
-        
-        @keyframes float { 
-            0%,100%{ transform:translate(0,0); } 
-            50%{ transform:translate(30px,-30px); } 
-        }
-        
-        .hero-content { position: relative; z-index: 1; }
-        
-        .hero h1 { 
-            font-size: 3.5rem; 
-            font-weight: 800; 
-            line-height: 1.2; 
-            margin-bottom: 20px; 
-            color: var(--white);
-        }
-        
-        .highlight-yellow { 
-            color: var(--accent); 
-            font-weight: 900;
-        }
-        
-        .hero-subtitle { 
-            font-size: 1.3rem; 
-            max-width: 800px; 
-            margin: 0 auto 40px; 
-            color: var(--white);
-            opacity: 0.95;
-        }
-        
-        .cta-buttons { 
-            display: flex; 
-            justify-content: center; 
-            gap: 20px; 
-            margin-top: 40px; 
-            flex-wrap: wrap; 
-        }
-        
-        .btn { 
-            padding: 16px 36px; 
-            border-radius: 8px; 
-            font-size: 1.1rem; 
-            font-weight: 700; 
-            text-decoration: none; 
-            display: inline-flex; 
-            align-items: center; 
-            gap: 10px; 
-            transition: all .3s; 
-            border: none; 
-            cursor: pointer; 
-        }
-        
-        .btn-primary { 
-            background-color: var(--accent);
-            color: var(--black); 
-        }
-        
-        .btn-primary:hover {
-            transform: translateY(-3px);
-            box-shadow: 0 10px 25px rgba(255, 215, 0, 0.3);
-        }
-        
-        .btn-secondary { 
-            background: transparent; 
-            color: var(--white); 
-            border: 2px solid rgba(255, 215, 0, 0.4); 
-        }
-        
-        .btn-secondary:hover {
-            background: rgba(255, 215, 0, 0.1);
-            transform: translateY(-3px);
-        }
-        
-        .hero-features { 
-            display: flex; 
-            justify-content: center; 
-            gap: 30px; 
-            margin-top: 50px; 
-            flex-wrap: wrap; 
-        }
-        
-        .hero-feature { 
-            display: flex; 
-            align-items: center; 
-            gap: 10px; 
-            font-weight: 500; 
-        }
-        
-        .hero-feature i { 
-            color: var(--accent); 
-            font-size: 1.2rem; 
-        }
-        
-        .video-section { 
-            padding: 70px 0; 
-            text-align: center; 
-            background: rgba(0, 0, 0, 0.5);
-            border-bottom: 1px solid rgba(23, 17, 61, 0.7);
-        }
-        
-        .video-container { 
-            max-width: 900px; 
-            margin: 20px auto; 
-            border-radius: 12px; 
-            overflow: hidden; 
-            box-shadow: 0 15px 30px rgba(42, 31, 92, 0.85); 
-            background: #000; 
-            position: relative; 
-            aspect-ratio: 16/9; 
-            border: 1px solid rgba(42, 31, 92, 0.85);
-        }
-        
-        .video-placeholder { 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            flex-direction: column; 
-            color: #fff; 
-            height: 100%; 
-            padding: 20px; 
-        }
-        
-        .video-placeholder i { 
-            font-size: 4rem; 
-            color: var(--accent); 
-            margin-bottom: 15px; 
-        }
-        
-        .features { 
-            padding: 100px 0; 
-            background: var(--black);
-            border-bottom: 1px solid rgba(23, 17, 61, 0.7);
-        }
-        
-        .section-title { 
-            text-align: center; 
-            font-size: 2.5rem; 
-            font-weight: 800; 
-            margin-bottom: 60px; 
-            color: var(--white); 
-        }
-        
-        .features-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); 
-            gap: 30px; 
-        }
-        
-        .feature-card { 
-            background: rgba(23, 17, 61, 0.7); 
-            padding: 40px 30px; 
-            border-radius: 12px; 
-            box-shadow: 0 5px 15px rgba(23, 17, 61, 0.7); 
-            border: 1px solid rgba(42, 31, 92, 0.85);
-            color: var(--white);
-        }
-        
-        .feature-card h3 { color: var(--white); margin-bottom: 15px; }
-        .feature-card p { opacity: 0.9; }
-        
-        .feature-icon { 
-            width: 60px; 
-            height: 60px; 
-            border-radius: 12px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            margin-bottom: 20px; 
-            color: var(--accent); 
-            font-size: 1.8rem; 
-            background: rgba(255, 215, 0, 0.1);
-        }
-        
-        .benefits { 
-            padding: 100px 0; 
-            background: rgba(0, 0, 0, 0.7);
-            border-bottom: 1px solid rgba(23, 17, 61, 0.7);
-        }
-        
-        .benefits-text h2 { 
-            font-size: 2.2rem; 
-            color: var(--white); 
-            margin-bottom: 20px; 
-        }
-        
-        .benefits-text p { 
-            color: var(--white); 
-            margin-bottom: 15px; 
-            opacity: 0.95;
-        }
-        
-        .benefits-list { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 25px; 
-            margin-top: 30px; 
-        }
-        
-        .benefit-item { 
-            display: flex; 
-            gap: 15px; 
-            align-items: flex-start; 
-            color: var(--white);
-        }
-        
-        .benefit-item i { 
-            color: var(--accent); 
-            font-size: 1.5rem; 
-            margin-top: 3px; 
-        }
-        
-        .services { 
-            padding: 100px 0; 
-            background: var(--black);
-            border-bottom: 1px solid rgba(23, 17, 61, 0.7);
-        }
-        
-        .services-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 25px; 
-        }
-        
-        .service-card { 
-            background: rgba(23, 17, 61, 0.7); 
-            padding: 35px; 
-            border-radius: 12px; 
-            box-shadow: 0 5px 15px rgba(23, 17, 61, 0.7); 
-            border-top: 4px solid var(--accent); 
-            border: 1px solid rgba(42, 31, 92, 0.85);
-            color: var(--white);
-        }
-        
-        .service-card h3 { color: var(--white); margin-bottom: 15px; }
-        
-        .about-founder {
-            padding: 100px 0;
-            background: rgba(0, 0, 0, 0.7);
-            border-bottom: 1px solid rgba(23, 17, 61, 0.7);
-        }
-        
-        .founder-content {
-            display: grid;
-            grid-template-columns: 280px 1fr;
-            gap: 60px;
-            align-items: flex-start;
-        }
-        
-        .founder-photo {
-            background: linear-gradient(135deg, #2A1F5C 0%, var(--accent) 100%);
-            border-radius: 16px;
-            padding: 30px;
-            text-align: center;
-            color: white;
-            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-            border: 1px solid rgba(255, 215, 0, 0.2);
-            height: fit-content;
-        }
-        
-        .founder-photo img {
-            width: 150px;
-            height: 150px;
-            border-radius: 50%;
-            object-fit: cover;
-            border: 3px solid var(--accent);
-            margin-bottom: 15px;
-        }
-        
-        .founder-photo i {
-            font-size: 80px;
-            margin-bottom: 15px;
-            display: block;
-        }
-        
-        .founder-photo h3 {
-            font-size: 1.4rem;
-            margin-bottom: 5px;
-            font-weight: 800;
-        }
-        
-        .founder-photo p {
-            opacity: 0.9;
-            font-size: 0.9rem;
-            margin-bottom: 5px;
-        }
-        
-        .founder-story h3 {
-            color: var(--accent);
-            font-size: 1.6rem;
-            margin-bottom: 20px;
-        }
-        
-        .founder-story p {
-            color: var(--white);
-            margin-bottom: 15px;
-            opacity: 0.95;
-            line-height: 1.8;
-        }
-        
-        .how-it-works { 
-            padding: 100px 0; 
-            background: rgba(0, 0, 0, 0.7);
-            border-bottom: 1px solid rgba(23, 17, 61, 0.7);
-        }
-        
-        .steps-container { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 40px; 
-            max-width: 1000px; 
-            margin: 60px auto 0; 
-        }
-        
-        .step { display: flex; flex-direction: column; align-items: flex-start; }
-        
-        .step-number { 
-            width: 60px; 
-            height: 60px; 
-            background: linear-gradient(135deg, #2A1F5C 0%, #17113D 100%); 
-            border-radius: 50%; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            color: #fff; 
-            font-weight: 800; 
-            font-size: 1.6rem; 
-            margin-bottom: 20px;
-        }
-        
-        .step-content { 
-            background: rgba(23, 17, 61, 0.7); 
-            padding: 30px; 
-            border-radius: 12px; 
-            border-left: 4px solid var(--accent); 
-            border: 1px solid rgba(42, 31, 92, 0.85);
-            color: var(--white);
-        }
-        
-        .step-content h3 { color: var(--white); margin-bottom: 10px; }
-        
-        .who-its-for { 
-            padding: 100px 0; 
-            background: linear-gradient(135deg, rgba(42, 31, 92, 0.85) 0%, rgba(0, 0, 0, 0.8) 100%);
-            color: white;
-            border-bottom: 1px solid rgba(23, 17, 61, 0.7);
-        }
-        
-        .who-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); 
-            gap: 30px; 
-        }
-        
-        .who-card { 
-            background: rgba(23, 17, 61, 0.7); 
-            padding: 30px; 
-            border-radius: 12px; 
-            border: 1px solid rgba(42, 31, 92, 0.85);
-            color: var(--white);
-        }
-        
-        .who-card h3 { color: var(--accent); margin-bottom: 15px; }
-        
-        .pricing { 
-            padding: 100px 0; 
-            background: rgba(0, 0, 0, 0.7);
-            border-bottom: 1px solid rgba(23, 17, 61, 0.7);
-        }
-        
-        .pricing-content { text-align: center; }
-        .pricing-content h2 { color: var(--white); margin-bottom: 20px; }
-        .pricing-content p { color: var(--white); opacity: 0.95; margin-bottom: 15px; }
-        
-        .plan-note {
-            font-size: 1.6rem;
-            font-weight: 800;
-            color: var(--accent);
-            letter-spacing: 0.5px;
-            margin: 5px 0 30px;
-            line-height: 1.3;
-        }
-        .plan-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(300px, 1fr)); gap:25px; max-width:900px; margin:0 auto 35px; text-align:left; }
-        .plan-card { background:rgba(0,0,0,0.25); border:1px solid rgba(255,255,255,0.18); border-radius:14px; padding:30px 28px; }
-        .plan-card h3 { color:var(--accent); font-size:1.35rem; margin-bottom:6px; letter-spacing:0.5px; }
-        .plan-term { color:var(--white); opacity:0.75; font-size:0.85rem; font-weight:700; letter-spacing:1.2px; text-transform:uppercase; margin-bottom:20px; }
-        .plan-card ul { list-style:none; }
-        .plan-card ul li { display:flex; align-items:flex-start; gap:11px; color:var(--white); font-size:0.98rem; line-height:1.5; margin-bottom:13px; }
-        .plan-card ul li i { color:var(--accent); margin-top:4px; flex-shrink:0; }
-        .plan-card ul li .fa-gift { color:var(--accent); }
-        @media (max-width: 600px) {
-            .plan-note { font-size:1.3rem; }
-            .plan-card { padding:25px 22px; }
-        }
-
-        .price-display { 
-            font-size: 3rem; 
-            font-weight: 800; 
-            color: var(--accent); 
-            margin: 30px 0; 
-        }
-        
-        .testimonials { 
-            padding: 100px 0; 
-            background: var(--black);
-            border-bottom: 1px solid rgba(23, 17, 61, 0.7);
-        }
-        
-        .testimonials-grid { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); 
-            gap: 30px; 
-        }
-        
-        .testimonial-card { 
-            background: rgba(23, 17, 61, 0.7); 
-            padding: 30px; 
-            border-radius: 12px; 
-            border-left: 5px solid var(--accent); 
-            border: 1px solid rgba(42, 31, 92, 0.85);
-            color: var(--white);
-        }
-        
-        .testimonial-rating { color: var(--accent); margin-bottom: 15px; }
-        .testimonial-text { opacity: 0.9; margin-bottom: 20px; }
-        .testimonial-author { display: flex; gap: 15px; align-items: center; }
-        .author-avatar { 
-            width: 50px; 
-            height: 50px; 
-            border-radius: 50%; 
-            background: linear-gradient(135deg, #2A1F5C 0%, var(--accent) 100%); 
-            color: white; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-weight: 800; 
-        }
-        
-        .author-info h4 { color: var(--white); }
-        .author-info p { opacity: 0.7; font-size: 0.9rem; }
-        
-        .faq { 
-            padding: 100px 0; 
-            background: rgba(0, 0, 0, 0.7);
-            border-bottom: 1px solid rgba(23, 17, 61, 0.7);
-        }
-        
-        .faq-container { 
-            max-width: 900px; 
-            margin: 0 auto; 
-        }
-        
-        .faq-item { 
-            margin-bottom: 15px; 
-            background: rgba(23, 17, 61, 0.7); 
-            border-radius: 10px; 
-            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.3); 
-            border: 1px solid rgba(42, 31, 92, 0.85);
-        }
-        
-        .faq-question { 
-            padding: 25px; 
-            font-weight: 600; 
-            cursor: pointer; 
-            display: flex; 
-            justify-content: space-between; 
-            align-items: center; 
-            color: var(--white); 
-        }
-        
-        .faq-answer { 
-            padding: 0 25px 25px; 
-            color: var(--white); 
-            display: none; 
-            opacity: 0.9;
-        }
-        
-        .faq-item.active .faq-answer { 
-            display: block; 
-        }
-        
-        .final-cta { 
-            background: linear-gradient(135deg, rgba(42, 31, 92, 0.85) 0%, rgba(0, 0, 0, 0.9) 100%);
-            color: white; 
-            padding: 80px 0; 
-            text-align: center; 
-            border-bottom: 1px solid rgba(23, 17, 61, 0.7);
-        }
-        
-        .final-cta h2 { 
-            color: var(--white); 
-            font-size: 2.2rem; 
-            margin-bottom: 20px; 
-        }
-        
-        .final-cta p { 
-            opacity: 0.95; 
-            max-width: 700px; 
-            margin: 0 auto 30px; 
-        }
-        
-        footer { 
-            background: #0a0a0a; 
-            color: white; 
-            padding: 60px 0 30px; 
-            border-top: 1px solid rgba(42, 31, 92, 0.85);
-        }
-        
-        .footer-content { 
-            display: grid; 
-            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-            gap: 40px; 
-            margin-bottom: 40px;
-        }
-        
-        .footer-links a { 
-            color: var(--gray-dark); 
-            text-decoration: none; 
-            display: block; 
-            margin-bottom: 10px; 
-            cursor: pointer;
-        }
-        
-        .footer-links a:hover { color: var(--accent); }
-        
-        .copyright { 
-            text-align: center; 
-            padding-top: 30px; 
-            border-top: 1px solid rgba(255, 255, 255, 0.1);
-            color: var(--gray-dark);
-            font-size: 0.85rem;
-        }
-        
-        .modal { 
-            display: none; 
-            position: fixed; 
-            top: 0; 
-            left: 0; 
-            width: 100%; 
-            height: 100%; 
-            background: rgba(0, 0, 0, 0.9); 
-            z-index: 9999; 
-            justify-content: center; 
-            align-items: center; 
-            padding: 20px; 
-        }
-        
-        .modal.active { 
-            display: flex; 
-        }
-        
-        .modal-content { 
-            background: var(--black); 
-            border-radius: 16px; 
-            padding: 40px; 
-            max-width: 520px; 
-            width: 100%; 
-            position: relative; 
-            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.8); 
-            border: 1px solid rgba(42, 31, 92, 0.85); 
-            animation: slideIn 0.3s ease; 
-            max-height: 90vh;
-            overflow-y: auto;
-        }
-        
-        @keyframes slideIn {
-            from { opacity: 0; transform: translateY(-30px); }
-            to { opacity: 1; transform: translateY(0); }
-        }
-        
-        .close-btn { 
-            position: absolute; 
-            top: 15px; 
-            right: 20px; 
-            background: none; 
-            border: none; 
-            font-size: 1.5rem; 
-            cursor: pointer; 
-            color: var(--white); 
-        }
-        
-        .close-btn:hover { color: var(--accent); }
-        
-        .modal h2 { 
-            color: var(--accent); 
-            font-size: 1.5rem; 
-            font-weight: 800; 
-            margin-bottom: 8px; 
-            text-align: center; 
-        }
-        
-        .modal-subtitle { 
-            color: var(--gray-dark); 
-            font-size: 0.95rem; 
-            text-align: center; 
-            margin-bottom: 28px; 
-        }
-        
-        .form-group { 
-            margin-bottom: 18px; 
-        }
-        
-        .form-group label { 
-            display: block; 
-            color: var(--white); 
-            font-weight: 600; 
-            margin-bottom: 8px; 
-            font-size: 0.9rem; 
-        }
-        
-        .form-group input{
-            width: 100%; 
-            padding: 12px 16px; 
-            border: 2px solid rgba(42, 31, 92, 0.85); 
-            border-radius: 8px; 
-            font-size: 1rem; 
-            outline: none; 
-            transition: border 0.2s; 
-            background: rgba(255, 255, 255, 0.05); 
-            color: var(--white);
-        }
-        
-        .form-group input:focus {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 3px rgba(42, 31, 92, 0.85);
-        }
-        
-        .form-group input::placeholder { 
-            color: var(--gray-dark); 
-        }
-        
-        .submit-btn { 
-            width: 100%; 
-            background: var(--accent); 
-            color: var(--black); 
-            padding: 14px; 
-            border: none; 
-            border-radius: 8px; 
-            font-size: 1.05rem; 
-            font-weight: 700; 
-            cursor: pointer; 
-            letter-spacing: 1px; 
-            transition: all 0.3s; 
-            margin-top: 8px; 
-        }
-        
-        .submit-btn:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
-        }
-        
-        .thank-you-page { 
-            display: none; 
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: var(--black); 
-            z-index: 10000;
-            overflow-y: auto;
-            padding: 40px 20px;
-        }
-        
-        .thank-you-page.active { 
-            display: flex;
-            align-items: flex-start;
-            justify-content: center;
-        }
-        
-        .thank-you-card { 
-            background: rgba(23, 17, 61, 0.7); 
-            border-radius: 20px; 
-            padding: 50px 40px; 
-            max-width: 560px; 
-            width: 100%; 
-            text-align: center; 
-            box-shadow: 0 20px 60px rgba(42, 31, 92, 0.85); 
-            border: 1px solid rgba(42, 31, 92, 0.85); 
-            color: var(--white);
-            margin: auto;
-        }
-        
-        .check-icon { 
-            font-size: 4rem; 
-            margin-bottom: 24px; 
-            color: var(--accent); 
-            animation: bounce 0.6s ease; 
-        }
-        
-        @keyframes bounce { 
-            0%, 100% { transform: scale(1); } 
-            50% { transform: scale(1.1); } 
-        }
-        
-        .thank-you-card h1 { 
-            color: var(--accent); 
-            font-size: 2rem; 
-            font-weight: 800; 
-            margin-bottom: 12px; 
-        }
-        
-        .thank-you-subtitle { 
-            color: var(--white); 
-            font-size: 1rem; 
-            line-height: 1.6; 
-            margin-bottom: 32px; 
-        }
-        
-        .name-highlight { 
-            color: var(--accent); 
-            font-weight: 700; 
-        }
-        
-        .divider { 
-            border: none; 
-            border-top: 2px solid rgba(42, 31, 92, 0.85); 
-            margin: 32px 0; 
-        }
-        
-        .what-next { 
-            background: rgba(23, 17, 61, 0.7); 
-            border-radius: 12px; 
-            padding: 24px; 
-            margin-bottom: 32px; 
-            text-align: left; 
-            border: 1px solid rgba(42, 31, 92, 0.85);
-        }
-        
-        .what-next h3 { 
-            color: var(--accent); 
-            font-size: 1rem; 
-            font-weight: 700; 
-            margin-bottom: 16px; 
-            text-align: center; 
-        }
-        
-        .step-ty { 
-            display: flex; 
-            align-items: flex-start; 
-            gap: 14px; 
-            margin-bottom: 14px; 
-        }
-        
-        .step-num-ty { 
-            background: linear-gradient(135deg, #2A1F5C 0%, #17113D 100%); 
-            color: #fff; 
-            border-radius: 50%; 
-            width: 32px; 
-            height: 32px; 
-            display: flex; 
-            align-items: center; 
-            justify-content: center; 
-            font-size: 0.8rem; 
-            font-weight: 700; 
-            flex-shrink: 0; 
-        }
-        
-        .step-text-ty { 
-            color: var(--white); 
-            font-size: 0.9rem; 
-            line-height: 1.5; 
-        }
-        
-        .step-text-ty strong { 
-            color: var(--accent); 
-        }
-        
-        .ty-buttons { 
-            display: flex; 
-            flex-direction: column; 
-            gap: 12px; 
-            margin-bottom: 24px; 
-        }
-        
-        .ty-btn { 
-            display: inline-flex; 
-            align-items: center; 
-            justify-content: center; 
-            gap: 10px; 
-            padding: 16px 24px; 
-            border-radius: 10px; 
-            text-decoration: none; 
-            font-size: 1rem; 
-            font-weight: 700; 
-            transition: all 0.3s; 
-            cursor: pointer; 
-            border: none; 
-        }
-        
-        .ty-btn-whatsapp { 
-            background: var(--whatsapp); 
-            color: #fff; 
-        }
-        
-        .ty-btn-whatsapp:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(37, 211, 102, 0.3);
-        }
-        
-        .ty-btn-cal { 
-            background: var(--accent); 
-            color: var(--black); 
-        }
-        
-        .ty-btn-cal:hover {
-            transform: translateY(-2px);
-            box-shadow: 0 8px 20px rgba(255, 215, 0, 0.3);
-        }
-        
-        .footer-note-ty { 
-            color: var(--gray-dark); 
-            font-size: 0.8rem; 
-            margin-top: 24px; 
-            line-height: 1.5; 
-        }
-        
-        .back-btn { 
-            background: rgba(42, 31, 92, 0.85); 
-            color: var(--accent); 
-            padding: 12px 24px; 
-            border-radius: 8px; 
-            border: 1px solid rgba(42, 31, 92, 0.85); 
-            cursor: pointer; 
-            font-weight: 600; 
-            margin-top: 20px; 
-        }
-        
-        .policy-page {
-            display: none;
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.95);
-            z-index: 10000;
-            overflow-y: auto;
-            padding: 40px 20px;
-        }
-        
-        .policy-page.active {
-            display: block;
-        }
-        
-        .policy-content {
-            background: var(--black);
-            border-radius: 20px;
-            padding: 60px 50px;
-            max-width: 900px;
-            margin: 0 auto;
-            box-shadow: 0 20px 60px rgba(42, 31, 92, 0.85);
-            border: 1px solid rgba(42, 31, 92, 0.85);
-            color: var(--white);
-        }
-        
-        .policy-header {
-            text-align: center;
-            margin-bottom: 40px;
-            padding-bottom: 20px;
-            border-bottom: 2px solid rgba(255, 215, 0, 0.3);
-        }
-        
-        .policy-title {
-            font-size: 2.5rem;
-            color: var(--accent);
-            margin-bottom: 10px;
-            font-weight: 800;
-        }
-        
-        .policy-date {
-            color: var(--gray-dark);
-            font-size: 0.9rem;
-        }
-        
-        .policy-body h2 {
-            color: var(--white);
-            margin: 30px 0 15px;
-            padding-bottom: 8px;
-            border-bottom: 2px solid rgba(255, 215, 0, 0.2);
-        }
-        
-        .policy-body h3 {
-            color: var(--accent);
-            margin: 25px 0 10px;
-        }
-        
-        .policy-body p {
-            color: var(--white);
-            opacity: 0.95;
-            margin-bottom: 15px;
-            line-height: 1.7;
-        }
-        
-        .policy-body ul {
-            margin-left: 25px;
-            margin-bottom: 20px;
-        }
-        
-        .policy-body li {
-            color: var(--white);
-            opacity: 0.9;
-            margin-bottom: 8px;
-        }
-        
-        .back-policy {
-            display: inline-flex;
-            align-items: center;
-            gap: 10px;
-            background: var(--accent);
-            color: var(--black);
-            padding: 12px 25px;
-            border-radius: 8px;
-            text-decoration: none;
-            margin-top: 40px;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-        }
-        
-        .mobile-cta { 
-            display: none; 
-            position: fixed; 
-            bottom: 0; 
-            left: 0; 
-            right: 0; 
-            background: var(--black); 
-            padding: 12px 15px; 
-            z-index: 999; 
-            box-shadow: 0 -4px 12px rgba(0, 0, 0, 0.3); 
-            border-top: 1px solid rgba(42, 31, 92, 0.85);
-        }
-        
-        .mobile-cta .btn { 
-            width: 100%; 
-            justify-content: center; 
-            padding: 12px 20px; 
-        }
-        
-        @media (max-width: 992px) { 
-            .nav-links { display: none; } 
-            .mobile-menu-btn { display: block; background: none; border: none; color: var(--white); cursor: pointer; } 
-        } 
-        
-        @media (max-width: 768px) { 
-            .hero { padding: 80px 0 60px; } 
-            .hero h1 { font-size: 2rem; } 
-            .cta-buttons { flex-direction: column; } 
-            .btn { width: 100%; justify-content: center; } 
-            .mobile-cta { display: block; } 
-            body { padding-bottom: 70px; } 
-            .section-title { font-size: 1.8rem; } 
-            .founder-content { grid-template-columns: 1fr; gap: 30px; }
-            .modal-content { padding: 30px 24px; } 
-            .thank-you-card { padding: 30px 24px; }
-            .policy-content { padding: 30px 20px; }
-        }
-
-        /* PACKAGE TABS / APP ECOSYSTEM */
-        .pkg-tabs { display:flex; gap:15px; justify-content:center; flex-wrap:wrap; margin-bottom:40px; }
-        .pkg-tab { background:rgba(23, 17, 61, 0.7); border:1px solid rgba(42, 31, 92, 0.85); color:var(--white); padding:14px 28px; border-radius:10px; font-family:inherit; font-size:1.05rem; font-weight:700; cursor:pointer; display:inline-flex; align-items:center; gap:10px; transition:all .3s; }
-        .pkg-tab:hover { border-color:rgba(255,215,0,0.5); }
-        .pkg-tab.active { background:var(--accent); color:var(--black); border-color:var(--accent); }
-        .pkg-tab-count { font-size:0.85rem; font-weight:600; opacity:0.85; white-space:nowrap; }
-        .pkg-panel { display:none; }
-        .pkg-panel.active { display:block; }
-        .pkg-panel-head { display:flex; align-items:center; justify-content:space-between; gap:15px; flex-wrap:wrap; margin-bottom:25px; }
-        .pkg-panel-head h3 { color: var(--white); font-size:1.5rem; }
-        .pkg-badge { background:rgba(255,215,0,0.12); border:1px solid rgba(255,215,0,0.35); color:var(--accent); padding:8px 16px; border-radius:999px; font-weight:700; font-size:0.9rem; white-space:nowrap; }
-        .app-grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:15px; }
-        .app-item { background:rgba(23, 17, 61, 0.7); border:1px solid rgba(42, 31, 92, 0.85); border-radius:10px; padding:18px 20px; display:flex; align-items:center; gap:12px; color:var(--white); font-weight:600; line-height:1.4; }
-        .app-item i { color:var(--accent); flex-shrink:0; }
-        .upcoming-block { margin-top:45px; background:rgba(255,255,255,0.04); border:1px solid rgba(42, 31, 92, 0.85); border-left:4px solid var(--navy-light); border-radius:10px; padding:25px 28px; }
-        .upcoming-block h4 { color: var(--white); margin-bottom:10px; font-size:1.15rem; }
-        .upcoming-block p { color:var(--white); opacity:0.9; }
-        .nowrap { white-space:nowrap; }
-
-        /* VERTICAL (SHORTS) VIDEO */
-        .video-shorts { max-width:400px; aspect-ratio:9/16; margin:20px auto 0; border-radius:12px; overflow:hidden; background:#000; border:1px solid rgba(42, 31, 92, 0.85); box-shadow:0 15px 30px rgba(42, 31, 92, 0.85); }
-        .video-shorts iframe { width:100%; height:100%; display:block; border:0; }
-
-        /* CONTACT ROWS + THANK YOU EXTRAS */
-        .contact-rows a, .contact-rows p { display:flex; align-items:center; gap:10px; color:var(--gray-dark); text-decoration:none; margin-bottom:10px; word-break:break-word; }
-        .contact-rows a:hover { color:var(--accent); }
-        .contact-rows i { color:var(--accent); width:18px; text-align:center; flex-shrink:0; }
-        .ty-contact { display:flex; flex-direction:column; gap:8px; align-items:center; margin-bottom:20px; }
-        .ty-contact a { color:var(--white); text-decoration:none; font-size:0.9rem; display:inline-flex; align-items:center; gap:8px; word-break:break-word; }
-        .ty-contact a:hover { color:var(--accent); }
-        .ty-contact i { color:var(--accent); }
-        .ty-footer-links { display:flex; flex-wrap:wrap; gap:8px 18px; justify-content:center; padding-top:20px; border-top:1px solid rgba(255,255,255,0.1); }
-        .ty-footer-links a { color:var(--gray-dark); font-size:0.85rem; text-decoration:none; cursor:pointer; }
-        .ty-footer-links a:hover { color:var(--accent); }
-        @media (max-width: 600px) {
-            .pkg-tab { width:100%; justify-content:center; }
-            .pkg-panel-head { flex-direction:column; align-items:flex-start; }
-            .upcoming-block { padding:20px; }
-        }
-    </style>
-
-<!-- ==========================================================================
-     SITE SETTINGS, EDIT EVERYTHING IN THIS ONE BLOCK
-     Change a value here and it updates everywhere on the site.
-     ========================================================================== -->
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VelorixAI: Launch &amp; Scale Your Business in 2 Hours with AI</title>
+<meta name="description" content="VelorixAI combines your website, funnel, CRM, WhatsApp automation and payments into one connected dashboard. Guided 2-hour setup.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Playfair+Display:wght@600;700&family=Montserrat:wght@700;800&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com"></script>
 <script>
-window.SITE = {
-
-    /* BRAND */
-    brandName:   "VelorixAI",
-    brandFirst:  "Velorix",      // shown in normal colour in the logo
-    brandSecond: "AI",           // shown in accent colour in the logo
-    logoUrl:     "assets/velorix-logo.png",   // swap in your own file to change the logo
-
-    /* CONTACT */
-    phone:           "+91 8218854770",
-    email:           "contact.velorixai@gmail.com",
-    whatsappNumber:  "918218854770",                              // digits only, with country code
-    whatsappMessage: "Hi! I'm interested in VelorixAI.",
-
-    /* BOOKING */
-    CAL_ID_BOOKING_URL: "https://cal.id/velorixai/demo-call?duration=30",
-    prefillCalId: true,          // pass the lead's name/email into Cal.id
-    openCalInNewTab: false,
-
-    /* MEDIA */
-    youtubeUrl:   "https://youtube.com/shorts/Ol6ReFCvqeQ?feature=share",
-    youtubeTitle: "VelorixAI Build Walkthrough",
-
-    /* POLICY PAGES
-       "#terms" / "#privacy" / "#refund" open the built-in pages below.
-       Replace with a full URL (e.g. "https://velorixai.com/terms") to link out instead. */
-    termsUrl:   "#terms",
-    privacyUrl: "#privacy",
-    refundUrl:  "#refund",
-
-    /* PLANS (no public pricing, confirmed on the free demo) */
-    planNote: "Quarterly & Annual plans available"
+tailwind.config = {
+  theme: {
+    extend: {
+      fontFamily: {
+        sans:    ['"Plus Jakarta Sans"', 'Inter', 'system-ui', 'sans-serif'],
+        display: ['Montserrat', '"Plus Jakarta Sans"', 'system-ui', 'sans-serif']
+      },
+      colors: {
+        ink:    '#0F172A',
+        slate:  { 450: '#5B6478' },
+        line:   '#E2E8F0',
+        mist:   '#F8FAFC',
+        /* one accent hue. DEFAULT/deep = the accent itself (fills, rings, text on
+           black). ink = the same hue darkened, used only for text on white, where
+           the light value is unreadable. */
+        /* exactly one accent value, identical on every surface */
+        /* exactly one accent value, identical on every page and surface */
+        neon:   { DEFAULT: '#A9D622', deep: '#A9D622', ink: '#A9D622' },
+        lime:   { DEFAULT: '#A9D622', deep: '#A9D622', ink: '#A9D622' }
+      },
+      boxShadow: {
+        card: '0 1px 2px rgba(15,23,42,0.04), 0 8px 24px -12px rgba(15,23,42,0.10)',
+        pop:  '0 24px 64px -16px rgba(15,23,42,0.28)'
+      }
+    }
+  }
 };
 </script>
-</head>
-<body>
+<style>
+  html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+  body { -webkit-font-smoothing: antialiased; }
+  [x-modal] { display: none; }
+  [x-modal].is-open { display: flex; }
+  .reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s ease, transform .6s ease; }
+  .js-reveal .reveal.is-visible, .reveal.is-visible { opacity: 1; transform: none; }
+  html:not(.js-reveal) .reveal { opacity: 1; transform: none; }
+  .hero-gradient-text { color: #A9D622; }
 
-<!-- BOOKING FORM MODAL -->
-<div class="modal" id="demoModal">
-    <div class="modal-content">
-        <button class="close-btn" onclick="closeDemoForm()">✕</button>
-        <h2>📅 Book Your Free Demo Call</h2>
-        <p class="modal-subtitle">Enter your details and pick your demo date and time on the next step.</p>
-        
-        <form id="demoForm" onsubmit="submitDemoForm(event)">
-            <div class="form-group">
-                <label for="clientName">Full Name *</label>
-                <input type="text" id="clientName" required placeholder="Enter your full name"/>
-            </div>
-            <div class="form-group">
-                <label for="clientEmail">Email Address *</label>
-                <input type="email" id="clientEmail" required placeholder="you@example.com"/>
-            </div>
-            <div class="form-group">
-                <label for="clientPhone">Phone Number *</label>
-                <input type="tel" id="clientPhone" required placeholder="+91 98765 43210"/>
-            </div>
-            
-            <button type="submit" class="submit-btn">SEND &amp; CONTINUE TO BOOK DEMO</button>
-            
-            <p style="text-align:center; font-size:0.8rem; color:var(--gray-dark); margin-top:12px;">
-                🔒 No spam. Your info is 100% safe with us.
+  /* Green headings: the existing green with a light sweep travelling right to left.
+     One keyframe drives every green heading. .sweep runs to pure white (used on the
+     black hero); .sweep-light runs to a pale tint of the same green, so headings on
+     white and #F8FAFC sections never disappear into their background mid-sweep. */
+  .sweep, .sweep-light {
+    background-image: linear-gradient(100deg,
+      #A9D622 0%, #A9D622 34%,
+      #FFFFFF 46%, #FFFFFF 54%,
+      #A9D622 66%, #A9D622 100%);
+    background-size: 300% 100%;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+    animation: sweep-green 3.2s linear infinite;
+  }
+  .sweep-light {
+    background-image: linear-gradient(100deg,
+      #A9D622 0%, #A9D622 34%,
+      #E4F3B4 46%, #E4F3B4 54%,
+      #A9D622 66%, #A9D622 100%);
+  }
+  @keyframes sweep-green {
+    from { background-position: 100% 0; }
+    to   { background-position: 0% 0; }
+  }
+
+  /* AI orb: concentric rings pulsing outward, core drifting */
+  @keyframes orb-ring {
+    0%   { transform: scale(0.6); opacity: 0; }
+    20%  { opacity: 0.9; }
+    100% { transform: scale(1); opacity: 0; }
+  }
+  @keyframes orb-float {
+    0%, 100% { transform: translateY(-5px); }
+    50%      { transform: translateY(5px); }
+  }
+  .orb-ring { animation: orb-ring 4.6s ease-out infinite; }
+  .orb-core { animation: orb-float 5.5s ease-in-out infinite; }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .reveal { opacity: 1 !important; transform: none !important; transition: none; }
+    .sweep, .sweep-light { animation: none; background-image: none; color: #A9D622; -webkit-text-fill-color: #A9D622; }
+    .orb-ring, .orb-core { animation: none; }
+  }
+</style>
+</head>
+<body class="bg-white font-sans text-ink antialiased">
+
+<!-- ============================================================== HEADER -->
+<header class="sticky top-0 z-40 border-b border-white/10 bg-black/90 backdrop-blur">
+    <div class="mx-auto flex h-[76px] max-w-6xl items-center justify-between gap-6 px-6">
+        <a href="#top" class="flex items-center gap-3 text-lg font-extrabold tracking-tight text-white">
+            <img src="assets/velorix-logo.png" alt="VelorixAI logo" class="h-9 w-9 rounded-lg object-contain">
+            <span>Velorix<span class="text-neon">AI</span></span>
+        </a>
+
+        <nav id="site-nav" class="hidden items-center gap-7 lg:flex" aria-label="Main">
+            <a href="#watch" class="whitespace-nowrap text-sm font-semibold text-white/70 hover:text-white">Watch</a>
+            <a href="#features" class="whitespace-nowrap text-sm font-semibold text-white/70 hover:text-white">Features</a>
+            <a href="#fit" class="whitespace-nowrap text-sm font-semibold text-white/70 hover:text-white">Who It's For</a>
+            <a href="#roadmap" class="whitespace-nowrap text-sm font-semibold text-white/70 hover:text-white">Roadmap</a>
+            <a href="#plans" class="whitespace-nowrap text-sm font-semibold text-white/70 hover:text-white">Plans</a>
+            <a href="#founder" class="whitespace-nowrap text-sm font-semibold text-white/70 hover:text-white">Founder</a>
+            <a href="#testimonials" class="whitespace-nowrap text-sm font-semibold text-white/70 hover:text-white">Reviews</a>
+            <button type="button" data-open-lead class="whitespace-nowrap rounded-full bg-neon px-6 py-3 text-sm font-bold uppercase tracking-wide text-ink transition hover:bg-neon-deep">Book Demo</button>
+        </nav>
+
+        <button type="button" id="nav-toggle" class="grid h-11 w-11 place-items-center rounded-lg border border-white/20 text-xl text-white lg:hidden" aria-label="Open menu" aria-expanded="false" aria-controls="mobile-nav">&#9776;</button>
+    </div>
+
+    <nav id="mobile-nav" class="hidden border-t border-white/10 bg-black px-6 pb-6 pt-2 lg:hidden" aria-label="Mobile">
+        <a href="#watch" class="block border-b border-white/10 py-4 font-semibold text-white">Watch</a>
+        <a href="#features" class="block border-b border-white/10 py-4 font-semibold text-white">Features</a>
+        <a href="#fit" class="block border-b border-white/10 py-4 font-semibold text-white">Who It's For</a>
+        <a href="#roadmap" class="block border-b border-white/10 py-4 font-semibold text-white">Roadmap</a>
+        <a href="#plans" class="block border-b border-white/10 py-4 font-semibold text-white">Plans</a>
+        <a href="#founder" class="block border-b border-white/10 py-4 font-semibold text-white">Founder</a>
+        <a href="#testimonials" class="block border-b border-white/10 py-4 font-semibold text-white">Reviews</a>
+        <button type="button" data-open-lead class="mt-5 w-full rounded-full bg-neon px-6 py-4 text-sm font-bold uppercase tracking-wide text-ink">Book My Free Demo</button>
+    </nav>
+</header>
+
+<main id="top">
+
+    <!-- ============================================================ HERO -->
+    <section class="bg-black px-6 pb-24 pt-8 text-center md:pt-10">
+        <p class="mb-7 inline-flex items-center gap-2 rounded-full bg-white/5 px-5 py-2.5 text-[13px] font-extrabold uppercase tracking-[0.12em] text-neon ring-1 ring-neon/50">
+            &#9889; AI BUSINESS PLATFORM
+        </p>
+        <div class="mx-auto max-w-4xl">
+            <h1 class="font-display text-[42px] font-extrabold leading-[1.06] tracking-tight text-white sm:text-[72px] lg:text-[96px]">
+                Launch &amp; Scale Your Business in <span class="sweep">2 Hours with AI</span>
+            </h1>
+
+            <p class="mx-auto mt-7 max-w-2xl text-[16px] font-normal leading-relaxed text-[#E0E0E0] sm:text-[18px]">
+                Replace 8 disconnected tools with one smart system that automates your funnels, CRM, WhatsApp, and payments to launch and grow your business
             </p>
+
+            <div class="mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+                <button type="button" data-open-lead class="inline-flex min-h-[58px] items-center justify-center gap-2 rounded-full bg-neon px-9 text-[17px] font-bold text-black transition hover:-translate-y-0.5 hover:brightness-95">
+                    Book My Free Demo &rarr;
+                </button>
+                <a href="https://wa.me/918218854770?text=Hi%21%20I%27m%20interested%20in%20VelorixAI." target="_blank" rel="noopener" class="inline-flex min-h-[56px] items-center justify-center gap-2 rounded-full border border-white/25 bg-transparent px-9 text-base font-bold uppercase tracking-wide text-white transition hover:border-white">
+                    &#128172; Chat on WhatsApp
+                </a>
+            </div>
+
+            <ul class="mt-11 flex flex-wrap justify-center gap-x-8 gap-y-3 text-sm text-white/60">
+            </ul>
+        </div>
+    </section>
+
+    <!-- =========================================================== VIDEO -->
+    <section id="watch" class="border-y border-line bg-mist px-6 py-24">
+        <div class="mx-auto max-w-6xl">
+            <div class="reveal mx-auto mb-14 max-w-2xl text-center">
+                <p class="mb-5 inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-neon-ink">Watch This First</p>
+                <h2 class="font-display text-[34px] font-extrabold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-[52px]">Before You Build With AI,<br><span class="sweep-light">Watch This.</span></h2>
+                <p class="mx-auto mt-5 max-w-xl text-[15px] font-medium leading-relaxed text-slate-450 sm:text-base">Get a quick overview of how Velorix AI approaches business growth, automation and AI-powered opportunities, without the usual complexity.</p>
+            </div>
+
+            <div class="reveal mx-auto aspect-video w-full max-w-3xl overflow-hidden rounded-2xl border border-line bg-black shadow-card">
+                <iframe class="h-full w-full" src="https://www.youtube.com/embed/Ol6ReFCvqeQ?rel=0" title="VelorixAI build walkthrough" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+            </div>
+            <p class="reveal mx-auto mt-5 max-w-2xl text-center text-[13px] leading-relaxed text-slate-450">
+                &#9654; Watch the short overview and discover what your next AI move could look like
+            </p>
+        </div>
+    </section>
+
+    <!-- ======================================================== FEATURES -->
+    <section id="features" class="px-6 py-24">
+        <div class="mx-auto max-w-6xl">
+            <div class="reveal mx-auto mb-16 max-w-2xl text-center">
+                <p class="mb-5 inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-neon-ink">The Ecosystem</p>
+                <h2 class="font-display text-[34px] font-extrabold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-[52px]"><span class="sweep-light">One Unified Ecosystem</span><br>Not Scattered Solutions</h2>
+                <p class="mx-auto mt-5 max-w-xl text-[15px] font-medium leading-relaxed text-slate-450 sm:text-base">Everything you need to launch, sell and scale, in a single dashboard.</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-3">
+                <article class="reveal relative overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-card">
+                    <span aria-hidden="true" class="pointer-events-none absolute -right-10 -top-10 h-20 w-20 rounded-full bg-neon"></span>
+                    <span class="relative mb-5 block text-[32px] font-extrabold leading-none tracking-[0.02em] text-neon-ink">01</span>
+                    <h3 class="mb-3 text-xl font-bold tracking-tight text-ink">Fast Launch</h3>
+                    <p class="text-base leading-relaxed text-slate-450">From idea to live business in a single guided session, no tech skills required.</p>
+                </article>
+                <article class="reveal relative overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-card">
+                    <span aria-hidden="true" class="pointer-events-none absolute -right-10 -top-10 h-20 w-20 rounded-full bg-neon"></span>
+                    <span class="relative mb-5 block text-[32px] font-extrabold leading-none tracking-[0.02em] text-neon-ink">02</span>
+                    <h3 class="mb-3 text-xl font-bold tracking-tight text-ink">16 Apps in One Platform</h3>
+                    <p class="text-base leading-relaxed text-slate-450">Website builder, CRM, WhatsApp automation, scheduling and payments, all connected.</p>
+                </article>
+                <article class="reveal relative overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-card">
+                    <span aria-hidden="true" class="pointer-events-none absolute -right-10 -top-10 h-20 w-20 rounded-full bg-neon"></span>
+                    <span class="relative mb-5 block text-[32px] font-extrabold leading-none tracking-[0.02em] text-neon-ink">03</span>
+                    <h3 class="mb-3 text-xl font-bold tracking-tight text-ink">Automated Lead Gen</h3>
+                    <p class="text-base leading-relaxed text-slate-450">Smart AI tools find and qualify your ideal clients 24/7 while you deliver results.</p>
+                </article>
+                <article class="reveal relative overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-card">
+                    <span aria-hidden="true" class="pointer-events-none absolute -right-10 -top-10 h-20 w-20 rounded-full bg-neon"></span>
+                    <span class="relative mb-5 block text-[32px] font-extrabold leading-none tracking-[0.02em] text-neon-ink">04</span>
+                    <h3 class="mb-3 text-xl font-bold tracking-tight text-ink">Autopilot Marketing</h3>
+                    <p class="text-base leading-relaxed text-slate-450">Email sequences, WhatsApp follow-ups and lead nurturing run on complete autopilot.</p>
+                </article>
+                <article class="reveal relative overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-card">
+                    <span aria-hidden="true" class="pointer-events-none absolute -right-10 -top-10 h-20 w-20 rounded-full bg-neon"></span>
+                    <span class="relative mb-5 block text-[32px] font-extrabold leading-none tracking-[0.02em] text-neon-ink">05</span>
+                    <h3 class="mb-3 text-xl font-bold tracking-tight text-ink">Unified Hub</h3>
+                    <p class="text-base leading-relaxed text-slate-450">Track every lead, client and payment without switching between 10 different tools.</p>
+                </article>
+                <article class="reveal relative overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-card">
+                    <span aria-hidden="true" class="pointer-events-none absolute -right-10 -top-10 h-20 w-20 rounded-full bg-neon"></span>
+                    <span class="relative mb-5 block text-[32px] font-extrabold leading-none tracking-[0.02em] text-neon-ink">06</span>
+                    <h3 class="mb-3 text-xl font-bold tracking-tight text-ink">Drag-and-Drop Simple</h3>
+                    <p class="text-base leading-relaxed text-slate-450">No coding required. A simple interface that saves time and lets you grow fast.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================== WHO IT'S FOR -->
+    <section id="fit" class="bg-black px-6 py-24">
+        <div class="mx-auto max-w-6xl">
+            <div class="reveal mx-auto mb-16 max-w-2xl text-center">
+                <p class="mb-5 inline-flex items-center rounded-full bg-white/10 px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-neon">The Fit</p>
+                <h2 class="font-display text-[34px] font-extrabold leading-[1.1] tracking-tight text-[#F5F5F5] sm:text-5xl lg:text-[52px]">Who's It For<br>And <span class="sweep">Who's It Not For?</span></h2>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <article class="reveal rounded-2xl border border-white/10 bg-white/[0.06] p-9">
+                    <h3 class="mb-9 font-display text-[26px] font-extrabold tracking-tight text-[#F5F5F5] sm:text-[32px]">VelorixAI is Built For:</h3>
+                    <ul class="space-y-7">
+                        <li class="flex gap-5">
+                            <span class="w-8 shrink-0 pt-1 text-sm font-extrabold text-neon">01</span>
+                            <span>
+                                <h4 class="text-[17px] font-bold tracking-tight text-[#F5F5F5]">Coaches Ready to Go Live</h4>
+                                <p class="mt-2 text-[15px] leading-relaxed text-white/65">You've got the expertise. You just need the tech to stop holding you back. Launch your first funnel, sell your first offer, and start making money, all in 2 hours.</p>
+                            </span>
+                        </li>
+                        <li class="flex gap-5">
+                            <span class="w-8 shrink-0 pt-1 text-sm font-extrabold text-neon">02</span>
+                            <span>
+                                <h4 class="text-[17px] font-bold tracking-tight text-[#F5F5F5]">Agency Owners Tired of Tool Chaos</h4>
+                                <p class="mt-2 text-[15px] leading-relaxed text-white/65">You're managing 5-6 tools, losing leads between systems, and paying for every one of them. One dashboard. Everything connected. Your leads never fall through cracks again.</p>
+                            </span>
+                        </li>
+                        <li class="flex gap-5">
+                            <span class="w-8 shrink-0 pt-1 text-sm font-extrabold text-neon">03</span>
+                            <span>
+                                <h4 class="text-[17px] font-bold tracking-tight text-[#F5F5F5]">Solopreneurs Who Want Freedom</h4>
+                                <p class="mt-2 text-[15px] leading-relaxed text-white/65">You don't want to hire a tech team or waste 6 months building a website. You want to sell, deliver, and scale, without the headache.</p>
+                            </span>
+                        </li>
+                        <li class="flex gap-5">
+                            <span class="w-8 shrink-0 pt-1 text-sm font-extrabold text-neon">04</span>
+                            <span>
+                                <h4 class="text-[17px] font-bold tracking-tight text-[#F5F5F5]">Consultants Who Value Their Time</h4>
+                                <p class="mt-2 text-[15px] leading-relaxed text-white/65">Every hour you spend on admin tasks is an hour you're not earning. Automate everything. Focus on what you do best, delivering results for clients.</p>
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+
+                <article class="reveal rounded-2xl border border-white/10 bg-transparent p-9">
+                    <h3 class="mb-9 font-display text-[26px] font-extrabold tracking-tight text-[#F5F5F5] sm:text-[32px]">VelorixAI is Not Built For:</h3>
+                    <ul class="space-y-7">
+                        <li class="flex gap-5">
+                            <span class="w-8 shrink-0 pt-1 text-sm font-extrabold text-[#FF3B30]">01</span>
+                            <span>
+                                <h4 class="text-[17px] font-bold tracking-tight text-[#F5F5F5]">People Looking for Free Tools or Shortcuts</h4>
+                                <p class="mt-2 text-[15px] leading-relaxed text-white/65">This is about building real, profitable businesses, not finding free workarounds. If you want cheap hacks instead of actual systems, this isn't for you.</p>
+                            </span>
+                        </li>
+                        <li class="flex gap-5">
+                            <span class="w-8 shrink-0 pt-1 text-sm font-extrabold text-[#FF3B30]">02</span>
+                            <span>
+                                <h4 class="text-[17px] font-bold tracking-tight text-[#F5F5F5]">Those Who Just Want to &quot;Learn AI&quot;</h4>
+                                <p class="mt-2 text-[15px] leading-relaxed text-white/65">We focus on earning from AI, not endless tutorials and certifications. If you're collecting courses instead of building revenue, this won't help.</p>
+                            </span>
+                        </li>
+                        <li class="flex gap-5">
+                            <span class="w-8 shrink-0 pt-1 text-sm font-extrabold text-[#FF3B30]">03</span>
+                            <span>
+                                <h4 class="text-[17px] font-bold tracking-tight text-[#F5F5F5]">Anyone Not Ready to Take Action</h4>
+                                <p class="mt-2 text-[15px] leading-relaxed text-white/65">Clarity without commitment is pointless. If you're not ready to actually launch or scale your business, booking a demo is just wasting time.</p>
+                            </span>
+                        </li>
+                        <li class="flex gap-5">
+                            <span class="w-8 shrink-0 pt-1 text-sm font-extrabold text-[#FF3B30]">04</span>
+                            <span>
+                                <h4 class="text-[17px] font-bold tracking-tight text-[#F5F5F5]">Job Seekers or Hobbyists</h4>
+                                <p class="mt-2 text-[15px] leading-relaxed text-white/65">This is for entrepreneurs who want to build and scale their own business, not for people looking for employment or side projects.</p>
+                            </span>
+                        </li>
+                    </ul>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= AI ORB -->
+    <section id="build-with-it" class="border-y border-line bg-mist px-6 py-24">
+        <div class="mx-auto max-w-6xl">
+            <div class="grid grid-cols-1 items-center gap-14 md:grid-cols-2">
+                <div class="reveal">
+                    <p class="mb-5 inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-neon-ink">Think Different</p>
+                    <h2 class="font-display text-[34px] font-extrabold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-[52px]">Don't Just <span class="sweep-light">Learn AI.</span><br>Build With It.</h2>
+                    <p class="mt-6 max-w-md text-[15px] font-medium leading-relaxed text-slate-450 sm:text-base">The real advantage comes from connecting AI with strategy, systems and execution.</p>
+
+                    <ul class="mt-9 space-y-4">
+                        <li class="flex items-center gap-4"><span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-neon text-sm font-bold text-black" aria-hidden="true">&#10003;</span><span class="text-[15px] font-bold text-ink">Identify high-impact AI opportunities</span></li>
+                        <li class="flex items-center gap-4"><span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-neon text-sm font-bold text-black" aria-hidden="true">&#10003;</span><span class="text-[15px] font-bold text-ink">Build smarter workflows</span></li>
+                        <li class="flex items-center gap-4"><span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-neon text-sm font-bold text-black" aria-hidden="true">&#10003;</span><span class="text-[15px] font-bold text-ink">Reduce repetitive work</span></li>
+                        <li class="flex items-center gap-4"><span class="grid h-7 w-7 shrink-0 place-items-center rounded-full bg-neon text-sm font-bold text-black" aria-hidden="true">&#10003;</span><span class="text-[15px] font-bold text-ink">Create scalable systems</span></li>
+                    </ul>
+                </div>
+
+                <div class="reveal relative mx-auto grid aspect-square w-full max-w-[420px] place-items-center" aria-hidden="true">
+                    <span class="orb-ring absolute inset-0 rounded-full border border-neon/50"></span>
+                    <span class="orb-ring absolute inset-0 rounded-full border border-neon/50" style="animation-delay:1.15s"></span>
+                    <span class="orb-ring absolute inset-0 rounded-full border border-neon/50" style="animation-delay:2.3s"></span>
+                    <span class="orb-ring absolute inset-0 rounded-full border border-neon/50" style="animation-delay:3.45s"></span>
+                    <span class="orb-core grid h-[46%] w-[46%] place-items-center rounded-full bg-neon text-2xl font-extrabold tracking-tight text-black shadow-pop">AI</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ======================================================== ROADMAP -->
+    <section id="roadmap" class="px-6 py-24">
+        <div class="mx-auto max-w-6xl">
+            <div class="reveal mx-auto mb-16 max-w-2xl text-center">
+                <p class="mb-5 inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-neon-ink">The Roadmap</p>
+                <h2 class="font-display text-[34px] font-extrabold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-[52px]">From Idea To <span class="sweep-light">Execution.</span></h2>
+                <p class="mx-auto mt-5 max-w-xl text-[15px] font-medium leading-relaxed text-slate-450 sm:text-base">A simple framework for turning AI possibilities into practical business action.</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-4">
+                <article class="reveal relative overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-card">
+                    <span aria-hidden="true" class="pointer-events-none absolute -right-10 -top-10 h-20 w-20 rounded-full bg-neon"></span>
+                    <span class="relative block text-[17px] font-extrabold uppercase tracking-[0.1em] text-neon-ink">Step 01</span>
+                    <h3 class="relative mt-4 text-xl font-bold tracking-tight text-ink">Discover</h3>
+                    <p class="relative mt-3 text-[15px] leading-relaxed text-slate-450">Find the AI opportunities that make the most sense for your business and goals.</p>
+                </article>
+                <article class="reveal relative overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-card">
+                    <span aria-hidden="true" class="pointer-events-none absolute -right-10 -top-10 h-20 w-20 rounded-full bg-neon"></span>
+                    <span class="relative block text-[17px] font-extrabold uppercase tracking-[0.1em] text-neon-ink">Step 02</span>
+                    <h3 class="relative mt-4 text-xl font-bold tracking-tight text-ink">Design</h3>
+                    <p class="relative mt-3 text-[15px] leading-relaxed text-slate-450">Map the workflow, offer or system you want AI to improve.</p>
+                </article>
+                <article class="reveal relative overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-card">
+                    <span aria-hidden="true" class="pointer-events-none absolute -right-10 -top-10 h-20 w-20 rounded-full bg-neon"></span>
+                    <span class="relative block text-[17px] font-extrabold uppercase tracking-[0.1em] text-neon-ink">Step 03</span>
+                    <h3 class="relative mt-4 text-xl font-bold tracking-tight text-ink">Build</h3>
+                    <p class="relative mt-3 text-[15px] leading-relaxed text-slate-450">Turn the strategy into an actual workflow, product or automation.</p>
+                </article>
+                <article class="reveal relative overflow-hidden rounded-2xl border border-line bg-white p-8 shadow-card">
+                    <span aria-hidden="true" class="pointer-events-none absolute -right-10 -top-10 h-20 w-20 rounded-full bg-neon"></span>
+                    <span class="relative block text-[17px] font-extrabold uppercase tracking-[0.1em] text-neon-ink">Step 04</span>
+                    <h3 class="relative mt-4 text-xl font-bold tracking-tight text-ink">Scale</h3>
+                    <p class="relative mt-3 text-[15px] leading-relaxed text-slate-450">Improve what works and create systems that can grow with your business.</p>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- =========================================================== PLANS -->
+    <section id="plans" class="border-y border-line bg-mist px-6 py-24">
+        <div class="mx-auto max-w-6xl">
+            <div class="reveal mx-auto mb-14 max-w-2xl text-center">
+                <p class="mb-5 inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-neon-ink">Our Packages</p>
+                <h2 class="font-display text-[34px] font-extrabold leading-[1.1] tracking-tight text-ink sm:text-5xl lg:text-[52px]">Choose Your<br><span class="sweep-light">Strategic Path</span></h2>
+                <p class="mx-auto mt-5 max-w-xl text-[15px] font-medium leading-relaxed text-slate-450 sm:text-base">Quarterly or annual frameworks, customized for your unique needs</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-6 md:grid-cols-2">
+                <article class="reveal flex flex-col rounded-2xl border border-line bg-white p-9 shadow-card">
+                    <h3 class="text-2xl font-extrabold tracking-tight text-ink">Prestige Plan</h3>
+                    <p class="mt-2 text-xs font-bold uppercase tracking-[0.16em] text-slate-450">Quarterly, 3 months</p>
+                    <ul class="mt-8 flex-1 space-y-4">
+                        <li class="flex gap-3 text-base text-ink"><span class="font-bold text-neon-ink">&#10003;</span><span><strong class="font-bold">8 essential apps</strong> to launch and run your offer</span></li>
+                        <li class="flex gap-3 text-base text-ink"><span class="font-bold text-neon-ink">&#10003;</span><span><strong class="font-bold">4,000 AI tokens</strong></span></li>
+                        <li class="flex gap-3 text-base text-ink"><span class="font-bold text-neon-ink">&#10003;</span><span><strong class="font-bold">1 funnel free</strong>, built with you</span></li>
+                        <li class="flex gap-3 text-base text-ink"><span class="font-bold text-neon-ink">&#10003;</span><span>2-hour guided setup session</span></li>
+                    </ul>
+                    <button type="button" data-open-lead class="mt-9 w-full rounded-full bg-neon px-8 py-4 text-sm font-bold uppercase tracking-wide text-ink transition hover:brightness-95">Book Demo</button>
+                </article>
+
+                <article class="reveal relative flex flex-col rounded-2xl border-2 border-neon bg-white p-9 shadow-card">
+                    <p class="absolute -top-3.5 left-9 rounded-full bg-neon px-4 py-1.5 text-[11px] font-bold uppercase tracking-[0.14em] text-ink">Most Complete</p>
+                    <h3 class="text-2xl font-extrabold tracking-tight text-ink">Signature Plan</h3>
+                    <p class="mt-2 text-xs font-bold uppercase tracking-[0.16em] text-slate-450">Annual, 12 months</p>
+                    <ul class="mt-8 flex-1 space-y-4">
+                        <li class="flex gap-3 text-base text-ink"><span class="font-bold text-neon-ink">&#10003;</span><span><strong class="font-bold">16+ powerful apps</strong>, the full current ecosystem</span></li>
+                        <li class="flex gap-3 text-base text-ink"><span class="font-bold text-neon-ink">&#10003;</span><span><strong class="font-bold">9,000 AI tokens</strong></span></li>
+                        <li class="flex gap-3 text-base text-ink"><span class="font-bold text-neon-ink">&#10003;</span><span>New apps added over time</span></li>
+                        <li class="flex gap-3 text-base text-ink"><span class="font-bold text-neon-ink">&#10003;</span><span>Technical support and assistance</span></li>
+                        <li class="flex gap-3 text-base text-ink"><span class="font-bold text-neon-ink">&#9733;</span><span><strong class="font-bold">Choose one premium bonus:</strong> 1 AEO website, or a 150-page authority book</span></li>
+                    </ul>
+                    <button type="button" data-open-lead class="mt-9 w-full rounded-full bg-neon px-8 py-4 text-sm font-bold uppercase tracking-wide text-ink transition hover:brightness-95">Book Demo</button>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- ========================================================= FOUNDER -->
+    <section id="founder" class="px-6 py-24">
+        <div class="mx-auto max-w-6xl">
+            <p class="reveal mb-10 text-center"><span class="inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-neon-ink">Founder's Note</span></p>
+
+            <div class="grid grid-cols-1 items-stretch gap-12 md:grid-cols-[minmax(0,0.85fr)_minmax(0,1.15fr)]">
+                <div class="reveal min-h-full overflow-hidden rounded-2xl border border-line bg-mist shadow-card">
+                    <img src="https://i.ibb.co/mrhgQGy3/photo-16.jpg" alt="Anis Ahmad, founder of VelorixAI" width="283" height="308" class="h-full min-h-full w-full object-cover object-top">
+                </div>
+
+                <div class="reveal flex flex-col">
+                    <figure class="m-0 flex h-full flex-col">
+                        <blockquote class="m-0 font-display text-[26px] font-extrabold leading-[1.25] tracking-tight text-ink sm:text-[34px]">
+                            "I spent years watching coaches and agency owners waste time and money juggling 5-6 tools. VelorixAI was created to replace the tech nightmare with one simple 2-hour setup."
+                        </blockquote>
+
+                        <figcaption class="mt-auto border-t border-line pt-6">
+                            <strong class="block text-[22px] font-extrabold tracking-tight text-ink">Anis Ahmad</strong>
+                            <span class="text-[17px] font-medium text-slate-450">Founder &amp; CEO, VelorixAI</span>
+                        </figcaption>
+                    </figure>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ==================================================== TESTIMONIALS -->
+    <section id="testimonials" class="border-y border-line bg-mist px-6 py-24">
+        <div class="mx-auto max-w-6xl">
+            <div class="reveal mx-auto mb-16 max-w-2xl text-center">
+                <p class="mb-5 inline-flex items-center rounded-full bg-white px-4 py-2 text-xs font-extrabold uppercase tracking-[0.18em] text-neon-ink">Client Results</p>
+                <h2 class="text-[32px] font-extrabold tracking-tight text-ink sm:text-4xl lg:text-[40px]">Loved by Coaches &amp; Agencies</h2>
+            </div>
+
+            <div class="grid gap-6 lg:grid-cols-3">
+                <figure class="reveal flex flex-col rounded-2xl border border-line bg-white p-8 shadow-card">
+                    <div class="mb-5 tracking-[3px] text-neon-ink" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote class="mb-7 text-[15px] leading-relaxed text-ink">"I was managing my coaching business across 7 different tools, Kajabi for courses, a separate booking app, a separate CRM, WhatsApp manually, Stripe for payments. I was losing leads because nothing talked to each other. After my VelorixAI demo, everything was live in 2 hours. My first automated WhatsApp sequence brought in 3 leads the next day. By week 2, I had my first paying client."</blockquote>
+                    <figcaption class="mt-auto flex items-center gap-4">
+                        <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-neon font-bold text-black" aria-hidden="true">R</span>
+                        <span>
+                            <strong class="block text-[15px] font-bold text-ink">Riya Malhotra</strong>
+                            <span class="text-[13px] text-slate-450">Fitness Coach, Pune</span>
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure class="reveal flex flex-col rounded-2xl border border-line bg-white p-8 shadow-card">
+                    <div class="mb-5 tracking-[3px] text-neon-ink" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote class="mb-7 text-[15px] leading-relaxed text-ink">"As an agency owner, I was drowning in tool management. My team was jumping between Pipedrive, email, scheduling apps, and invoicing software. It was chaos. Anis showed us how VelorixAI consolidates everything, our entire client pipeline, automated follow-ups, booking management, and billing, all in one place. We've cut our operational overhead by 40% and onboarded 5 new clients in the first month."</blockquote>
+                    <figcaption class="mt-auto flex items-center gap-4">
+                        <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-neon font-bold text-black" aria-hidden="true">A</span>
+                        <span>
+                            <strong class="block text-[15px] font-bold text-ink">Aman Singh</strong>
+                            <span class="text-[13px] text-slate-450">Agency Owner, Jaipur</span>
+                        </span>
+                    </figcaption>
+                </figure>
+
+                <figure class="reveal flex flex-col rounded-2xl border border-line bg-white p-8 shadow-card">
+                    <div class="mb-5 tracking-[3px] text-neon-ink" aria-label="5 out of 5">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+                    <blockquote class="mb-7 text-[15px] leading-relaxed text-ink">"I was a freelancer consultant with zero interest in tech. I thought I'd need to hire someone to build my funnel and CRM. The 2-hour setup call with VelorixAI was eye-opening, within hours, I had a professional website, a lead capture funnel, and WhatsApp automation running. No coding, no confusion. The system does what used to require a VA and three different software licenses."</blockquote>
+                    <figcaption class="mt-auto flex items-center gap-4">
+                        <span class="grid h-12 w-12 shrink-0 place-items-center rounded-full bg-neon font-bold text-black" aria-hidden="true">P</span>
+                        <span>
+                            <strong class="block text-[15px] font-bold text-ink">Priya Kapoor</strong>
+                            <span class="text-[13px] text-slate-450">Business Consultant, Indore</span>
+                        </span>
+                    </figcaption>
+                </figure>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============================================================= CTA -->
+    <section class="px-6 py-24 text-center">
+        <div class="mx-auto max-w-3xl">
+            <h2 class="reveal text-[32px] font-extrabold tracking-tight text-ink sm:text-4xl lg:text-[40px]">See Your Business Running on <span class="sweep-light">VelorixAI</span></h2>
+            <p class="reveal mx-auto mt-6 max-w-xl text-lg font-medium text-slate-450">Book a free 30-minute demo and we'll walk you through the exact apps and workflows for your business.</p>
+            <div class="reveal mt-10 flex flex-col justify-center gap-4 sm:flex-row">
+                <button type="button" data-open-lead class="inline-flex min-h-[56px] items-center justify-center gap-2 rounded-full bg-neon px-9 text-base font-bold uppercase tracking-wide text-ink shadow-card transition hover:-translate-y-0.5 hover:bg-neon-deep">&#128640; Book My Free Demo</button>
+                <a href="https://wa.me/918218854770?text=Hi%21%20I%27m%20interested%20in%20VelorixAI." target="_blank" rel="noopener" class="inline-flex min-h-[56px] items-center justify-center gap-2 rounded-full border border-line bg-white px-9 text-base font-bold uppercase tracking-wide text-ink transition hover:border-ink">&#128172; Chat on WhatsApp</a>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ============================================================== FOOTER -->
+<footer class="border-t border-line bg-mist px-6 py-16">
+    <div class="mx-auto max-w-6xl">
+        <div class="grid gap-12 md:grid-cols-3">
+            <div>
+                <a href="#top" class="flex items-center gap-3 text-lg font-extrabold tracking-tight text-ink">
+                    <img src="assets/velorix-logo.png" alt="VelorixAI logo" class="h-9 w-9 rounded-lg object-contain">
+                    <span>Velorix<span class="text-neon-ink">AI</span></span>
+                </a>
+                <p class="mt-5 max-w-xs text-[15px] leading-relaxed text-slate-450">One connected AI platform for coaches, consultants and agency owners.</p>
+            </div>
+
+            <div>
+                <h3 class="mb-5 text-xs font-bold uppercase tracking-[0.16em] text-ink">Contact</h3>
+                <ul class="space-y-3">
+                    <li><a href="tel:+918218854770" class="text-[15px] text-slate-450 hover:text-neon-ink">+91 8218854770</a></li>
+                    <li><a href="mailto:contact.velorixai@gmail.com" class="text-[15px] text-slate-450 hover:text-neon-ink">contact.velorixai@gmail.com</a></li>
+                    <li><a href="https://wa.me/918218854770?text=Hi%21%20I%27m%20interested%20in%20VelorixAI." target="_blank" rel="noopener" class="text-[15px] text-slate-450 hover:text-neon-ink">Chat on WhatsApp</a></li>
+                </ul>
+            </div>
+
+            <div>
+                <h3 class="mb-5 text-xs font-bold uppercase tracking-[0.16em] text-ink">Legal</h3>
+                <ul class="space-y-3">
+                    <li><button type="button" data-policy="terms" class="text-[15px] text-slate-450 hover:text-neon-ink">Terms &amp; Conditions</button></li>
+                    <li><button type="button" data-policy="privacy" class="text-[15px] text-slate-450 hover:text-neon-ink">Privacy Policy</button></li>
+                    <li><button type="button" data-policy="refund" class="text-[15px] text-slate-450 hover:text-neon-ink">Refund Policy</button></li>
+                </ul>
+            </div>
+        </div>
+
+        <p class="mt-14 border-t border-line pt-8 text-sm text-slate-450">&copy; 2026 VelorixAI. All rights reserved.</p>
+    </div>
+</footer>
+
+<!-- ================================================== LEAD CAPTURE MODAL -->
+<div x-modal id="lead-modal" class="fixed inset-0 z-50 items-center justify-center overflow-y-auto bg-ink/60 p-5 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="lead-title">
+    <div class="relative my-auto w-full max-w-md rounded-2xl bg-white p-8 shadow-pop sm:p-10">
+        <button type="button" data-close-modal class="absolute right-5 top-5 grid h-9 w-9 place-items-center rounded-full text-xl text-slate-450 hover:bg-mist hover:text-ink" aria-label="Close">&times;</button>
+
+        <h2 id="lead-title" class="text-2xl font-extrabold tracking-tight text-ink">Book Your Free Demo</h2>
+        <p class="mt-3 text-[15px] leading-relaxed text-slate-450">Enter your details and pick your date and time on the next step.</p>
+
+        <form id="lead-form" class="mt-8 space-y-5" novalidate>
+            <div>
+                <label for="lead-name" class="mb-2 block text-sm font-bold text-ink">Full Name</label>
+                <input id="lead-name" name="name" type="text" required autocomplete="name" placeholder="Your name" class="w-full rounded-xl border border-line bg-white px-4 py-3.5 text-base text-ink outline-none transition focus:border-neon focus:ring-2 focus:ring-neon/30">
+            </div>
+            <div>
+                <label for="lead-email" class="mb-2 block text-sm font-bold text-ink">Email Address</label>
+                <input id="lead-email" name="email" type="email" required autocomplete="email" placeholder="you@example.com" class="w-full rounded-xl border border-line bg-white px-4 py-3.5 text-base text-ink outline-none transition focus:border-neon focus:ring-2 focus:ring-neon/30">
+            </div>
+            <div>
+                <label for="lead-phone" class="mb-2 block text-sm font-bold text-ink">Phone Number</label>
+                <input id="lead-phone" name="phone" type="tel" required autocomplete="tel" placeholder="+91 98765 43210" class="w-full rounded-xl border border-line bg-white px-4 py-3.5 text-base text-ink outline-none transition focus:border-neon focus:ring-2 focus:ring-neon/30">
+            </div>
+
+            <p id="lead-error" class="hidden text-sm font-semibold text-red-600" role="alert"></p>
+
+            <button type="submit" class="w-full rounded-full bg-neon px-8 py-4 text-base font-bold uppercase tracking-wide text-ink transition hover:bg-neon-deep">Send</button>
+            <p class="text-center text-[13px] text-slate-450">Your details are used only to arrange your demo.</p>
         </form>
     </div>
 </div>
 
+<!-- ============================================== CONFIRMATION / RETURN -->
+<div x-modal id="confirm-modal" class="fixed inset-0 z-50 items-center justify-center overflow-y-auto bg-ink/60 p-5 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="confirm-title">
+    <div class="relative my-auto w-full max-w-md rounded-2xl bg-white p-8 text-center shadow-pop sm:p-10">
+        <button type="button" data-close-modal class="absolute right-5 top-5 grid h-9 w-9 place-items-center rounded-full text-xl text-slate-450 hover:bg-mist hover:text-ink" aria-label="Close">&times;</button>
 
-<!-- THANK YOU PAGE -->
-<div class="thank-you-page" id="thankYouPage">
-    <div class="thank-you-card">
-        <img data-site="logo" src="assets/velorix-logo.png" alt="VelorixAI logo" style="width:64px; height:64px; border-radius:10px; object-fit:contain; margin:0 auto 20px; display:block;">
-        <div class="check-icon"><i class="fas fa-circle-check"></i></div>
-        <h1>Thank You!</h1>
-        <p class="thank-you-subtitle">
-            Your request has been received<span id="tyName"></span>.<br>
-            To complete your demo booking, choose a convenient date and time below.
-        </p>
+        <div class="mx-auto mb-6 grid h-16 w-16 place-items-center rounded-full bg-neon text-3xl font-bold text-black">&#10003;</div>
+        <h2 id="confirm-title" class="text-2xl font-extrabold tracking-tight text-ink">Booking Confirmed</h2>
+        <p class="mt-3 text-[15px] leading-relaxed text-slate-450">Your demo slot is booked<span id="confirm-name"></span>. Check your email for the confirmation and the call link.</p>
 
-        <div class="what-next">
-            <h3>What happens next</h3>
-            <div class="step-ty">
-                <div class="step-num-ty">1</div>
-                <div class="step-text-ty">Click <strong>Book Your Demo</strong> to open the live calendar.</div>
-            </div>
-            <div class="step-ty">
-                <div class="step-num-ty">2</div>
-                <div class="step-text-ty">Pick your <strong>date and time</strong> and confirm the 30-minute slot.</div>
-            </div>
-            <div class="step-ty">
-                <div class="step-num-ty">3</div>
-                <div class="step-text-ty">You get a <strong>confirmation</strong> with the call link. Message us on WhatsApp if you need to reschedule.</div>
-            </div>
-        </div>
-
-        <div class="ty-buttons">
-            <a href="#" class="ty-btn ty-btn-cal" data-site="calBooking"><i class="fas fa-calendar-alt"></i> Book Your Demo</a>
-            <a href="#" class="ty-btn ty-btn-whatsapp" data-site="whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Connect on WhatsApp</a>
-        </div>
-
-        <hr class="divider">
-
-        <div class="ty-contact">
-            <a href="#" data-site="phoneLink"><i class="fas fa-phone"></i><span data-site="phone">+91 8218854770</span></a>
-            <a href="#" data-site="emailLink"><i class="fas fa-envelope"></i><span data-site="email">contact.velorixai@gmail.com</span></a>
-        </div>
-
-        <div class="ty-footer-links">
-            <a href="#" data-policy="terms">Terms &amp; Conditions</a>
-            <a href="#" data-policy="refund">Refund Policy</a>
-            <a href="#" data-policy="privacy">Privacy Policy</a>
-            <a href="#" onclick="closeThankYou(); return false;">Back to Home</a>
-        </div>
-
-        <p class="footer-note-ty">Your details are safe with us and are used only to arrange your demo.</p>
+        <a href="https://wa.me/918218854770?text=Hi%21%20I%27ve%20just%20booked%20a%20VelorixAI%20demo." target="_blank" rel="noopener" class="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-full bg-neon px-8 py-4 text-base font-bold uppercase tracking-wide text-ink transition hover:bg-neon-deep">&#128172; Chat on WhatsApp</a>
+        <p class="mt-5 text-[13px] text-slate-450">Need to reschedule? Message us and we'll sort it out.</p>
     </div>
 </div>
 
-<!-- POLICY PAGES -->
-<!-- PRIVACY POLICY -->
-<div class="policy-page" id="privacyPolicyPage">
-    <div class="policy-content">
-        <div class="policy-header">
-            <h1 class="policy-title">Privacy Policy</h1>
-            <p class="policy-date">Last Updated: August 30, 2026</p>
-        </div>
-        
-        <div class="policy-body">
-            <h2>1. Introduction</h2>
-            <p>At VelorixAI ("we," "us," or "our"), we respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.</p>
-            
-            <h2>2. Information We Collect</h2>
-            <h3>2.1 Personal Information</h3>
-            <p>We may collect personal information that you voluntarily provide to us when you:</p>
-            <ul>
-                <li>Book a demo call or contact us</li>
-                <li>Sign up for our services</li>
-                <li>Subscribe to our newsletter</li>
-                <li>Interact with our website or support team</li>
-            </ul>
-            
-            <h3>2.2 Automatically Collected Information</h3>
-            <p>When you visit our website, we automatically collect certain information, including:</p>
-            <ul>
-                <li>IP address</li>
-                <li>Browser type and version</li>
-                <li>Pages visited</li>
-                <li>Time and date of visit</li>
-                <li>Referring website</li>
-            </ul>
-            
-            <h2>3. How We Use Your Information</h2>
-            <p>We use the information we collect to:</p>
-            <ul>
-                <li>Provide and maintain our services</li>
-                <li>Schedule and conduct demo calls</li>
-                <li>Process payments and subscriptions</li>
-                <li>Send you updates and marketing communications</li>
-                <li>Improve our website and services</li>
-                <li>Respond to your inquiries and provide support</li>
-                <li>Comply with legal obligations</li>
-            </ul>
-            
-            <h2>4. Data Security</h2>
-            <p>We implement reasonable security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.</p>
-            
-            <h2>5. Contact Us</h2>
-            <p><strong>Email:</strong> privacy@velorixai.com<br><strong>Address:</strong> VelorixAI, Bandia, Uttarakhand, India</p>
-            
-            <button onclick="closePolicy('privacy')" class="back-policy">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </button>
-        </div>
-    </div>
-</div>
+<!-- ======================================================= POLICY MODAL -->
+<div x-modal id="policy-modal" class="fixed inset-0 z-50 items-start justify-center overflow-y-auto bg-ink/60 p-5 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="policy-title">
+    <div class="relative my-8 w-full max-w-2xl rounded-2xl bg-white p-8 shadow-pop sm:p-12">
+        <button type="button" data-close-modal class="absolute right-5 top-5 grid h-9 w-9 place-items-center rounded-full text-xl text-slate-450 hover:bg-mist hover:text-ink" aria-label="Close">&times;</button>
 
-<!-- TERMS & CONDITIONS -->
-<div class="policy-page" id="termsPage">
-    <div class="policy-content">
-        <div class="policy-header">
-            <h1 class="policy-title">Terms & Conditions</h1>
-            <p class="policy-date">Last Updated: August 30, 2026</p>
-        </div>
-        
-        <div class="policy-body">
-            <h2>1. Agreement to Terms</h2>
-            <p>By accessing or using VelorixAI's services, website, or booking a demo call, you agree to be bound by these Terms & Conditions.</p>
-            
-            <h2>2. Services & Demo Calls</h2>
-            <p>VelorixAI provides all-in-one AI growth platforms for coaches, consultants, and agency owners. Our free 30-minute demo calls are for discovery and consultation purposes only.</p>
-            
-            <h2>3. Pricing & Payments</h2>
-            <p>Pricing is confirmed during your demo call based on your specific business needs. Payment plans are available quarterly and annually. All amounts are quoted and payable in Indian Rupees.</p>
-            
-            <h2>4. Use of Service</h2>
-            <p>You agree to use our services only for lawful purposes and in accordance with these Terms.</p>
-            
-            <h2>5. Data & Privacy</h2>
-            <p>Your use of our services is subject to our Privacy Policy. You own your business data and we don't sell or share your data with third parties.</p>
-            
-            <h2>6. Contact Information</h2>
-            <p><strong>Email:</strong> legal@velorixai.com<br><strong>Address:</strong> VelorixAI, Bandia, Uttarakhand, India</p>
-            
-            <button onclick="closePolicy('terms')" class="back-policy">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </button>
-        </div>
-    </div>
-</div>
+        <h2 id="policy-title" class="text-3xl font-extrabold tracking-tight text-ink">Terms &amp; Conditions</h2>
+        <p id="policy-updated" class="mt-2 text-sm text-slate-450">Last updated: August 30, 2026</p>
 
-<!-- REFUND POLICY -->
-<div class="policy-page" id="refundPage">
-    <div class="policy-content">
-        <div class="policy-header">
-            <h1 class="policy-title">Refund Policy</h1>
-            <p class="policy-date">Last Updated: August 30, 2026</p>
+        <div id="policy-terms" class="policy-doc mt-8 space-y-6">
+            <div><h3 class="mb-2 text-lg font-bold text-ink">1. Agreement to Terms</h3><p class="text-base leading-relaxed text-slate-450">By accessing or using VelorixAI's services, website, or booking a demo call, you agree to be bound by these Terms &amp; Conditions.</p></div>
+            <div><h3 class="mb-2 text-lg font-bold text-ink">2. Services &amp; Demo Calls</h3><p class="text-base leading-relaxed text-slate-450">VelorixAI provides all-in-one AI growth platforms for coaches, consultants, and agency owners. Our free 30-minute demo calls are for discovery and consultation purposes only.</p></div>
+            <div><h3 class="mb-2 text-lg font-bold text-ink">3. Pricing &amp; Payments</h3><p class="text-base leading-relaxed text-slate-450">Pricing is confirmed during your demo call based on your specific business needs. Payment plans are available quarterly and annually. All amounts are quoted and payable in Indian Rupees.</p></div>
+            <div><h3 class="mb-2 text-lg font-bold text-ink">4. Use of Service</h3><p class="text-base leading-relaxed text-slate-450">You agree to use our services only for lawful purposes and in accordance with these Terms.</p></div>
+            <div><h3 class="mb-2 text-lg font-bold text-ink">5. Data &amp; Privacy</h3><p class="text-base leading-relaxed text-slate-450">Your use of our services is subject to our Privacy Policy. You own your business data and we don't sell or share your data with third parties.</p></div>
+            <div><h3 class="mb-2 text-lg font-bold text-ink">6. Contact Information</h3><p class="text-base leading-relaxed text-slate-450"><strong class="font-semibold text-ink">Email:</strong> legal@velorixai.com<br><strong class="font-semibold text-ink">Address:</strong> VelorixAI, Bandia, Uttarakhand, India</p></div>
         </div>
-        
-        <div class="policy-body">
-            <h2>1. Refund Eligibility</h2>
-            <p><strong>✅ You ARE eligible for a refund if:</strong></p>
-            <ul>
-                <li>Technical issues on our end prevent you from accessing the platform for over 7 consecutive days.</li>
-                <li>You purchased the wrong plan and notify us within <strong>3 days (72 hours)</strong> of payment.</li>
-                <li>The agreed-upon initial onboarding support was not provided within the promised timeframe.</li>
-            </ul>
-            
-            <p><strong>❌ You ARE NOT eligible for a refund if:</strong></p>
-            <ul>
-                <li>You change your mind after the <strong>3-day window</strong> has passed.</li>
-                <li>You have already accessed premium training materials or AI specialized tools.</li>
-                <li>Your business model changes or you decide to stop your operations.</li>
-            </ul>
-            
-            <h2>2. Refund Process & Timeline</h2>
-            <p>Email refunds@velorixai.com within 72 hours of your transaction with your Name, Registered Email, and Transaction ID. We review all requests within 3 business days. If approved, the amount will be credited to your original payment method within 7-10 business days.</p>
-            
-            <h2>3. Subscription Cancellations</h2>
-            <p>You can cancel your subscription at any time through your dashboard. Your access will continue until the end of your current billing period.</p>
-            
-            <button onclick="closePolicy('refund')" class="back-policy">
-                <i class="fas fa-arrow-left"></i> Back to Home
-            </button>
-        </div>
-    </div>
-</div>
 
-<!-- NAVIGATION -->
-<nav>
-    <div class="container navbar">
-        <a href="/" class="logo">
-            <img class="logo-img" data-site="logo" src="assets/velorix-logo.png" alt="VelorixAI logo">
-            <span data-site="brandLockup">Velorix<span style="color:var(--accent);">AI</span></span>
-        </a>
-        <div class="nav-links">
-            <a href="#services">Platform</a>
-            <a href="#how-it-works">How It Works</a>
-            <a href="#founder">About Founder</a>
-            <a href="#testimonials">Testimonials</a>
-            <a href="#faq">FAQ</a>
-            <a href="#pricing">Plans</a>
-            <button onclick="openDemoForm()" class="btn btn-primary" style="padding:10px 24px;">Book Free Demo</button>
-        </div>
-        <button class="mobile-menu-btn" onclick="openDemoForm()">
-            <i class="fas fa-calendar-check"></i>
-        </button>
-    </div>
-</nav>
-
-<!-- HERO SECTION -->
-<section class="hero">
-    <div class="container hero-content">
-        <h1>Launch Your Coaching or Agency Business in <span class="highlight-yellow">2 Hours</span>, Not 2 Months</h1>
-        <p class="hero-subtitle">VelorixAI puts <span class="highlight-yellow nowrap">16 AI-powered apps</span> in one dashboard, so you can launch and run your coaching or agency business without hiring a tech team or juggling a dozen tools.</p>
-        
-        <div class="cta-buttons">
-            <button onclick="openDemoForm()" class="btn btn-primary">
-                <i class="fas fa-calendar-check"></i> Book My Free Demo
-            </button>
-            <a href="#" data-site="whatsapp" target="_blank" class="btn btn-secondary">
-                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-            </a>
-        </div>
-        
-        <div class="hero-features">
-            <div class="hero-feature"><i class="fas fa-check-circle"></i><span><span class="highlight-yellow nowrap">16 apps</span> in one dashboard</span></div>
-            <div class="hero-feature"><i class="fas fa-check-circle"></i><span>Go live in about <span class="highlight-yellow">2 hours</span></span></div>
-            <div class="hero-feature"><i class="fas fa-check-circle"></i><span>No tech team needed</span></div>
-        </div>
-    </div>
-</section>
-
-<!-- VIDEO SECTION -->
-<section class="video-section" id="watch-demo">
-    <div class="container">
-        <h2 class="section-title">Watch a Real 2-Hour Build</h2>
-        <p style="text-align:center; color:var(--gray-dark); max-width:800px; margin:0 auto 20px;">This is the actual walkthrough of a guided build session, from kickoff to going live.</p>
-        <div class="video-shorts" role="region" aria-label="Demo video">
-            <iframe id="siteVideo" src="" title="VelorixAI Build Walkthrough" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-        </div>
-    </div>
-</section>
-
-<!-- FEATURES SECTION -->
-<section class="features">
-    <div class="container">
-        <h2 class="section-title">Everything You Need to Grow</h2>
-        <div class="features-grid">
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-rocket"></i></div>
-                <h3>Launch your business in just 2 hours with AI</h3>
-                <p>From idea to live business in a single guided session, no tech skills required.</p>
+        <div id="policy-privacy" class="policy-doc mt-8 hidden space-y-6">
+            <div><h3 class="mb-2 text-lg font-bold text-ink">1. Introduction</h3><p class="text-base leading-relaxed text-slate-450">At VelorixAI ("we," "us," or "our"), we respect your privacy and are committed to protecting the personal information you share with us. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you visit our website and use our services.</p></div>
+            <div>
+                <h3 class="mb-2 text-lg font-bold text-ink">2. Information We Collect</h3>
+                <p class="text-base leading-relaxed text-slate-450">We may collect personal information that you voluntarily provide to us when you:</p>
+                <ul class="mt-3 list-disc space-y-2 pl-6 text-base text-slate-450">
+                    <li>Book a demo call or contact us</li>
+                    <li>Sign up for our services</li>
+                    <li>Subscribe to our newsletter</li>
+                    <li>Interact with our website or support team</li>
+                </ul>
+                <p class="mt-4 text-base leading-relaxed text-slate-450">We also automatically collect your IP address, browser type and version, pages visited, time and date of visit, and referring website.</p>
             </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-th-large"></i></div>
-                <h3>16 powerful apps in one platform</h3>
-                <p>Website builder, CRM, WhatsApp automation, scheduling, payments, and more, all connected.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
-                <h3>Generate leads automatically</h3>
-                <p>Smart AI tools find and qualify your ideal clients 24/7 while you focus on delivering results.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-robot"></i></div>
-                <h3>Automate your marketing</h3>
-                <p>Email sequences, WhatsApp follow-ups, and lead nurturing run on complete autopilot.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-tachometer-alt"></i></div>
-                <h3>Manage clients from one dashboard</h3>
-                <p>Track every lead, client, and payment without switching between 10 different tools.</p>
-            </div>
-            <div class="feature-card">
-                <div class="feature-icon"><i class="fas fa-code"></i></div>
-                <h3>No coding required</h3>
-                <p>Drag-and-drop interface makes everything simple. Save time and grow fast.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- BENEFITS SECTION -->
-<section class="benefits">
-    <div class="container benefits-content">
-        <div class="benefits-text">
-            <h2>Built for Coaches, Agency Owners & Solopreneurs Who Want to Move Fast</h2>
-            <p>Most coaches and agency owners lose weeks stitching together a website builder, a CRM, an email tool, a course platform and a scheduling app that refuse to talk to each other. VelorixAI replaces that entire stack with one connected system.</p>
-            <p><strong>Everything you need to sell, deliver and support your clients, live in a single login.</strong></p>
-        </div>
-        <div class="benefits-list">
-            <div class="benefit-item">
-                <i class="fas fa-check-circle"></i>
-                <p>Stop paying for <span class="highlight-yellow">6 to 10 separate tools</span> that don't sync with each other</p>
-            </div>
-            <div class="benefit-item">
-                <i class="fas fa-check-circle"></i>
-                <p>Skip the learning curve of hiring or managing a developer</p>
-            </div>
-            <div class="benefit-item">
-                <i class="fas fa-check-circle"></i>
-                <p>Launch offers, funnels and client portals the <span class="highlight-yellow">same day you sign up</span></p>
-            </div>
-            <div class="benefit-item">
-                <i class="fas fa-check-circle"></i>
-                <p>Manage your whole business, leads, clients and payments, from one dashboard</p>
-            </div>
-            <div class="benefit-item">
-                <i class="fas fa-check-circle"></i>
-                <p>Scale to a full agency setup without rebuilding your tech from scratch</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- PACKAGES & APP ECOSYSTEM -->
-<section class="services" id="services">
-    <div class="container">
-        <h2 class="section-title">One Dashboard. Zero Tool Chaos.</h2>
-        <p style="text-align:center; color:var(--gray-dark); max-width:780px; margin:0 auto 40px;">Pick a package to see exactly which apps are included. Prestige includes <strong class="nowrap">8 apps</strong>. Signature includes <strong class="nowrap">16 apps</strong>.</p>
-
-        <div class="pkg-tabs" role="tablist" aria-label="Packages">
-            <button type="button" class="pkg-tab active" id="tab-prestige" role="tab" aria-selected="true" aria-controls="panel-prestige" onclick="showPackage('prestige')">Prestige <span class="pkg-tab-count">8 apps</span></button>
-            <button type="button" class="pkg-tab" id="tab-signature" role="tab" aria-selected="false" aria-controls="panel-signature" onclick="showPackage('signature')">Signature <span class="pkg-tab-count">16 apps</span></button>
-        </div>
-
-        <div class="pkg-panel active" id="panel-prestige" role="tabpanel" aria-labelledby="tab-prestige">
-            <div class="pkg-panel-head">
-                <h3>Prestige</h3>
-                <span class="pkg-badge"><span class="nowrap">8 apps</span> included</span>
-            </div>
-            <div class="app-grid">
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Opportunity Finder Pro</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Funnel & Website Builder</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Omni Chat</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>AI Chatbot Engine</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Contacts</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>AEO Launch Pad</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Image Editor</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Video Craft AI</span></div>
-            </div>
-        </div>
-
-        <div class="pkg-panel" id="panel-signature" role="tabpanel" aria-labelledby="tab-signature">
-            <div class="pkg-panel-head">
-                <h3>Signature</h3>
-                <span class="pkg-badge"><span class="nowrap">16 apps</span> included</span>
-            </div>
-            <div class="app-grid">
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Opportunity Finder Pro</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Funnel & Website Builder</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Craft Book AI</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Audio Studio</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Presentation AI</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>AEO Blogs Engine</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Motion Canvas AI</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Omni Chat</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Image Editor</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Studio Canvas</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Video Craft AI</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>AEO Launch Pad</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Humanizer</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Knowledge Base</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>AI Chatbot Engine</span></div>
-                    <div class="app-item"><i class="fas fa-check-circle"></i><span>Contacts</span></div>
-            </div>
-        </div>
-
-        <div class="upcoming-block">
-            <h4><i class="fas fa-clock" style="margin-right:8px;"></i>Upcoming Apps</h4>
-            <p>New apps are released to the platform over time and added to your package as they launch. Upcoming apps are not counted in the <span class="nowrap">8 apps</span> in Prestige or the <span class="nowrap">16 apps</span> in Signature. The lists above are what is included today.</p>
-        </div>
-
-        <div style="text-align:center; margin-top:40px;">
-            <button onclick="openDemoForm()" class="btn btn-primary">
-                <i class="fas fa-calendar-check"></i> See the Apps on a Free Demo
-            </button>
-        </div>
-    </div>
-</section>
-
-<!-- ABOUT FOUNDER -->
-<section class="about-founder" id="founder">
-    <div class="container">
-        <h2 class="section-title">Meet Anis Ahmad, The Founder Behind VelorixAI</h2>
-        
-        <div class="founder-content">
-            <div class="founder-photo">
-                <img src="https://i.ibb.co/mrhgQGy3/photo-16.jpg" alt="Anis Ahmad - Founder of VelorixAI">
-                <h3>Anis Ahmad</h3>
-                <p>Founder & CEO</p>
-                <p>VelorixAI</p>
-            </div>
-            
-            <div class="founder-story">
-                <h3>Why We Built VelorixAI</h3>
-                <p>I spent years watching coaches and agency owners waste time and money. They'd juggle 5-6 tools, pay for every one of them monthly, and still lose leads because nothing talked to each other.</p>
-
-                <p>One founder told me: "I spend more time managing software than growing my business." That line changed everything.</p>
-
-                <p>The problem wasn't the tools, they just weren't built for people who move fast. So I built VelorixAI. One dashboard. Website + CRM + WhatsApp + Booking + Payments. All connected. Live in 2 hours.</p>
-
-                <p>On your free demo, I'll show you exactly how it works for your business. No BS. Just results.</p>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- HOW IT WORKS -->
-<section class="how-it-works" id="how-it-works">
-    <div class="container">
-        <h2 class="section-title">From Idea to Live in 3 Steps</h2>
-        <p style="text-align:center; color:var(--gray-dark); max-width:700px; margin:0 auto 40px;">VelorixAI is designed so any coach or solopreneur, with zero technical background, can go fully operational in a single session.</p>
-        <div class="steps-container">
-            <div class="step">
-                <div class="step-number">1</div>
-                <div class="step-content">
-                    <h3>Book your free 30-minute demo</h3>
-                    <p>A VelorixAI specialist walks you through the platform and builds a plan around your business, coaching, consulting, or agency.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-number">2</div>
-                <div class="step-content">
-                    <h3>Set up in 2 hours</h3>
-                    <p>Your website, funnel, CRM, WhatsApp automation, calendar, and payments go live in one guided build session. No tech skills required.</p>
-                </div>
-            </div>
-            <div class="step">
-                <div class="step-number">3</div>
-                <div class="step-content">
-                    <h3>Grow on autopilot</h3>
-                    <p>Your marketing runs 24/7. Leads come in, get nurtured, and book calls while you focus on delivering results for your clients.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- WHO IS THIS FOR / NOT FOR -->
-<section class="who-its-for" style="background: rgba(0, 0, 0, 0.7); padding: 100px 0; border-bottom: 1px solid rgba(23, 17, 61, 0.7);">
-    <div class="container">
-        <h2 class="section-title">Is VelorixAI Right for You?</h2>
-        
-        <!-- WHO IT'S FOR -->
-        <div style="margin-bottom: 60px;">
-            <h3 style="text-align: center; color: var(--accent); font-size: 1.8rem; margin-bottom: 40px;">
-                <i class="fas fa-check-circle"></i> VelorixAI is Built For:
-            </h3>
-            
-            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px;">
-                <div style="background: rgba(23, 17, 61, 0.7); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(42, 31, 92, 0.85);">
-                    <h4 style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
-                        <i class="fas fa-check"></i> Coaches Ready to Go Live
-                    </h4>
-                    <p style="color: var(--white); opacity: 0.9; line-height: 1.6;">
-                        You've got the expertise. You just need the tech to stop holding you back. Launch your first funnel, sell your first offer, and start making money, all in 2 hours.
-                    </p>
-                </div>
-                
-                <div style="background: rgba(23, 17, 61, 0.7); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(42, 31, 92, 0.85);">
-                    <h4 style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
-                        <i class="fas fa-check"></i> Agency Owners Tired of Tool Chaos
-                    </h4>
-                    <p style="color: var(--white); opacity: 0.9; line-height: 1.6;">
-                        You're managing 5-6 tools, losing leads between systems, and paying for every one of them. One dashboard. Everything connected. Your leads never fall through cracks again.
-                    </p>
-                </div>
-                
-                <div style="background: rgba(23, 17, 61, 0.7); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(42, 31, 92, 0.85);">
-                    <h4 style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
-                        <i class="fas fa-check"></i> Solopreneurs Who Want Freedom
-                    </h4>
-                    <p style="color: var(--white); opacity: 0.9; line-height: 1.6;">
-                        You don't want to hire a tech team or waste 6 months building a website. You want to sell, deliver, and scale, without the headache.
-                    </p>
-                </div>
-                
-                <div style="background: rgba(23, 17, 61, 0.7); padding: 30px; border-radius: 12px; border-left: 5px solid var(--accent); border: 1px solid rgba(42, 31, 92, 0.85);">
-                    <h4 style="color: var(--accent); margin-bottom: 12px; font-size: 1.1rem;">
-                        <i class="fas fa-check"></i> Consultants Who Value Their Time
-                    </h4>
-                    <p style="color: var(--white); opacity: 0.9; line-height: 1.6;">
-                        Every hour you spend on admin tasks is an hour you're not earning. Automate everything. Focus on what you do best, delivering results for clients.
-                    </p>
-                </div>
-            </div>
-        </div>
-        
-        <!-- WHO IT'S NOT FOR -->
-        <h3 style="text-align: center; color: #FF3B30; font-size: 1.8rem; margin-bottom: 40px;">
-            <i class="fas fa-times-circle"></i> VelorixAI is Not Built For:
-        </h3>
-
-        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF3B30; margin-bottom: 10px;">
-            <h4 style="color: #FF3B30; margin-bottom: 10px; font-size: 1.1rem;">
-                <i class="fas fa-times"></i> People Looking for Free Tools or Shortcuts
-            </h4>
-            <p style="color: var(--white); opacity: 0.9;">
-                This is about building real, profitable businesses, not finding free workarounds. If you want cheap hacks instead of actual systems, this isn't for you.
-            </p>
-        </div>
-
-        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF3B30; margin-bottom: 10px;">
-            <h4 style="color: #FF3B30; margin-bottom: 10px; font-size: 1.1rem;">
-                <i class="fas fa-times"></i> Those Who Just Want to "Learn AI"
-            </h4>
-            <p style="color: var(--white); opacity: 0.9;">
-                We focus on EARNING from AI, not endless tutorials and certifications. If you're collecting courses instead of building revenue, this won't help.
-            </p>
-        </div>
-
-        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF3B30; margin-bottom: 10px;">
-            <h4 style="color: #FF3B30; margin-bottom: 10px; font-size: 1.1rem;">
-                <i class="fas fa-times"></i> Anyone Not Ready to Take Action
-            </h4>
-            <p style="color: var(--white); opacity: 0.9;">
-                Clarity without commitment is pointless. If you're not ready to actually launch or scale your business, booking a demo is just wasting time.
-            </p>
-        </div>
-
-        <div style="background: rgba(255, 255, 255, 0.05); padding: 25px; border-radius: 10px; border-left: 4px solid #FF3B30; margin-bottom: 10px;">
-            <h4 style="color: #FF3B30; margin-bottom: 10px; font-size: 1.1rem;">
-                <i class="fas fa-times"></i> Job Seekers or Hobbyists
-            </h4>
-            <p style="color: var(--white); opacity: 0.9;">
-                This is for entrepreneurs who want to BUILD and SCALE their own business, not for people looking for employment or side projects.
-            </p>
-        </div>
-        
-        <!-- BOTTOM CTA -->
-        <div style="text-align: center; margin-top: 60px; padding: 40px; background: rgba(23, 17, 61, 0.7); border-radius: 16px; border: 1px solid rgba(42, 31, 92, 0.85);">
-            <h3 style="color: var(--accent); margin-bottom: 20px; font-size: 1.5rem;">
-                <i class="fas fa-arrow-right"></i> Sounds Like You?
-            </h3>
-            <p style="color: var(--white); opacity: 0.95; margin-bottom: 25px; font-size: 1.05rem;">
-                Book your free 30-minute demo and let's see if VelorixAI is the right fit for your business.
-            </p>
-            <button onclick="openDemoForm()" class="btn btn-primary" style="font-size: 1.1rem;">
-                <i class="fas fa-calendar-check"></i> Book My Free Demo Now
-            </button>
-        </div>
-    </div>
-</section>
-
-<!-- PLANS -->
-<section class="pricing" id="pricing">
-    <div class="container pricing-content">
-        <h2 class="section-title">Plans Tailored to Your Business</h2>
-        <p>Every coaching and agency business is different, so we use your free demo to recommend the plan that fits your business size and how you will actually use the apps.</p>
-        <div class="plan-note" data-site="planNote">Quarterly &amp; Annual plans available</div>
-
-        <div class="plan-grid">
-            <div class="plan-card">
-                <h3>Prestige</h3>
-                <div class="plan-term">Quarterly · 3 Months</div>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i><span><strong>8 essential apps</strong> to launch and run your offer</span></li>
-                    <li><i class="fas fa-check-circle"></i><span><strong>4,000 AI tokens</strong></span></li>
-                    <li><i class="fas fa-check-circle"></i><span><strong>1 funnel free</strong>, built with you</span></li>
+            <div>
+                <h3 class="mb-2 text-lg font-bold text-ink">3. How We Use Your Information</h3>
+                <ul class="mt-3 list-disc space-y-2 pl-6 text-base text-slate-450">
+                    <li>Provide and maintain our services</li>
+                    <li>Schedule and conduct demo calls</li>
+                    <li>Process payments and subscriptions</li>
+                    <li>Send you updates and marketing communications</li>
+                    <li>Improve our website and services</li>
+                    <li>Respond to your inquiries and provide support</li>
+                    <li>Comply with legal obligations</li>
                 </ul>
             </div>
-            <div class="plan-card">
-                <h3>Signature</h3>
-                <div class="plan-term">Annual · 12 Months</div>
-                <ul>
-                    <li><i class="fas fa-check-circle"></i><span><strong>16+ powerful apps</strong>, the full current ecosystem</span></li>
-                    <li><i class="fas fa-check-circle"></i><span><strong>9,000 AI tokens</strong></span></li>
-                    <li><i class="fas fa-check-circle"></i><span>New apps added over time</span></li>
-                    <li><i class="fas fa-check-circle"></i><span>Technical support and assistance</span></li>
-                    <li><i class="fas fa-gift"></i><span><strong>Choose one premium bonus:</strong><br>1 AEO website, or a 150-page authority book</span></li>
+            <div><h3 class="mb-2 text-lg font-bold text-ink">4. Data Security</h3><p class="text-base leading-relaxed text-slate-450">We implement reasonable security measures to protect your personal information from unauthorized access, alteration, disclosure, or destruction.</p></div>
+            <div><h3 class="mb-2 text-lg font-bold text-ink">5. Contact Us</h3><p class="text-base leading-relaxed text-slate-450"><strong class="font-semibold text-ink">Email:</strong> privacy@velorixai.com<br><strong class="font-semibold text-ink">Address:</strong> VelorixAI, Bandia, Uttarakhand, India</p></div>
+        </div>
+
+        <div id="policy-refund" class="policy-doc mt-8 hidden space-y-6">
+            <div>
+                <h3 class="mb-2 text-lg font-bold text-ink">1. Refund Eligibility</h3>
+                <p class="text-base font-semibold text-ink">You are eligible for a refund if:</p>
+                <ul class="mt-3 list-disc space-y-2 pl-6 text-base text-slate-450">
+                    <li>Technical issues on our end prevent you from accessing the platform for over 7 consecutive days.</li>
+                    <li>You purchased the wrong plan and notify us within <strong class="font-semibold text-ink">3 days (72 hours)</strong> of payment.</li>
+                    <li>The agreed-upon initial onboarding support was not provided within the promised timeframe.</li>
+                </ul>
+                <p class="mt-5 text-base font-semibold text-ink">You are not eligible for a refund if:</p>
+                <ul class="mt-3 list-disc space-y-2 pl-6 text-base text-slate-450">
+                    <li>You change your mind after the <strong class="font-semibold text-ink">3-day window</strong> has passed.</li>
+                    <li>You have already accessed premium training materials or AI specialized tools.</li>
+                    <li>Your business model changes or you decide to stop your operations.</li>
                 </ul>
             </div>
+            <div><h3 class="mb-2 text-lg font-bold text-ink">2. Refund Process &amp; Timeline</h3><p class="text-base leading-relaxed text-slate-450">Email refunds@velorixai.com within 72 hours of your transaction with your Name, Registered Email, and Transaction ID. We review all requests within 3 business days. If approved, the amount will be credited to your original payment method within 7-10 business days.</p></div>
+            <div><h3 class="mb-2 text-lg font-bold text-ink">3. Subscription Cancellations</h3><p class="text-base leading-relaxed text-slate-450">You can cancel your subscription at any time through your dashboard. Your access will continue until the end of your current billing period.</p></div>
         </div>
 
-        <div class="pricing-description">
-            <p>Plans scale with your business, from solo coach to full agency<br>Get a personalized recommendation during your free demo<br>No cost and no obligation. All it takes is 30 minutes of your time.</p>
-        </div>
-        <button onclick="openDemoForm()" class="btn btn-primary" style="margin-top:20px;">
-            <i class="fas fa-calendar-alt"></i> Get Your Custom Plan
-        </button>
+        <button type="button" data-close-modal class="mt-10 rounded-full border border-line bg-white px-8 py-3.5 text-sm font-bold uppercase tracking-wide text-ink transition hover:border-ink">Close</button>
     </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section class="testimonials" id="testimonials">
-    <div class="container">
-        <h2 class="section-title">Loved by Coaches & Agencies</h2>
-        <div class="testimonials-grid">
-            <div class="testimonial-card">
-                <div class="testimonial-rating">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p class="testimonial-text">"I was managing my coaching business across 7 different tools, Kajabi for courses, a separate booking app, a separate CRM, WhatsApp manually, Stripe for payments. I was losing leads because nothing talked to each other. After my VelorixAI demo, everything was live in 2 hours. My first automated WhatsApp sequence brought in 3 leads the next day. By week 2, I had my first paying client. This single platform has literally tripled my efficiency and cut my monthly subscriptions from ₹15,000 to ₹5,000."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">R</div>
-                    <div class="author-info">
-                        <h4>Riya Malhotra</h4>
-                        <p>Fitness Coach, Pune | 8-12 clients/month</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-rating">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p class="testimonial-text">"As an agency owner, I was drowning in tool management. My team was jumping between Pipedrive, email, scheduling apps, and invoicing software. It was chaos. Anis showed us how VelorixAI consolidates everything, our entire client pipeline, automated follow-ups, booking management, and billing, all in one place. We've cut our operational overhead by 40% and onboarded 5 new clients in the first month because we're actually responsive now. Best business decision we made this year."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">A</div>
-                    <div class="author-info">
-                        <h4>Aman Singh</h4>
-                        <p>Agency Owner, Jaipur | 15+ active clients</p>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="testimonial-card">
-                <div class="testimonial-rating">
-                    <i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i><i class="fas fa-star"></i>
-                </div>
-                <p class="testimonial-text">"I was a freelancer consultant with zero interest in tech. I thought I'd need to hire someone to build my funnel and CRM. The 2-hour setup call with VelorixAI was eye-opening, within hours, I had a professional website, a lead capture funnel, and WhatsApp automation running. No coding, no confusion. In 30 days, I went from ₹0 to ₹2.5L in revenue because my leads weren't falling through the cracks anymore. The system does what used to require a VA and three different software licenses."</p>
-                <div class="testimonial-author">
-                    <div class="author-avatar">P</div>
-                    <div class="author-info">
-                        <h4>Priya Kapoor</h4>
-                        <p>Business Consultant, Indore | ₹2.5L+ monthly</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FAQ -->
-<section class="faq" id="faq">
-    <div class="container">
-        <h2 class="section-title">Frequently Asked Questions</h2>
-        <div class="faq-container">
-            <div class="faq-item active">
-                <div class="faq-question">
-                    <span>💰 How much does VelorixAI cost?</span>
-                    <i class="fas fa-chevron-down faq-icon"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Pricing depends on the plan and your business requirements. We offer Quarterly and Annual plans, and exact pricing is confirmed during your free demo call.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>🛠️ Do I need any technical skills to use VelorixAI?</span>
-                    <i class="fas fa-chevron-down faq-icon"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Not at all. The dashboard is built for coaches and agency owners with no coding or design background. Everything is drag-and-drop, and we guide you through the entire setup.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>⏱️ How long is the demo?</span>
-                    <i class="fas fa-chevron-down faq-icon"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>The free demo session takes about 30 minutes. In that time, we'll walk you through exactly how VelorixAI replaces your entire tool stack and helps you launch faster.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>🔄 Can I move my existing tools over?</span>
-                    <i class="fas fa-chevron-down faq-icon"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Yes. Our team helps you migrate your contacts, content and offers during onboarding. We make sure nothing gets lost in the transition.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>🚀 How fast can I actually launch?</span>
-                    <i class="fas fa-chevron-down faq-icon"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Most clients go from idea to a live business in just 2 hours during our guided build session. Your website, funnel, CRM, WhatsApp automation, calendar, and payments can all go live in that single session.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>💳 What if I'm not ready to commit?</span>
-                    <i class="fas fa-chevron-down faq-icon"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>The demo is completely free and no-obligation. You'll only be charged if you decide to move forward after seeing exactly how VelorixAI works for your business.</p>
-                </div>
-            </div>
-            
-            <div class="faq-item">
-                <div class="faq-question">
-                    <span>🛡️ What about my data and privacy?</span>
-                    <i class="fas fa-chevron-down faq-icon"></i>
-                </div>
-                <div class="faq-answer">
-                    <p>Your data is 100% yours and secure with us. We follow strict privacy and security protocols. You can review our full Privacy Policy and Terms & Conditions before booking your demo.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-<!-- FINAL CTA -->
-<section class="final-cta" id="demo">
-    <div class="container">
-        <h2>See Your Business Running on VelorixAI</h2>
-        <p>Book a free 30-minute demo and we'll walk you through the exact apps and workflows for your coaching or agency business. Prefer to chat first? Message us directly on WhatsApp for instant answers.</p>
-        <div class="cta-buttons">
-            <button onclick="openDemoForm()" class="btn btn-primary">
-                <i class="fas fa-calendar-check"></i> Book My Free Demo
-            </button>
-            <a href="#" data-site="whatsapp" target="_blank" class="btn btn-secondary">
-                <i class="fab fa-whatsapp"></i> Chat on WhatsApp
-            </a>
-        </div>
-        <p style="margin-top:30px; font-size:0.9rem; opacity:0.8;">Limited build slots open this week</p>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <div class="container">
-        <div class="footer-content">
-            <div>
-                <h4 style="display:flex; align-items:center; gap:10px; color:var(--accent); margin-bottom:15px;">
-                    <img data-site="logo" src="assets/velorix-logo.png" alt="VelorixAI logo" style="width:32px; height:32px; border-radius:6px; object-fit:contain; background:var(--black);">
-                    <span data-site="brandLockup">Velorix<span style="color:var(--accent);">AI</span></span>
-                </h4>
-                <p style="color:var(--gray-dark); margin-bottom:10px;">All-in-one AI growth platform for coaches, consultants, and agencies.</p>
-                <p style="color:var(--gray-dark); font-size:0.9rem;">Based in Bandia, Uttarakhand, India, trusted by coaches and agencies worldwide.</p>
-            </div>
-            
-            <div>
-                <h4 style="color:var(--accent); margin-bottom:15px;">Platform</h4>
-                <div class="footer-links">
-                    <a href="#services">Platform</a>
-                    <a href="#how-it-works">How It Works</a>
-                    <a href="#founder">About Founder</a>
-                    <a href="#testimonials">Testimonials</a>
-                    <a href="#pricing">Plans</a>
-                    <a href="#faq">FAQ</a>
-                </div>
-            </div>
-            
-            <div>
-                <h4 style="color:var(--accent); margin-bottom:15px;">Legal</h4>
-                <div class="footer-links">
-                    <a href="#" data-policy="terms">Terms &amp; Conditions</a>
-                    <a href="#" data-policy="refund">Refund Policy</a>
-                    <a href="#" data-policy="privacy">Privacy Policy</a>
-                </div>
-            </div>
-            
-            <div>
-                <h4 style="color:var(--accent); margin-bottom:15px;">Connect</h4>
-                <div class="contact-rows">
-                    <a href="#" data-site="phoneLink"><i class="fas fa-phone"></i><span data-site="phone">+91 8218854770</span></a>
-                    <a href="#" data-site="emailLink"><i class="fas fa-envelope"></i><span data-site="email">contact.velorixai@gmail.com</span></a>
-                    <a href="#" data-site="whatsapp" target="_blank" rel="noopener"><i class="fab fa-whatsapp"></i> Chat on WhatsApp</a>
-                </div>
-                <p style="margin-top:20px; font-size:0.9rem; color:var(--gray-dark);"><strong>No cost, no obligation</strong><br>Just your time for 30 minutes.</p>
-            </div>
-        </div>
-        
-        <div class="copyright">
-            <p>© 2026 VelorixAI. All rights reserved.</p>
-            <p style="margin-top:10px; font-size:0.85rem;">
-                <a href="#" data-policy="terms" style="color:var(--gray-dark); text-decoration:none;">Terms &amp; Conditions</a> | 
-                <a href="#" data-policy="refund" style="color:var(--gray-dark); text-decoration:none;">Refund Policy</a> | 
-                <a href="#" data-policy="privacy" style="color:var(--gray-dark); text-decoration:none;">Privacy Policy</a>
-            </p>
-        </div>
-    </div>
-</footer>
-
-<!-- MOBILE STICKY CTA -->
-<div class="mobile-cta">
-    <button onclick="openDemoForm()" class="btn btn-primary">
-        <i class="fas fa-calendar-check"></i> Book Free Demo
-    </button>
 </div>
 
-<!-- COMPLETE WORKFLOW JAVASCRIPT -->
 <script>
-    // Initialize page state
-    let currentPage = 'home';
-    
-    // Open Demo Form
-    function openDemoForm() {
-        document.getElementById('demoModal').classList.add('active');
+(function () {
+    "use strict";
+
+    /* ---------------------------------------------------------------
+       SITE SETTINGS
+       --------------------------------------------------------------- */
+    var SITE = {
+        CAL_ID_BOOKING_URL: "https://cal.id/velorixai/demo-call?duration=30",
+        whatsappNumber: "918218854770",
+        openCalInNewTab: false
+    };
+
+    /* ------------------------------------------------------- modals */
+    var openEl = null;
+    var lastFocus = null;
+
+    function openModal(el) {
+        if (openEl) closeModal();
+        lastFocus = document.activeElement;
+        openEl = el;
+        el.classList.add("is-open");
+        document.documentElement.style.overflow = "hidden";
+        var focusable = el.querySelector("input, button, a[href]");
+        if (focusable) focusable.focus();
     }
-    
-    // Close Demo Form
-    function closeDemoForm() {
-        document.getElementById('demoModal').classList.remove('active');
+
+    function closeModal() {
+        if (!openEl) return;
+        openEl.classList.remove("is-open");
+        openEl = null;
+        document.documentElement.style.overflow = "";
+        if (lastFocus && lastFocus.focus) lastFocus.focus();
     }
-    
-    // Open Policy Pages
-    function openPolicy(type) {
-        if (type === 'privacy') {
-            document.getElementById('privacyPolicyPage').classList.add('active');
-        } else if (type === 'terms') {
-            document.getElementById('termsPage').classList.add('active');
-        } else if (type === 'refund') {
-            document.getElementById('refundPage').classList.add('active');
+
+    document.addEventListener("click", function (e) {
+        if (e.target.closest("[data-open-lead]")) {
+            e.preventDefault();
+            openModal(document.getElementById("lead-modal"));
+            return;
         }
-        document.body.style.overflow = 'hidden';
-    }
-    
-    // Close Policy Pages
-    function closePolicy(type) {
-        if (type === 'privacy') {
-            document.getElementById('privacyPolicyPage').classList.remove('active');
-        } else if (type === 'terms') {
-            document.getElementById('termsPage').classList.remove('active');
-        } else if (type === 'refund') {
-            document.getElementById('refundPage').classList.remove('active');
+        if (e.target.closest("[data-close-modal]")) {
+            e.preventDefault();
+            closeModal();
+            return;
         }
-        document.body.style.overflow = '';
-    }
-    
-    // ---------------------------------------------------------------
-    // CONFIG WIRING, reads window.SITE (see the SITE SETTINGS block in <head>)
-    // ---------------------------------------------------------------
-    var S = window.SITE || {};
+        var policyBtn = e.target.closest("[data-policy]");
+        if (policyBtn) {
+            e.preventDefault();
+            showPolicy(policyBtn.getAttribute("data-policy"));
+            return;
+        }
+        if (openEl && e.target === openEl) closeModal();   // backdrop
+    });
 
-    function waLink() {
-        return 'https://wa.me/' + (S.whatsappNumber || '') +
-               (S.whatsappMessage ? '?text=' + encodeURIComponent(S.whatsappMessage) : '');
-    }
+    document.addEventListener("keydown", function (e) {
+        if (e.key === "Escape") closeModal();
+    });
 
-    function youtubeEmbed(url) {
-        if (!url) return '';
-        var m = url.match(/(?:shorts\/|embed\/|v=|youtu\.be\/)([A-Za-z0-9_-]{6,})/);
-        return m ? 'https://www.youtube.com/embed/' + m[1] + '?rel=0' : url;
-    }
+    /* ------------------------------------------------------ policies */
+    var POLICY_TITLES = {
+        terms: "Terms & Conditions",
+        privacy: "Privacy Policy",
+        refund: "Refund Policy"
+    };
 
-    function calUrl() {
-        var base = S.CAL_ID_BOOKING_URL || '';
-        if (!S.prefillCalId) return base;
-        var name = localStorage.getItem('clientName') || '';
-        var email = localStorage.getItem('clientEmail') || '';
-        var phone = localStorage.getItem('clientPhone') || '';
-        if (!name && !email) return base;
-        var q = [];
-        if (name) q.push('name=' + encodeURIComponent(name));
-        if (email) q.push('email=' + encodeURIComponent(email));
-        if (phone) q.push('smsReminderNumber=' + encodeURIComponent(phone));
-        return base + (base.indexOf('?') > -1 ? '&' : '?') + q.join('&');
-    }
-
-    function setAll(key, fn) {
-        document.querySelectorAll('[data-site="' + key + '"]').forEach(fn);
-    }
-
-    function applySiteSettings() {
-        if (S.phone) setAll('phone', function (el) { el.textContent = S.phone; });
-        if (S.phone) setAll('phoneLink', function (el) { el.href = 'tel:' + S.phone.replace(/[^+0-9]/g, ''); });
-        if (S.email) setAll('email', function (el) { el.textContent = S.email; });
-        if (S.email) setAll('emailLink', function (el) { el.href = 'mailto:' + S.email; });
-        setAll('whatsapp', function (el) { el.href = waLink(); el.target = '_blank'; el.rel = 'noopener'; });
-        setAll('calBooking', function (el) { el.href = calUrl(); });
-        if (S.planNote) setAll('planNote', function (el) { el.textContent = S.planNote; });
-        if (S.brandFirst) setAll('brandLockup', function (el) {
-            el.innerHTML = S.brandFirst + '<span style="color:var(--accent);">' + (S.brandSecond || '') + '</span>';
+    function showPolicy(key) {
+        var modal = document.getElementById("policy-modal");
+        document.getElementById("policy-title").textContent = POLICY_TITLES[key] || "Legal";
+        Array.prototype.forEach.call(modal.querySelectorAll(".policy-doc"), function (doc) {
+            doc.classList.toggle("hidden", doc.id !== "policy-" + key);
         });
-        if (S.logoUrl) setAll('logo', function (el) { el.src = S.logoUrl; el.alt = (S.brandName || '') + ' logo'; });
-        var vid = document.getElementById('siteVideo');
-        if (vid) {
-            vid.src = youtubeEmbed(S.youtubeUrl);
-            if (S.youtubeTitle) vid.title = S.youtubeTitle;
-        }
-        document.querySelectorAll('[data-policy]').forEach(function (el) {
-            var key = el.getAttribute('data-policy');
-            var url = S[key + 'Url'] || '#' + key;
-            if (url.charAt(0) === '#') {
-                el.href = url;
-                el.addEventListener('click', function (e) { e.preventDefault(); openPolicy(key); });
-            } else {
-                el.href = url;
-                el.target = '_blank';
-                el.rel = 'noopener';
+        modal.querySelector("div").scrollTop = 0;
+        openModal(modal);
+    }
+
+    /* ------------------------------------------- lead form -> Cal.id */
+    var form = document.getElementById("lead-form");
+    var errorEl = document.getElementById("lead-error");
+
+    function fail(message, field) {
+        errorEl.textContent = message;
+        errorEl.classList.remove("hidden");
+        if (field) field.focus();
+    }
+
+    form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        errorEl.classList.add("hidden");
+
+        var nameEl = document.getElementById("lead-name");
+        var emailEl = document.getElementById("lead-email");
+        var phoneEl = document.getElementById("lead-phone");
+
+        var name = nameEl.value.trim();
+        var email = emailEl.value.trim();
+        var phone = phoneEl.value.trim();
+
+        if (!name) return fail("Please enter your full name.", nameEl);
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) return fail("Please enter a valid email address.", emailEl);
+        if (phone.replace(/[^0-9]/g, "").length < 8) return fail("Please enter a valid phone number.", phoneEl);
+
+        try {
+            localStorage.setItem("velorixLead", JSON.stringify({ name: name, email: email, phone: phone, at: Date.now() }));
+        } catch (err) { /* private mode: continue without storing */ }
+
+        var base = SITE.CAL_ID_BOOKING_URL;
+        var params = [
+            "name=" + encodeURIComponent(name),
+            "email=" + encodeURIComponent(email),
+            "smsReminderNumber=" + encodeURIComponent(phone),
+            "layout=month_view"
+        ].join("&");
+        var url = base + (base.indexOf("?") > -1 ? "&" : "?") + params;
+
+        closeModal();
+
+        if (SITE.openCalInNewTab) window.open(url, "_blank", "noopener");
+        else window.location.href = url;
+    });
+
+    /* ------------------------- confirmation view on return from Cal.id */
+    function maybeShowConfirmation() {
+        var q = new URLSearchParams(window.location.search);
+        if (!q.has("booked") && window.location.hash !== "#booked") return;
+        var lead = null;
+        try { lead = JSON.parse(localStorage.getItem("velorixLead") || "null"); } catch (err) {}
+        var slot = document.getElementById("confirm-name");
+        if (slot && lead && lead.name) slot.textContent = ", " + lead.name;
+        openModal(document.getElementById("confirm-modal"));
+    }
+
+    /* ------------------------------------------------- mobile menu */
+    var toggle = document.getElementById("nav-toggle");
+    var mobileNav = document.getElementById("mobile-nav");
+    if (toggle && mobileNav) {
+        toggle.addEventListener("click", function () {
+            var open = mobileNav.classList.toggle("hidden") === false;
+            toggle.setAttribute("aria-expanded", open ? "true" : "false");
+        });
+        mobileNav.addEventListener("click", function (e) {
+            if (e.target.closest("a")) {
+                mobileNav.classList.add("hidden");
+                toggle.setAttribute("aria-expanded", "false");
             }
         });
     }
 
-    // ---------------------------------------------------------------
-    // FUNNEL: Book Demo -> Lead Form -> Send -> Thank You -> Cal.id
-    // ---------------------------------------------------------------
-    function submitDemoForm(event) {
-        if (event) event.preventDefault();
+    /* ---------------------------------------------------- reveal */
+    var targets = Array.prototype.slice.call(document.querySelectorAll(".reveal"));
+    if (targets.length) {
+        document.documentElement.classList.add("js-reveal");
 
-        var name = document.getElementById('clientName').value.trim();
-        var email = document.getElementById('clientEmail').value.trim();
-        var phone = document.getElementById('clientPhone').value.trim();
-
-        if (!name || !email || !phone) {
-            alert('Please fill all fields.');
-            return;
-        }
-
-        localStorage.setItem('clientName', name);
-        localStorage.setItem('clientEmail', email);
-        localStorage.setItem('clientPhone', phone);
-
-        closeDemoForm();
-        openThankYou(name);
-    }
-
-    function openThankYou(name) {
-        var tyName = document.getElementById('tyName');
-        if (tyName) tyName.innerHTML = name ? ', <span class="name-highlight">' + name + '</span>' : '';
-        setAll('calBooking', function (el) {
-            el.href = calUrl();
-            if (S.openCalInNewTab) { el.target = '_blank'; el.rel = 'noopener'; }
-        });
-        document.getElementById('thankYouPage').classList.add('active');
-        document.body.style.overflow = 'hidden';
-    }
-
-    function closeThankYou() {
-        document.getElementById('thankYouPage').classList.remove('active');
-        document.body.style.overflow = '';
-    }
-
-    // Package tabs
-    function showPackage(pkg) {
-        ['prestige', 'signature'].forEach(function (key) {
-            var tab = document.getElementById('tab-' + key);
-            var panel = document.getElementById('panel-' + key);
-            var on = key === pkg;
-            tab.classList.toggle('active', on);
-            tab.setAttribute('aria-selected', on ? 'true' : 'false');
-            panel.classList.toggle('active', on);
-        });
-    }
-
-    applySiteSettings();
-
-    // FAQ Toggle
-    document.querySelectorAll('.faq-question').forEach(item => {
-        item.addEventListener('click', function() {
-            const parent = this.parentElement;
-            document.querySelectorAll('.faq-item').forEach(f => { 
-                if(f !== parent) f.classList.remove('active'); 
+        function checkInView() {
+            var h = window.innerHeight || document.documentElement.clientHeight;
+            var pending = false;
+            targets.forEach(function (el) {
+                if (el.classList.contains("is-visible")) return;
+                if (el.getBoundingClientRect().top < h * 0.92) el.classList.add("is-visible");
+                else pending = true;
             });
-            parent.classList.toggle('active');
-        });
-    });
-    
-    // Allow Enter key to submit form
-    document.addEventListener('keypress', function(event) {
-        if (event.key === 'Enter' && document.getElementById('demoModal').classList.contains('active')) {
-            document.getElementById('demoForm').dispatchEvent(new Event('submit'));
+            return pending;
         }
-    });
-    
-    // Close policy pages with Escape key
-    document.addEventListener('keydown', function(event) {
-        if (event.key === 'Escape') {
-            document.getElementById('privacyPolicyPage').classList.remove('active');
-            document.getElementById('termsPage').classList.remove('active');
-            document.getElementById('refundPage').classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-    
-    // Close modals when clicking outside
-    window.addEventListener('click', function(event) {
-        // Demo modal
-        var modal = document.getElementById('demoModal');
-        if (event.target === modal) {
-            modal.classList.remove('active');
-        }
-        
-        // Policy pages
-        if (event.target.classList.contains('policy-page')) {
-            event.target.classList.remove('active');
-            document.body.style.overflow = '';
-        }
-    });
-    
-    console.log('VelorixAI page loaded.');
-</script>
 
+        if ("IntersectionObserver" in window) {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (entry) {
+                    if (entry.isIntersecting) {
+                        entry.target.classList.add("is-visible");
+                        io.unobserve(entry.target);
+                    }
+                });
+            }, { rootMargin: "0px 0px -8% 0px", threshold: 0.01 });
+            targets.forEach(function (el) { io.observe(el); });
+        }
+
+        var ticking = false;
+        function onScroll() {
+            if (ticking) return;
+            ticking = true;
+            window.requestAnimationFrame(function () {
+                ticking = false;
+                if (!checkInView()) {
+                    window.removeEventListener("scroll", onScroll);
+                    window.removeEventListener("resize", onScroll);
+                }
+            });
+        }
+
+        checkInView();
+        window.addEventListener("scroll", onScroll, { passive: true });
+        window.addEventListener("resize", onScroll);
+        window.addEventListener("load", checkInView);
+        window.setTimeout(function () {
+            targets.forEach(function (el) { el.classList.add("is-visible"); });
+        }, 4000);
+    }
+
+    maybeShowConfirmation();
+})();
+</script>
 </body>
 </html>
